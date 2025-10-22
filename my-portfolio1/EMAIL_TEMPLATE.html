@@ -1,0 +1,117 @@
+<!-- EmailJS Template HTML -->
+<!-- Copy this into your EmailJS template editor -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4;">
+  <table role="presentation" style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td align="center" style="padding: 40px 0;">
+        <table role="presentation" style="width: 600px; border-collapse: collapse; background-color: #ffffff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden;">
+          
+          <!-- Header -->
+          <tr>
+            <td style="background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%); padding: 30px; text-align: center;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700;">
+                New Portfolio Message
+              </h1>
+              <p style="margin: 10px 0 0 0; color: #e0f2fe; font-size: 14px;">
+                You have received a new message from your portfolio contact form
+              </p>
+            </td>
+          </tr>
+          
+          <!-- Content -->
+          <tr>
+            <td style="padding: 40px 30px;">
+              
+              <!-- Sender Info Card -->
+              <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 25px;">
+                <tr>
+                  <td style="vertical-align: top; width: 70px;">
+                    <img 
+                      src="{{gravatar_url}}" 
+                      alt="{{from_name}}" 
+                      style="
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        border: 3px solid #3b82f6;
+                        display: block;
+                        object-fit: cover;
+                      "
+                      onerror="this.src='https://ui-avatars.com/api/?name={{from_name}}&background=3b82f6&color=fff&size=60&bold=true'"
+                    />
+                  </td>
+                  <td style="vertical-align: top; padding-left: 15px;">
+                    <div style="font-size: 18px; font-weight: 600; color: #1e293b; margin-bottom: 5px;">
+                      {{from_name}}
+                    </div>
+                    <div style="font-size: 14px; color: #3b82f6; margin-bottom: 3px;">
+                      {{from_email}}
+                    </div>
+                    <div style="font-size: 12px; color: #94a3b8;">
+                      Received on {{time}}
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              
+              <!-- Message Section -->
+              <div style="margin-bottom: 20px;">
+                <h2 style="font-size: 16px; font-weight: 600; color: #64748b; margin: 0 0 15px 0; text-transform: uppercase; letter-spacing: 0.5px;">
+                  Message Content
+                </h2>
+                <div style="
+                  background-color: #ffffff;
+                  border-left: 4px solid #3b82f6;
+                  padding: 20px;
+                  border-radius: 4px;
+                  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                ">
+                  <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #334155; white-space: pre-wrap;">{{message}}</p>
+                </div>
+              </div>
+              
+              <!-- Action Button -->
+              <div style="text-align: center; margin-top: 30px;">
+                <a href="mailto:{{from_email}}" style="
+                  display: inline-block;
+                  padding: 14px 32px;
+                  background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+                  color: #ffffff;
+                  text-decoration: none;
+                  border-radius: 6px;
+                  font-weight: 600;
+                  font-size: 15px;
+                  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+                ">
+                  Reply to {{from_name}}
+                </a>
+              </div>
+              
+            </td>
+          </tr>
+          
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f8fafc; padding: 25px 30px; text-align: center; border-top: 1px solid #e2e8f0;">
+              <p style="margin: 0 0 10px 0; font-size: 13px; color: #64748b;">
+                This message was sent from your portfolio contact form
+              </p>
+              <p style="margin: 0; font-size: 12px; color: #94a3b8;">
+                © {{year}} Harold F. Pasion - Portfolio
+              </p>
+            </td>
+          </tr>
+          
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
