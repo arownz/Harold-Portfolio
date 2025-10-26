@@ -20,27 +20,23 @@ import { Code2, Palette, Database } from "lucide-vue-next";
           <div class="intro-text">
             <p class="lead">
               I'm an Information Technology student at National University -
-              Dasmariñas, specializing in Mobile and Web App Development.
+              Dasmariñas, Majoring in Mobile and Web App Development.
             </p>
 
             <p>
               My passion lies in creating user-centric solutions that make
-              technology more accessible to everyone. I led the development of
-              <strong>Lexia</strong>, a gamified learning platform designed
-              specifically for children with dyslexia, which taught me the
-              importance of accessibility-first design.
+              technology more accessible to everyone. In our capstone project, I led the functional development of
+              <strong>"Lexia"</strong>, a gamified learning platform designed
+              specifically for children with dyslexia conditions, which taught me the
+              importance of user case accessibility-first principles.
             </p>
 
             <p>
               With experience in both frontend and backend development, I enjoy
               building full-stack applications that solve real-world problems.
               I'm constantly learning new technologies and best practices to
-              improve my craft.
-            </p>
-
-            <p>
-              I love exploring various tech stacks to adapt to ever-changing
-              technologies and deliver innovative solutions.
+              improve my craft. I love exploring various tech stacks to adapt to ever-changing
+              technologies.
             </p>
           </div>
         </div>
@@ -79,20 +75,6 @@ import { Code2, Palette, Database } from "lucide-vue-next";
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <div class="timeline-period">2022 - 2026</div>
-              <h4>Bachelor of Science in Information Technology</h4>
-              <p class="timeline-location">National University - Dasmariñas</p>
-              <p class="timeline-description">
-                Major in Mobile and Web Application Development. Focused on
-                full-stack development, mobile technologies, and software
-                engineering principles.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
               <div class="timeline-period">2020 - 2022</div>
               <h4>
                 Senior High School - Information Communication Technologies
@@ -107,6 +89,20 @@ import { Code2, Palette, Database } from "lucide-vue-next";
               </p>
             </div>
           </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-period">2022 - 2026</div>
+              <h4>Bachelor of Science in Information Technology</h4>
+              <p class="timeline-location">National University - Dasmariñas</p>
+              <p class="timeline-description">
+                Major in Mobile and Web Application Development. Focused on
+                full-stack development, mobile technologies, and software
+                engineering principles.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -118,34 +114,131 @@ import { Code2, Palette, Database } from "lucide-vue-next";
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <div class="timeline-period">August 2024 - February 2025</div>
-              <h4>Office Assistant</h4>
+              <h4>Office / Student Assistant</h4>
               <p class="timeline-location">MSQ Business Services, Inc</p>
-              <p class="timeline-description">
-                Provided administrative support and assisted with various office
-                operations, developing professional communication and
-                organizational skills.
-              </p>
+              <ul class="timeline-description">
+                <li>Handled accurate data encoding and digital record management.</li>
+                <li>Assisted with basic IT troubleshooting for software and hardware issues.</li>
+                <li>Gained exposure to compliance workflows and documentation standards.</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="about-credentials fade-in">
-        <div class="credential-card">
-          <h3>Certification</h3>
-          <div class="credential-content">
-            <div class="cert-image-container">
-              <img
-                src="/html-css_cert.png"
-                alt="IT Specialist HTML & CSS Certification"
-                class="cert-image"
-              />
+      <div class="certifications-section fade-in">
+        <h3 class="timeline-title">Certifications & Credentials</h3>
+        
+        <!-- Certiport Category -->
+        <div class="cert-category">
+          <h4 class="category-title">Certiport</h4>
+          <div class="cert-grid single-cert">
+            <div class="credential-card">
+              <div class="credential-content">
+                <div class="cert-image-container">
+                  <img
+                    src="/html-css_cert.png"
+                    alt="IT Specialist HTML & CSS Certification"
+                    class="cert-image"
+                  />
+                </div>
+                <p class="credential-title">IT Specialist - HTML & CSS</p>
+                <p class="credential-issuer">Certiport</p>
+                <div class="credential-badge">
+                  <span class="badge-text">Scored over 700 passing points</span> 
+                </div>
+              </div>
             </div>
-            <p class="credential-title">IT Specialist - HTML & CSS</p>
-            <p class="credential-issuer">Certiport</p>
-            <div class="credential-badge">
-              <span class="badge-icon">✓</span>
-              <span class="badge-text">Scored over 700</span>
+          </div>
+        </div>
+
+        <!-- TESDA Category -->
+        <div class="cert-category">
+          <h4 class="category-title">TESDA - Self Learning Module</h4>
+          <div class="cert-grid">
+            <div class="credential-card">
+              <div class="credential-content">
+                <div class="cert-image-container">
+                  <img
+                    src="/installconfig_cert.png"
+                    alt="Install and Configure Computer Systems"
+                    class="cert-image"
+                  />
+                </div>
+                <p class="credential-title">Install and Configure Computer Systems</p>
+                <p class="credential-issuer">TESDA</p>
+                <div class="credential-badge">
+                  <span class="badge-text">Completed</span> 
+                </div>
+              </div>
+            </div>
+
+            <div class="credential-card">
+              <div class="credential-content">
+                <div class="cert-image-container">
+                  <img
+                    src="/maintcompsysnet_cert.png"
+                    alt="Maintain Computer Systems and Networks"
+                    class="cert-image"
+                  />
+                </div>
+                <p class="credential-title">Maintain Computer Systems and Networks</p>
+                <p class="credential-issuer">TESDA</p>
+                <div class="credential-badge">
+                  <span class="badge-text">Completed</span> 
+                </div>
+              </div>
+            </div>
+
+            <div class="credential-card">
+              <div class="credential-content">
+                <div class="cert-image-container">
+                  <img
+                    src="/setupcompnet_cert.png"
+                    alt="Set-up Computer Networks"
+                    class="cert-image"
+                  />
+                </div>
+                <p class="credential-title">Set-up Computer Networks</p>
+                <p class="credential-issuer">TESDA</p>
+                <div class="credential-badge">
+                  <span class="badge-text">Completed</span> 
+                </div>
+              </div>
+            </div>
+
+            <div class="credential-card">
+              <div class="credential-content">
+                <div class="cert-image-container">
+                  <img
+                    src="/setupcompserv_cert.png"
+                    alt="Set-up Computer Servers"
+                    class="cert-image"
+                  />
+                </div>
+                <p class="credential-title">Set-up Computer Servers</p>
+                <p class="credential-issuer">TESDA</p>
+                <div class="credential-badge">
+                  <span class="badge-text">Completed</span> 
+                </div>
+              </div>
+            </div>
+            
+            <div class="credential-card">
+              <div class="credential-content">
+                <div class="cert-image-container">
+                  <img
+                    src="/introtocss_cert.png"
+                    alt="Introduction to Cascading Style Sheets"
+                    class="cert-image"
+                  />
+                </div>
+                <p class="credential-title">Introduction to Cascading Style Sheets</p>
+                <p class="credential-issuer">TESDA</p>
+                <div class="credential-badge">
+                  <span class="badge-text">Completed</span> 
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -169,10 +262,8 @@ import { Code2, Palette, Database } from "lucide-vue-next";
   font-size: clamp(2rem, 5vw, 3rem);
   text-align: center;
   margin-bottom: 4rem;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary);
+  font-weight: 700;
 }
 
 .about-intro {
@@ -347,34 +438,67 @@ import { Code2, Palette, Database } from "lucide-vue-next";
   color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;
+  padding-left: 1.5rem;
 }
 
-/* Credentials Styles */
-.about-credentials {
-  max-width: 600px;
+/* Certifications Section Styles */
+.certifications-section {
+  margin-bottom: 2rem;
+}
+
+.cert-category {
+  margin-bottom: 4rem;
+}
+
+.cert-category:last-child {
+  margin-bottom: 0;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category-description {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
   margin: 0 auto;
+}
+
+.cert-grid.single-cert {
+  max-width: 500px;
+  grid-template-columns: 1fr;
 }
 
 .credential-card {
   background: var(--bg-darker);
-  padding: 2rem;
+  padding: 1.75rem;
   border-radius: 1rem;
   border: 2px solid var(--primary);
   box-shadow: 0 10px 30px -10px var(--shadow-lg);
   transition: all 0.3s ease;
+  height: 100%;
 }
 
 .credential-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px -10px var(--shadow-lg);
-}
-
-.credential-card h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px -10px var(--shadow-lg);
+  border-color: var(--secondary);
 }
 
 .credential-content {
@@ -485,12 +609,26 @@ import { Code2, Palette, Database } from "lucide-vue-next";
     font-size: 1.1rem;
   }
 
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
   .credential-card {
     padding: 1.5rem;
   }
 
   .credential-title {
+    font-size: 1.15rem;
+  }
+
+  .category-title {
     font-size: 1.25rem;
+  }
+
+  .category-description {
+    font-size: 0.9rem;
+    padding: 0 1rem;
   }
 }
 </style>

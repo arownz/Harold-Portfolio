@@ -13,11 +13,11 @@ const projects = ref([
     tags: [
       "Godot",
       "Game Development",
-      "Accessibilit TTS, STT, OCR",
+      "Accessibility TTS, STT, OCR",
       "Google Cloud",
     ],
     github: "https://github.com/arownz/godotcaps", // Replace with actual repo
-    demo: "https://gamedevcapz.com/",
+    demo: "https://gamedevcapz.web.app/",
     featured: true,
   },
   {
@@ -40,6 +40,16 @@ const projects = ref([
     tags: ["React JS", "Bootstrap"],
     github: "https://github.com/arownz/SalesDuo",
     featured: false,
+  },
+  {
+    id: 4,
+    title: "Cashier Point of Sale System",
+    description:
+      "A Point of Sale System (POS) for cashier to manage their sales transactions.",
+    image: "/projects/POS_System.png", // Replace with actual image path
+    tags: ["Netbeans", "Java GUI"],
+    github: "https://github.com/arownz/Cashier-POS-java",
+    featured: true,
   },
 ]);
 </script>
@@ -108,10 +118,8 @@ const projects = ref([
   font-size: clamp(2rem, 5vw, 3rem);
   text-align: center;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary);
+  font-weight: 700;
 }
 
 .section-subtitle {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Monitor, Code2, Smartphone, Database, Cloud } from "lucide-vue-next";
+import { Monitor, Code2, Smartphone, Database, Cloud, Wrench, Gamepad2, Bot, Briefcase, Network } from "lucide-vue-next";
 
 const techStacks = ref({
   frontend: [
@@ -47,6 +47,10 @@ const techStacks = ref({
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
     },
     {
+      name: "Laravel",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
+    },
+    {
       name: "Python",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     },
@@ -57,8 +61,8 @@ const techStacks = ref({
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
     },
     {
-      name: "Android",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
+      name: "React Native",
+      icon: "react-native-logo-884x1024.png",
     },
     {
       name: "Kotlin",
@@ -75,6 +79,10 @@ const techStacks = ref({
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
     },
     {
+      name: "Supabase",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
+    },
+    {
       name: "MySQL",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     },
@@ -82,18 +90,18 @@ const techStacks = ref({
       name: "SQLite",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
     },
-    {
-      name: "MS SQL Server",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
-    },
   ],
   cloud: [
     {
       name: "Google Cloud",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
     },
+    {
+      name: "AWS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    },
   ],
-  tools: [
+  devtools: [
     {
       name: "Visual Studio Code",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
@@ -104,39 +112,99 @@ const techStacks = ref({
     },
     {
       name: "Cursor",
-      icon: "https://www.cursor.com/brand/icon.svg",
+      icon: "ODF.png",
     },
     {
       name: "Windsurf",
-      icon: "https://avatars.githubusercontent.com/u/184014476?s=200&v=4",
+      icon: "/windsurf.jpg",
     },
     {
       name: "NetBeans",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg",
+      icon: "craiyon_054400_image.png",
     },
     {
       name: "Git",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     },
     {
-      name: "Figma",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+      name: "Github Desktop",
+      icon: "githubdesk.png",
     },
     {
       name: "Postman",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
     },
     {
-      name: "Godot",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg",
+      name: "Figma",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
     },
+    {
+      name: "MySQL Workbench",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    },
+    {
+      name: "XAMPP",
+      icon: "xamppicon.jpg",
+    },
+    {
+      name: "Oracle VirtualBox",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg",
+    },
+  ],
+  gamedev: [
     {
       name: "Unity",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg",
     },
     {
-      name: "C#",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+      name: "Godot",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg",
+    },
+  ],
+  networking: [
+    {
+      name: "Cisco Packet Tracer",
+      icon: "image-removebg-preview (2).png"
+    },
+    {
+      name: "Wireshark",
+      icon: "wiresharkicon.png",
+    },
+  ],
+  ai: [
+    {
+      name: "MCP",
+      icon: "https://modelcontextprotocol.io/favicon.svg",
+    },
+    {
+      name: "ChatGPT",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    },
+    {
+      name: "Claude",
+      icon: "claudeicon.png",
+    },
+    {
+      name: "Gemini",
+      icon: "geminiicon.svg",
+    },
+    {
+      name: "DeepSeek",
+      icon: "craiyon_061056_image.png",
+    },
+  ],
+  productivity: [
+    {
+      name: "Microsoft 365",
+      icon: "microsoft365icon.png",
+    },
+    {
+      name: "Notion",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg",
+    },
+    {
+      name: "Adobe",
+      icon: "adobeicon.png",
     },
   ],
 });
@@ -146,7 +214,7 @@ const techStacks = ref({
   <section id="tech" class="tech-stack">
     <div class="container">
       <h2 class="section-title fade-in">Tech Stack</h2>
-      <p class="section-subtitle fade-in">Technologies and tools I work with</p>
+      <p class="section-subtitle fade-in">Technologies and tools I have experienced</p>
 
       <div class="tech-grid">
         <div class="tech-category fade-in">
@@ -236,12 +304,80 @@ const techStacks = ref({
 
         <div class="tech-category fade-in">
           <div class="category-header">
-            <Code2 :size="28" />
-            <h3>Tools & Others</h3>
+            <Wrench :size="28" />
+            <h3>Dev Tools</h3>
           </div>
           <div class="tech-items">
             <div
-              v-for="tech in techStacks.tools"
+              v-for="tech in techStacks.devtools"
+              :key="tech.name"
+              class="tech-item"
+            >
+              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
+              <span class="tech-name">{{ tech.name }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-category fade-in">
+          <div class="category-header">
+            <Network :size="28" />
+            <h3>Networking</h3>
+          </div>
+          <div class="tech-items">
+            <div
+              v-for="tech in techStacks.networking"
+              :key="tech.name"
+              class="tech-item"
+            >
+              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
+              <span class="tech-name">{{ tech.name }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-category fade-in">
+          <div class="category-header">
+            <Gamepad2 :size="28" />
+            <h3>Game Development</h3>
+          </div>
+          <div class="tech-items">
+            <div
+              v-for="tech in techStacks.gamedev"
+              :key="tech.name"
+              class="tech-item"
+            >
+              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
+              <span class="tech-name">{{ tech.name }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-category fade-in">
+          <div class="category-header">
+            <Bot :size="28" />
+            <h3>AI Tools</h3>
+          </div>
+          <div class="tech-items">
+            <div
+              v-for="tech in techStacks.ai"
+              :key="tech.name"
+              class="tech-item"
+            >
+              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
+              <span class="tech-name">{{ tech.name }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-category fade-in">
+          <div class="category-header">
+            <Briefcase :size="28" />
+            <h3>Productivity</h3>
+          </div>
+          <div class="tech-items">
+            <div
+              v-for="tech in techStacks.productivity"
               :key="tech.name"
               class="tech-item"
             >
@@ -270,10 +406,8 @@ const techStacks = ref({
   font-size: clamp(2rem, 5vw, 3rem);
   text-align: center;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary);
+  font-weight: 700;
 }
 
 .section-subtitle {

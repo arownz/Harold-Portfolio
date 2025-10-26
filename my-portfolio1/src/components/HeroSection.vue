@@ -1,10 +1,61 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
 import { Github, Linkedin, Mail, ChevronDown, Facebook } from "lucide-vue-next";
 import ParticleBackground from "./ParticleBackground.vue";
 
 defineEmits<{
   scrollTo: [section: string];
 }>();
+
+const roles = ["IT Intern", "Aspiring Software Developer"];
+const currentRole = ref("");
+const roleIndex = ref(0);
+const charIndex = ref(0);
+const isDeleting = ref(false);
+let typingInterval: number;
+
+const typeRole = () => {
+  const currentRoleText = roles[roleIndex.value];
+  
+  if (!currentRoleText) return;
+  
+  if (!isDeleting.value) {
+    // Typing
+    if (charIndex.value < currentRoleText.length) {
+      currentRole.value = currentRoleText.substring(0, charIndex.value + 1);
+      charIndex.value++;
+      typingInterval = setTimeout(typeRole, 100);
+    } else {
+      // Wait before deleting
+      typingInterval = setTimeout(() => {
+        isDeleting.value = true;
+        typeRole();
+      }, 2000);
+    }
+  } else {
+    // Deleting
+    if (charIndex.value > 0) {
+      charIndex.value--;
+      currentRole.value = currentRoleText.substring(0, charIndex.value + 1);
+      typingInterval = setTimeout(typeRole, 50);
+    } else {
+      // Move to next role
+      isDeleting.value = false;
+      roleIndex.value = (roleIndex.value + 1) % roles.length;
+      typingInterval = setTimeout(typeRole, 500);
+    }
+  }
+};
+
+onMounted(() => {
+  typeRole();
+});
+
+onUnmounted(() => {
+  if (typingInterval) {
+    clearTimeout(typingInterval);
+  }
+});
 </script>
 
 <template>
@@ -21,11 +72,11 @@ defineEmits<{
         <p class="hero-greeting">Hi, I'm</p>
         <h1 class="hero-name">Harold F. Pasion</h1>
         <h2 class="hero-title">
-          <span class="typing-text">Full Stack Developer</span>
+          <span class="typing-text">{{ currentRole }}</span>
         </h2>
         <p class="hero-description">
           IT student passionate about creating functionable, user-friendly
-          applications. Specialized in building experiences and modern
+          softwares. Specialized in building experiences using modern
           solutions.
         </p>
 
@@ -194,10 +245,7 @@ defineEmits<{
   font-size: clamp(2.5rem, 8vw, 4.5rem);
   font-weight: 800;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary);
 }
 
 .hero-title {

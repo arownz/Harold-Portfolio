@@ -96,7 +96,7 @@ const handleSubmit = async () => {
     <div class="container">
       <h2 class="section-title fade-in">Get In Touch</h2>
       <p class="section-subtitle fade-in">
-        Let's work together on your next project
+        Contact me for inquiries
       </p>
 
       <div class="contact-content">
@@ -260,10 +260,8 @@ const handleSubmit = async () => {
   font-size: clamp(2rem, 5vw, 3rem);
   text-align: center;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary);
+  font-weight: 700;
 }
 
 .section-subtitle {

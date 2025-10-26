@@ -6,7 +6,6 @@ import AboutSection from './components/AboutSection.vue'
 import TechStack from './components/TechStack.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
 import ContactSection from './components/ContactSection.vue'
-import ThemeToggle from './components/ThemeToggle.vue'
 import ScrollProgress from './components/ScrollProgress.vue'
 import BackToTop from './components/BackToTop.vue'
 
@@ -78,7 +77,6 @@ onUnmounted(() => {
     <ProjectsSection />
     <ContactSection />
     
-    <ThemeToggle />
     <BackToTop />
     
     <footer class="footer">

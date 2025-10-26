@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Menu, X, Download } from "lucide-vue-next";
+import { Menu, X, Download, Sun, Moon } from "lucide-vue-next";
+import { useTheme } from '../composables/useTheme';
 
 defineProps<{
   activeSection: string;
@@ -12,6 +13,7 @@ const emit = defineEmits<{
 }>();
 
 const isMobileMenuOpen = ref(false);
+const { currentTheme, toggleTheme } = useTheme();
 
 const scrollToSection = (section: string) => {
   emit("scrollTo", section);
@@ -20,7 +22,7 @@ const scrollToSection = (section: string) => {
 
 const downloadResume = () => {
   const link = document.createElement("a");
-  link.href = "/Harold_Resume.pdf";
+  link.href = "/Harold_Resumes.pdf";
   link.download = "Harold_Pasion_Resume.pdf";
   link.click();
 };
@@ -52,15 +54,40 @@ const downloadResume = () => {
             Resume
           </button>
         </li>
+        <li>
+          <button 
+            @click="toggleTheme" 
+            class="theme-toggle-btn"
+            :aria-label="`Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} mode`"
+          >
+            <transition name="fade" mode="out-in">
+              <Sun v-if="currentTheme === 'dark'" :size="20" key="sun" />
+              <Moon v-else :size="20" key="moon" />
+            </transition>
+          </button>
+        </li>
       </ul>
 
-      <button
-        class="mobile-menu-btn"
-        @click="isMobileMenuOpen = !isMobileMenuOpen"
-      >
-        <Menu v-if="!isMobileMenuOpen" :size="24" />
-        <X v-else :size="24" />
-      </button>
+      <div class="nav-actions">
+        <button 
+          @click="toggleTheme" 
+          class="theme-toggle-btn mobile-theme-toggle"
+          :aria-label="`Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} mode`"
+        >
+          <transition name="fade" mode="out-in">
+            <Sun v-if="currentTheme === 'dark'" :size="20" key="sun" />
+            <Moon v-else :size="20" key="moon" />
+          </transition>
+        </button>
+        
+        <button
+          class="mobile-menu-btn"
+          @click="isMobileMenuOpen = !isMobileMenuOpen"
+        >
+          <Menu v-if="!isMobileMenuOpen" :size="24" />
+          <X v-else :size="24" />
+        </button>
+      </div>
     </div>
 
     <div :class="['mobile-menu', { open: isMobileMenuOpen }]">
@@ -122,6 +149,7 @@ const downloadResume = () => {
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.3s ease;
+  user-select: none;
 }
 
 .nav-logo:hover {
@@ -167,6 +195,50 @@ const downloadResume = () => {
   width: 100%;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.mobile-theme-toggle {
+  display: none;
+}
+
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -174,6 +246,14 @@ const downloadResume = () => {
   color: var(--text-primary);
   cursor: pointer;
   padding: 0.5rem;
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-menu-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .mobile-menu {
@@ -237,6 +317,9 @@ const downloadResume = () => {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .resume-btn:hover {
@@ -248,15 +331,39 @@ const downloadResume = () => {
   transform: translateY(0);
 }
 
+.resume-btn:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
 .resume-btn.mobile {
   width: 100%;
   justify-content: center;
   margin-top: 0.5rem;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.8);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.8);
+}
+
 @media (max-width: 768px) {
   .desktop-menu {
     display: none;
+  }
+
+  .mobile-theme-toggle {
+    display: flex;
   }
 
   .mobile-menu-btn {
