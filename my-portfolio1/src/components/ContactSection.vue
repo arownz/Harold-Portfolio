@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  Send,
-} from "lucide-vue-next";
+import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-vue-next";
 import emailjs from "@emailjs/browser";
 
 const formData = ref({
@@ -93,11 +86,11 @@ const handleSubmit = async () => {
 <template>
   <section id="contact" class="contact">
     <div class="container">
-      <h2 class="section-title fade-in">Get In Touch</h2>
+      <h2 class="section-title scale-in">Get In Touch</h2>
       <p class="section-subtitle fade-in">Contact me for inquiries</p>
 
       <div class="contact-content">
-        <div class="contact-info fade-in">
+        <div class="contact-info fade-in-left">
           <div class="contact-item">
             <Mail :size="24" class="contact-icon" />
             <div>
@@ -142,26 +135,10 @@ const handleSubmit = async () => {
             >
               <Github :size="28" />
             </a>
-            <a
-              href="https://stackoverflow.com/users/19126644/arownz"
-              target="_blank"
-              aria-label="StackOverflow"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="social-icon"
-              >
-                <path
-                  d="M15.725 0l-1.72 1.277 6.39 8.588 1.716-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.15 4.465l-.905 1.94 9.702 4.517.904-1.94-9.701-4.517zm-1.85 4.86l-.44 2.093 10.473 2.201.44-2.093-10.473-2.201zM1.89 15.47V24h19.19v-8.53h-2.133v6.397H4.021v-6.396H1.89zm4.265 2.133v2.13h10.66v-2.13H6.154Z"
-                />
-              </svg>
-            </a>
           </div>
         </div>
 
-        <form class="contact-form fade-in" @submit.prevent="handleSubmit">
+        <form class="contact-form fade-in-right" @submit.prevent="handleSubmit">
           <div class="form-group">
             <label for="name">Name</label>
             <input
@@ -325,8 +302,25 @@ const handleSubmit = async () => {
 .contact-form {
   background: var(--bg-dark);
   padding: 2.5rem;
-  border-radius: 1rem;
-  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  border: 2px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary),
+    var(--accent)
+  );
 }
 
 .form-group {
@@ -345,19 +339,21 @@ const handleSubmit = async () => {
   width: 100%;
   padding: 0.875rem 1rem;
   background: var(--bg-darker);
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
+  border: 2px solid var(--border);
+  border-radius: 0.625rem;
   color: var(--text-primary);
   font-size: 1rem;
   font-family: inherit;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px var(--shadow);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
+  background: var(--bg-dark);
 }
 
 .form-group textarea {

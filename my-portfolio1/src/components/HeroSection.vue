@@ -12,6 +12,7 @@ const currentRole = ref("");
 const roleIndex = ref(0);
 const charIndex = ref(0);
 const isDeleting = ref(false);
+const parallaxY = ref(0);
 let typingInterval: number;
 
 const typeRole = () => {
@@ -47,14 +48,20 @@ const typeRole = () => {
   }
 };
 
+const handleScroll = () => {
+  parallaxY.value = window.scrollY * 0.5;
+};
+
 onMounted(() => {
   typeRole();
+  window.addEventListener('scroll', handleScroll);
 });
 
 onUnmounted(() => {
   if (typingInterval) {
     clearTimeout(typingInterval);
   }
+  window.removeEventListener('scroll', handleScroll);
 });
 </script>
 
@@ -67,14 +74,14 @@ onUnmounted(() => {
       <div class="gradient-orb orb-3"></div>
     </div>
 
-    <div class="hero-content">
+    <div class="hero-content" :style="{ transform: `translateY(${parallaxY}px)` }">
       <div class="hero-text fade-in">
-        <p class="hero-greeting">Hi, I'm</p>
-        <h1 class="hero-name">Harold F. Pasion</h1>
-        <h2 class="hero-title">
+        <p class="hero-greeting scale-in">Hi, I'm</p>
+        <h1 class="hero-name fade-in-left">Harold F. Pasion</h1>
+        <h2 class="hero-title fade-in-right">
           <span class="typing-text">{{ currentRole }}</span>
         </h2>
-        <p class="hero-description">An IT student who is curious by nature, driven by purpose who thrives on understanding how systems work, how they’re built, and how they can be improved.</p>
+        <p class="hero-description fade-in">An IT student who is curious by nature, driven by purpose who thrives on understanding how systems work, how they're built, and how they can be improved.</p>
 
         <div class="hero-cta">
           <button
@@ -108,22 +115,6 @@ onUnmounted(() => {
             aria-label="GitHub"
           >
             <Github :size="24" />
-          </a>
-          <a
-            href="https://stackoverflow.com/users/19126644/arownz"
-            target="_blank"
-            aria-label="StackOverflow"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="social-icon"
-            >
-              <path
-                d="M15.725 0l-1.72 1.277 6.39 8.588 1.716-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.15 4.465l-.905 1.94 9.702 4.517.904-1.94-9.701-4.517zm-1.85 4.86l-.44 2.093 10.473 2.201.44-2.093-10.473-2.201zM1.89 15.47V24h19.19v-8.53h-2.133v6.397H4.021v-6.396H1.89zm4.265 2.133v2.13h10.66v-2.13H6.154Z"
-              />
-            </svg>
           </a>
         </div>
       </div>

@@ -26,23 +26,25 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <button 
-    v-if="isVisible"
-    @click="scrollToTop"
-    class="back-to-top"
-    aria-label="Back to top"
-  >
-    <ChevronUp :size="24" />
-  </button>
+  <Teleport to="body">
+    <button 
+      v-if="isVisible"
+      @click="scrollToTop"
+      class="back-to-top"
+      aria-label="Back to top"
+    >
+      <ChevronUp :size="24" />
+    </button>
+  </Teleport>
 </template>
 
 <style scoped>
 .back-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 6rem;
-  width: 50px;
-  height: 50px;
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: white;
@@ -51,19 +53,20 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  z-index: 999;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9999 !important;
   animation: fadeInUp 0.3s ease;
+  pointer-events: auto;
 }
 
 .back-to-top:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.6);
 }
 
 .back-to-top:active {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.02);
 }
 
 @keyframes fadeInUp {
@@ -79,10 +82,19 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
   .back-to-top {
-    bottom: 5.5rem;
-    right: 1.5rem;
-    width: 45px;
-    height: 45px;
+    bottom: 1.5rem !important;
+    right: 1.5rem !important;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    bottom: 1rem !important;
+    right: 1rem !important;
+    width: 44px;
+    height: 44px;
   }
 }
 </style>

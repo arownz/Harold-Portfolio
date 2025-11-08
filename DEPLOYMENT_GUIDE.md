@@ -1,13 +1,13 @@
-# 🚀 Deploy Your Portfolio to Netlify (Free)
+# Deploy Your Portfolio to Netlify (Free)
 
 ## Why Netlify?
 
-✅ **100% Free** for personal projects  
-✅ **Automatic HTTPS** with SSL certificate  
-✅ **Custom domain** support (free subdomain or your own)  
-✅ **Continuous deployment** from Git  
-✅ **Fast CDN** - Global edge network  
-✅ **Easy updates** - Push to Git = Auto deploy  
+✅ **100% Free** for personal projects
+✅ **Automatic HTTPS** with SSL certificate
+✅ **Custom domain** support (free subdomain or your own)
+✅ **Continuous deployment** from Git
+✅ **Fast CDN** - Global edge network
+✅ **Easy updates** - Push to Git = Auto deploy
 
 ---
 
@@ -41,6 +41,7 @@ netlify deploy --prod
 ```
 
 Follow the prompts:
+
 - **Create & configure a new site**: Yes
 - **Team**: Select your team
 - **Site name**: `harold-pasion-portfolio` (or your choice)
@@ -111,6 +112,7 @@ git push -u origin main
 6. Click **"Deploy site"**
 
 ### Benefits:
+
 - ✅ Every Git push = Automatic deployment
 - ✅ Preview deployments for branches
 - ✅ Rollback to previous versions
@@ -121,9 +123,11 @@ git push -u origin main
 ## Custom Domain (Optional)
 
 ### Free Netlify Subdomain:
+
 - `https://harold-pasion-portfolio.netlify.app`
 
 ### Your Own Domain:
+
 1. Buy a domain (e.g., from Namecheap, GoDaddy)
 2. In Netlify: **Domain settings** → **Add custom domain**
 3. Update your domain's DNS settings
@@ -137,11 +141,12 @@ If you want to hide your EmailJS credentials:
 
 1. Go to **Site settings** → **Environment variables**
 2. Add variables:
+
    - `VITE_EMAILJS_SERVICE_ID` = `service_hootxr7`
    - `VITE_EMAILJS_TEMPLATE_ID` = `template_lemm6u7`
    - `VITE_EMAILJS_PUBLIC_KEY` = `UCFzr7LWiiuQHaXcj`
-
 3. Update `ContactSection.vue`:
+
 ```typescript
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -153,6 +158,7 @@ const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 ## Updating Your Portfolio
 
 ### If using Git + Netlify:
+
 ```bash
 # Make changes to your code
 git add .
@@ -162,6 +168,7 @@ git push
 ```
 
 ### If using manual deploy:
+
 ```bash
 npm run build
 netlify deploy --prod
@@ -172,24 +179,28 @@ netlify deploy --prod
 ## Troubleshooting
 
 ### Build fails?
+
 - Check `npm run build` works locally first
 - Verify Node version (18+)
 - Check build logs in Netlify dashboard
 
 ### Resume not downloading?
+
 - Make sure `Harold_Resume.pdf` is in the `public` folder
 - Rebuild and redeploy
 
 ### EmailJS not working?
+
 - Verify credentials in `ContactSection.vue`
 - Check browser console for errors
 - Test locally first with `npm run dev`
 
 ---
 
-## 🎉 Your Portfolio is Live!
+## Your Portfolio is Live
 
 Share your portfolio:
+
 - **Portfolio**: `https://harold-pasion-portfolio.netlify.app`
 - **LinkedIn**: Add to your profile
 - **Resume**: Include the link

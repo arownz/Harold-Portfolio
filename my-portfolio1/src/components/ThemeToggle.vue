@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { Sun, Moon } from 'lucide-vue-next'
-import { useTheme } from '../composables/useTheme'
+import { Sun, Moon } from "lucide-vue-next";
+import { useTheme } from "../composables/useTheme";
 
-const { currentTheme, toggleTheme } = useTheme()
+const { currentTheme, toggleTheme } = useTheme();
 </script>
 
 <template>
-  <button 
-    @click="toggleTheme" 
+  <button
+    @click="toggleTheme"
     class="theme-toggle"
     :aria-label="`Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} mode`"
   >

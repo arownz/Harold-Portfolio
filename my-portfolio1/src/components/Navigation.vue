@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { Menu, X, Download, Sun, Moon } from "lucide-vue-next";
-import { useTheme } from '../composables/useTheme';
+import { useTheme } from "../composables/useTheme";
 
 defineProps<{
   activeSection: string;
@@ -29,86 +29,92 @@ const downloadResume = () => {
 </script>
 
 <template>
-  <nav :class="['navbar', { scrolled: scrollY > 50 }]">
-    <div class="nav-container">
-      <div class="nav-logo" @click="scrollToSection('home')">
-        <span class="logo-text">Harold<span class="accent">.</span></span>
-      </div>
+  <Teleport to="body">
+    <nav :class="['navbar', { scrolled: scrollY > 50 }]">
+      <div class="nav-container">
+        <div class="nav-logo" @click="scrollToSection('home')">
+          <span class="logo-text">Harold<span class="accent">.</span></span>
+        </div>
 
-      <ul class="nav-menu desktop-menu">
-        <li
-          v-for="item in ['about', 'tech', 'projects', 'contact']"
-          :key="item"
-        >
-          <a
-            @click.prevent="scrollToSection(item)"
-            :class="{ active: activeSection === item }"
-            href="#"
+        <ul class="nav-menu desktop-menu">
+          <li
+            v-for="item in ['about', 'tech', 'projects', 'contact']"
+            :key="item"
           >
-            {{ item.charAt(0).toUpperCase() + item.slice(1) }}
-          </a>
-        </li>
-        <li>
-          <button @click="downloadResume" class="resume-btn">
-            <Download :size="18" />
-            Resume
-          </button>
-        </li>
-        <li>
-          <button 
-            @click="toggleTheme" 
-            class="theme-toggle-btn"
-            :aria-label="`Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} mode`"
+            <a
+              @click.prevent="scrollToSection(item)"
+              :class="{ active: activeSection === item }"
+              href="#"
+            >
+              {{ item.charAt(0).toUpperCase() + item.slice(1) }}
+            </a>
+          </li>
+          <li>
+            <button @click="downloadResume" class="resume-btn">
+              <Download :size="18" />
+              Resume
+            </button>
+          </li>
+          <li>
+            <button
+              @click="toggleTheme"
+              class="theme-toggle-btn"
+              :aria-label="`Switch to ${
+                currentTheme === 'dark' ? 'light' : 'dark'
+              } mode`"
+            >
+              <transition name="fade" mode="out-in">
+                <Sun v-if="currentTheme === 'dark'" :size="20" key="sun" />
+                <Moon v-else :size="20" key="moon" />
+              </transition>
+            </button>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            @click="toggleTheme"
+            class="theme-toggle-btn mobile-theme-toggle"
+            :aria-label="`Switch to ${
+              currentTheme === 'dark' ? 'light' : 'dark'
+            } mode`"
           >
             <transition name="fade" mode="out-in">
               <Sun v-if="currentTheme === 'dark'" :size="20" key="sun" />
               <Moon v-else :size="20" key="moon" />
             </transition>
           </button>
-        </li>
-      </ul>
 
-      <div class="nav-actions">
-        <button 
-          @click="toggleTheme" 
-          class="theme-toggle-btn mobile-theme-toggle"
-          :aria-label="`Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} mode`"
-        >
-          <transition name="fade" mode="out-in">
-            <Sun v-if="currentTheme === 'dark'" :size="20" key="sun" />
-            <Moon v-else :size="20" key="moon" />
-          </transition>
-        </button>
-        
-        <button
-          class="mobile-menu-btn"
-          @click="isMobileMenuOpen = !isMobileMenuOpen"
-        >
-          <Menu v-if="!isMobileMenuOpen" :size="24" />
-          <X v-else :size="24" />
-        </button>
-      </div>
-    </div>
-
-    <div :class="['mobile-menu', { open: isMobileMenuOpen }]">
-      <ul>
-        <li
-          v-for="item in ['about', 'tech', 'projects', 'contact']"
-          :key="item"
-        >
-          <a @click.prevent="scrollToSection(item)" href="#">
-            {{ item.charAt(0).toUpperCase() + item.slice(1) }}
-          </a>
-        </li>
-        <li>
-          <button @click="downloadResume" class="resume-btn mobile">
-            <Download :size="18" />
-            Download Resume
+          <button
+            class="mobile-menu-btn"
+            @click="isMobileMenuOpen = !isMobileMenuOpen"
+          >
+            <Menu v-if="!isMobileMenuOpen" :size="24" />
+            <X v-else :size="24" />
           </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        </div>
+      </div>
+
+      <div :class="['mobile-menu', { open: isMobileMenuOpen }]">
+        <ul>
+          <li
+            v-for="item in ['about', 'tech', 'projects', 'contact']"
+            :key="item"
+          >
+            <a @click.prevent="scrollToSection(item)" href="#">
+              {{ item.charAt(0).toUpperCase() + item.slice(1) }}
+            </a>
+          </li>
+          <li>
+            <button @click="downloadResume" class="resume-btn mobile">
+              <Download :size="18" />
+              Download Resume
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </Teleport>
 </template>
 
 <style scoped>

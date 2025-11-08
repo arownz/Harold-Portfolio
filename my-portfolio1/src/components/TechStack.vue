@@ -137,7 +137,7 @@ const techStacks = ref({
     },
     {
       name: "Git/Github",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      icon: "githubz.svg",
     },
     {
       name: "Github Desktop",
@@ -498,16 +498,38 @@ const techStacks = ref({
 
 .tech-category {
   background: var(--bg-dark);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 1.25rem;
   padding: 2rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(99, 102, 241, 0.1),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.tech-category:hover::before {
+  left: 100%;
 }
 
 .tech-category:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
   border-color: var(--primary);
-  box-shadow: 0 10px 30px -10px var(--shadow-lg);
+  box-shadow: 0 20px 40px -10px var(--shadow-lg);
 }
 
 .category-header {
@@ -534,18 +556,43 @@ const techStacks = ref({
   align-items: center;
   gap: 0.5rem;
   background: var(--bg-darker);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.625rem;
   font-size: 0.95rem;
   color: var(--text-secondary);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid transparent;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.tech-item:hover::before {
+  opacity: 0.1;
 }
 
 .tech-item:hover {
   background: var(--bg-light);
   border-color: var(--primary);
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.05);
+  color: var(--text-primary);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.tech-icon-img,
+.tech-name {
+  position: relative;
+  z-index: 1;
 }
 
 .tech-icon-img {

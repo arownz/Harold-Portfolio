@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from "vue";
 
 const scrollProgress = ref(0);
 
@@ -8,24 +8,24 @@ const updateScrollProgress = () => {
   const documentHeight = document.documentElement.scrollHeight;
   const scrollTop = window.scrollY;
   const scrollableHeight = documentHeight - windowHeight;
-  
+
   scrollProgress.value = (scrollTop / scrollableHeight) * 100;
 };
 
 onMounted(() => {
-  window.addEventListener('scroll', updateScrollProgress);
+  window.addEventListener("scroll", updateScrollProgress);
   updateScrollProgress();
 });
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', updateScrollProgress);
+  window.removeEventListener("scroll", updateScrollProgress);
 });
 </script>
 
 <template>
   <div class="scroll-progress-container">
-    <div 
-      class="scroll-progress-bar" 
+    <div
+      class="scroll-progress-bar"
       :style="{ width: `${scrollProgress}%` }"
     ></div>
   </div>

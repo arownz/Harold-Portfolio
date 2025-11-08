@@ -30,7 +30,7 @@ const projects = ref([
     tags: ["React + Vite", "Bootstrap", "Javascript", "Firebase", "REST API"],
     github: "https://github.com/arownz/admin_panel",
     demo: "https://gamedevcapz-admin.web.app/login",
-    featured: false,
+    featured: true,
   },
   {
     id: 3,
@@ -82,7 +82,7 @@ const projects = ref([
     github: "https://github.com/arownz/Group-1-ETS-Final",
     featured: false,
   },
-    {
+  {
     id: 8,
     title: "Sales Duo",
     description:
@@ -99,19 +99,32 @@ const projects = ref([
   <section id="projects" class="projects">
     <div class="container">
       <h2 class="section-title fade-in">Featured Projects</h2>
-      <p class="section-subtitle fade-in">Some of my recent works</p>
+      <p class="section-subtitle fade-in">Some self-initiated projects and group projects.</p>
 
       <div class="projects-grid">
         <div
-          v-for="project in projects"
+          v-for="(project, index) in projects"
           :key="project.id"
-          :class="['project-card fade-in', { featured: project.featured }]"
+          :class="[
+            'project-card',
+            { featured: project.featured },
+            index % 2 === 0 ? 'fade-in-left' : 'fade-in-right',
+          ]"
         >
+          <div class="project-badge" v-if="project.featured">
+            <span>Featured</span>
+          </div>
+
           <div class="project-image">
             <img :src="project.image" :alt="project.title" />
             <div class="project-overlay">
               <div class="project-links">
-                <a :href="project.github" target="_blank" class="project-link">
+                <a
+                  :href="project.github"
+                  target="_blank"
+                  class="project-link"
+                  aria-label="View source code"
+                >
                   <Github :size="24" />
                   <span>Code</span>
                 </a>
@@ -120,6 +133,7 @@ const projects = ref([
                   :href="project.demo"
                   target="_blank"
                   class="project-link"
+                  aria-label="View live demo"
                 >
                   <ExternalLink :size="24" />
                   <span>Demo</span>
@@ -179,22 +193,85 @@ const projects = ref([
 
 .project-card {
   background: var(--bg-darker);
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   overflow: hidden;
-  border: 1px solid var(--border);
-  transition: all 0.3s ease;
+  border: 2px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary),
+    var(--accent)
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-12px);
   border-color: var(--primary);
-  box-shadow: 0 20px 40px -10px var(--shadow-lg);
+  box-shadow: 0 25px 50px -12px var(--shadow-lg);
 }
 
 .project-card.featured {
-  grid-column: span 2;
+  grid-column: span 1;
+  background: linear-gradient(
+    135deg,
+    var(--bg-darker) 0%,
+    rgba(99, 102, 241, 0.05) 100%
+  );
+}
+
+.project-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  color: white;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.6);
+  }
+}
+
+.badge-star {
+  width: 16px;
+  height: 16px;
 }
 
 .project-image {
@@ -205,15 +282,32 @@ const projects = ref([
   background: linear-gradient(135deg, #1e293b, #334155);
 }
 
+.project-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-image::after {
+  opacity: 1;
+}
+
 .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card:hover .project-image img {
-  transform: scale(1.05);
+  transform: scale(1.1) rotate(1deg);
 }
 
 .project-overlay {
@@ -240,18 +334,40 @@ const projects = ref([
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--primary);
+  padding: 0.875rem 1.75rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: white;
   text-decoration: none;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.project-link:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .project-link:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.5);
 }
 
 .project-content {
@@ -283,10 +399,20 @@ const projects = ref([
 .tag {
   background: var(--bg-light);
   color: var(--text-muted);
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.375rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tag:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-2px);
 }
 
 .projects-note {
@@ -310,12 +436,6 @@ const projects = ref([
   font-family: "Courier New", monospace;
 }
 
-@media (max-width: 1024px) {
-  .project-card.featured {
-    grid-column: span 1;
-  }
-}
-
 @media (max-width: 768px) {
   .projects {
     padding: 4rem 1.5rem;
@@ -323,10 +443,6 @@ const projects = ref([
 
   .projects-grid {
     grid-template-columns: 1fr;
-  }
-
-  .project-card.featured {
-    grid-column: span 1;
   }
 }
 

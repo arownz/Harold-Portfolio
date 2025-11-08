@@ -39,7 +39,12 @@ const scrollToSection = (sectionId: string) => {
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
   
-  // Intersection Observer for fade-in animations
+  // Enhanced Intersection Observer for all animation types
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px' // Trigger slightly before element enters viewport
+  }
+  
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -48,12 +53,15 @@ onMounted(() => {
         }
       })
     },
-    { threshold: 0.1 }
+    observerOptions
   )
   
-  // Observe all fade-in elements
+  // Observe all animation elements
   setTimeout(() => {
-    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el))
+    const selectors = ['.fade-in', '.fade-in-left', '.fade-in-right', '.scale-in']
+    selectors.forEach(selector => {
+      document.querySelectorAll(selector).forEach((el) => observer.observe(el))
+    })
   }, 100)
 })
 
@@ -94,6 +102,7 @@ onUnmounted(() => {
   color: var(--text-primary);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   overflow-x: hidden;
+  position: relative;
 }
 
 .footer {
@@ -101,6 +110,7 @@ onUnmounted(() => {
   padding: 3rem 2rem;
   text-align: center;
   border-top: 1px solid var(--border);
+  position: relative;
 }
 
 .footer .container {

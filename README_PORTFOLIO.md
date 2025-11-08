@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with Vue 3, TypeScript, and Vite. Features smooth animations, interactive elements, and a clean, professional design.
 
-## 🚀 Features
+## Features
 
 - **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
 - **Modern UI/UX**: Clean, professional design with smooth animations and transitions
@@ -11,7 +11,7 @@ A modern, responsive portfolio website built with Vue 3, TypeScript, and Vite. F
 - **Accessibility**: Built with accessibility-first principles
 - **Performance**: Optimized for fast loading and smooth interactions
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 my-portfolio1/
@@ -31,14 +31,14 @@ my-portfolio1/
 └── package.json
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Vue 3** - Progressive JavaScript framework
 - **TypeScript** - Type-safe JavaScript
 - **Vite** - Next-generation frontend tooling
 - **Lucide Vue** - Beautiful icon library
 
-## 📝 Customization Guide
+## Customization Guide
 
 ### 1. Update Personal Information
 
@@ -102,7 +102,7 @@ The portfolio uses a modern dark theme with purple/blue accents. To change color
 - Accent: `#ec4899` (Pink)
 - Background: `#020617` (Dark blue)
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -132,7 +132,7 @@ The portfolio uses a modern dark theme with purple/blue accents. To change color
    npm run preview
    ```
 
-## 📸 Adding Project Images
+## Adding Project Images
 
 Since this is a template, placeholder image paths are used. Follow these steps:
 
@@ -142,7 +142,7 @@ Since this is a template, placeholder image paths are used. Follow these steps:
 4. Recommended formats: JPG, PNG, or WebP
 5. Optimize images for web (compress to reduce file size)
 
-## 🎨 Customization Tips
+## Customization Tips
 
 ### Adding New Sections
 
@@ -163,7 +163,7 @@ Since this is a template, placeholder image paths are used. Follow these steps:
 - Tablet: 768px - 1024px
 - Desktop: > 1024px
 
-## 📧 Contact Form
+## Contact Form
 
 The contact form currently shows an alert. To make it functional:
 
@@ -184,7 +184,7 @@ The contact form currently shows an alert. To make it functional:
    - Add `netlify` attribute to form
    - Configure in Netlify dashboard
 
-## 🚀 Deployment
+## Deployment
 
 ### Netlify (Recommended)
 
@@ -206,11 +206,11 @@ npm run build
 # Deploy dist folder to gh-pages branch
 ```
 
-## 📄 License
+## License
 
 This portfolio template is free to use for personal and commercial projects.
 
-## 🙏 Credits
+## Credits
 
 - Icons: [Lucide Icons](https://lucide.dev/)
 - Framework: [Vue.js](https://vuejs.org/)
