@@ -19,24 +19,30 @@ import { Code2, Palette, Database } from "lucide-vue-next";
 
           <div class="intro-text">
             <p class="lead">
-              I'm an Information Technology student at National University -
-              Dasmariñas, Majoring in Mobile and Web App Development.
+              I’m an undergraduate pursuing a Bachelor of Science in Information
+              Technology at National University – Dasmariñas, specializing in
+              Mobile and Web Applications.
             </p>
 
             <p>
-              My passion lies in creating user-centric solutions that make
-              technology more accessible to everyone. In our capstone project, I led the functional development of
+              My technological journey is curiosity — a drive to understand how
+              systems work, how they’re developed, and how they can be improved.
+              I enjoy exploring various tech stacks not just for breadth, but to
+              find the right tools to develop it that serve specific user needs
+              and adapt to the fast-changing technology era.
+            </p>
+            <p>
+              In our defended capstone project, I led the functional
+              development of
               <strong>"Lexia"</strong>, a gamified learning platform designed
-              specifically for children with dyslexia conditions, which taught me the
-              importance of user case accessibility-first principles.
+              specifically for children with dyslexia conditions, which taught
+              me the importance of user case accessibility-first principles for
+              those with special needs.
             </p>
 
             <p>
-              With experience in both frontend and backend development, I enjoy
-              building full-stack applications that solve real-world problems.
-              I'm constantly learning new technologies and best practices to
-              improve my craft. I love exploring various tech stacks to adapt to ever-changing
-              technologies.
+              Great software isn’t just functional — it’s empathetic, adaptable,
+              and built with purpose.
             </p>
           </div>
         </div>
@@ -77,15 +83,14 @@ import { Code2, Palette, Database } from "lucide-vue-next";
             <div class="timeline-content">
               <div class="timeline-period">2020 - 2022</div>
               <h4>
-                Senior High School - Information Communication Technologies
+                Senior High School – Information and Communication Technology
               </h4>
               <p class="timeline-location">
-                University of Perpetual Help System Dalta - Molino
+                University of Perpetual Help System Dalta – Molino
               </p>
               <p class="timeline-description">
-                Specialized in Information and Communications Technology,
-                building foundational skills in programming and web
-                development.
+                Specialized in Information and Communication Technology,
+                builded a foundational skill in java and standalone java projects.
               </p>
             </div>
           </div>
@@ -95,11 +100,11 @@ import { Code2, Palette, Database } from "lucide-vue-next";
             <div class="timeline-content">
               <div class="timeline-period">2022 - 2026</div>
               <h4>Bachelor of Science in Information Technology</h4>
-              <p class="timeline-location">National University - Dasmariñas</p>
+              <p class="timeline-location">National University – Dasmariñas</p>
               <p class="timeline-description">
-                Major in Mobile and Web Application Development. Focused on
-                full-stack development, mobile technologies, and software
-                engineering principles.
+                With a specialization in Mobile and Web Applications. Focused on
+                full‑stack app development, web development, mobile application
+                development, and software engineering principles.
               </p>
             </div>
           </div>
@@ -115,11 +120,22 @@ import { Code2, Palette, Database } from "lucide-vue-next";
             <div class="timeline-content">
               <div class="timeline-period">August 2024 - February 2025</div>
               <h4>Office / Student Assistant</h4>
-              <p class="timeline-location">MSQ Business Services, Inc</p>
+              <p class="timeline-location">MSQ Business Services, Inc.</p>
               <ul class="timeline-description">
-                <li>Handled accurate data encoding and digital record management.</li>
-                <li>Assisted with basic IT troubleshooting for software and hardware issues.</li>
-                <li>Gained exposure to compliance workflows and documentation standards.</li>
+                <li>
+                  Handled accurate data encoding and digital record management
+                  using Microsoft Excel and Google Workspace, ensuring organized
+                  and retrievable records.
+                </li>
+                <li>
+                  Assisted with IT troubleshooting, including Windows OS issues,
+                  printer and peripheral setup, and basic software
+                  installation/configuration.
+                </li>
+                <li>
+                  Supported compliance workflows and documentation standards,
+                  contributing to smoother audit preparation.
+                </li>
               </ul>
             </div>
           </div>
@@ -128,10 +144,10 @@ import { Code2, Palette, Database } from "lucide-vue-next";
 
       <div class="certifications-section fade-in">
         <h3 class="timeline-title">Certifications & Credentials</h3>
-        
+
         <!-- Certiport Category -->
         <div class="cert-category">
-          <h4 class="category-title">Certiport</h4>
+          <h4 class="category-title">Certiport - A Pearson Vue Business</h4>
           <div class="cert-grid single-cert">
             <div class="credential-card">
               <div class="credential-content">
@@ -143,9 +159,9 @@ import { Code2, Palette, Database } from "lucide-vue-next";
                   />
                 </div>
                 <p class="credential-title">IT Specialist - HTML & CSS</p>
-                <p class="credential-issuer">Certiport</p>
+                <p class="credential-issuer">Certiport - Frontend</p>
                 <div class="credential-badge">
-                  <span class="badge-text">Scored over 700 passing points</span> 
+                  <span class="badge-text">700 Passing Points</span>
                 </div>
               </div>
             </div>
@@ -154,7 +170,9 @@ import { Code2, Palette, Database } from "lucide-vue-next";
 
         <!-- TESDA Category -->
         <div class="cert-category">
-          <h4 class="category-title">TESDA - Self Learning Module</h4>
+          <h4 class="category-title">
+            TESDA - Technical Education and Skills Development Authority
+          </h4>
           <div class="cert-grid">
             <div class="credential-card">
               <div class="credential-content">
@@ -165,10 +183,12 @@ import { Code2, Palette, Database } from "lucide-vue-next";
                     class="cert-image"
                   />
                 </div>
-                <p class="credential-title">Install and Configure Computer Systems</p>
-                <p class="credential-issuer">TESDA</p>
+                <p class="credential-title">
+                  Install and Configure Computer Systems
+                </p>
+                <p class="credential-issuer">TESDA - ICCS</p>
                 <div class="credential-badge">
-                  <span class="badge-text">Completed</span> 
+                  <span class="badge-text">Self-Paced Completed</span>
                 </div>
               </div>
             </div>
@@ -182,10 +202,12 @@ import { Code2, Palette, Database } from "lucide-vue-next";
                     class="cert-image"
                   />
                 </div>
-                <p class="credential-title">Maintain Computer Systems and Networks</p>
-                <p class="credential-issuer">TESDA</p>
+                <p class="credential-title">
+                  Maintain Computer Systems and Networks
+                </p>
+                <p class="credential-issuer">TESDA - MCSN</p>
                 <div class="credential-badge">
-                  <span class="badge-text">Completed</span> 
+                  <span class="badge-text">Self-Paced Completed</span>
                 </div>
               </div>
             </div>
@@ -200,9 +222,9 @@ import { Code2, Palette, Database } from "lucide-vue-next";
                   />
                 </div>
                 <p class="credential-title">Set-up Computer Networks</p>
-                <p class="credential-issuer">TESDA</p>
+                <p class="credential-issuer">TESDA - SCN</p>
                 <div class="credential-badge">
-                  <span class="badge-text">Completed</span> 
+                  <span class="badge-text">Self-Paced Completed</span>
                 </div>
               </div>
             </div>
@@ -217,13 +239,13 @@ import { Code2, Palette, Database } from "lucide-vue-next";
                   />
                 </div>
                 <p class="credential-title">Set-up Computer Servers</p>
-                <p class="credential-issuer">TESDA</p>
+                <p class="credential-issuer">TESDA - SCS</p>
                 <div class="credential-badge">
-                  <span class="badge-text">Completed</span> 
+                  <span class="badge-text">Self-Paced Completed</span>
                 </div>
               </div>
             </div>
-            
+
             <div class="credential-card">
               <div class="credential-content">
                 <div class="cert-image-container">
@@ -233,10 +255,12 @@ import { Code2, Palette, Database } from "lucide-vue-next";
                     class="cert-image"
                   />
                 </div>
-                <p class="credential-title">Introduction to Cascading Style Sheets</p>
-                <p class="credential-issuer">TESDA</p>
+                <p class="credential-title">
+                  Introduction to Cascading Style Sheets
+                </p>
+                <p class="credential-issuer">TESDA - ICSS</p>
                 <div class="credential-badge">
-                  <span class="badge-text">Completed</span> 
+                  <span class="badge-text">Self-Paced Completed</span>
                 </div>
               </div>
             </div>
@@ -629,6 +653,105 @@ import { Code2, Palette, Database } from "lucide-vue-next";
   .category-description {
     font-size: 0.9rem;
     padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .intro-content {
+    gap: 1.5rem;
+  }
+
+  .about-image {
+    max-width: 200px;
+  }
+
+  .intro-text {
+    font-size: 0.95rem;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+  }
+
+  .about-highlights {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .highlight-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .highlight-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline {
+    padding-left: 1.25rem;
+  }
+
+  .timeline-marker {
+    left: -1.25rem;
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+    margin-left: 1rem;
+  }
+
+  .timeline-content h4 {
+    font-size: 1rem;
+  }
+
+  .timeline-period {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+  }
+
+  .credential-card {
+    padding: 1.25rem;
+  }
+
+  .credential-title {
+    font-size: 1rem;
+  }
+
+  .credential-issuer {
+    font-size: 0.9rem;
+  }
+
+  .credential-badge {
+    padding: 0.5rem 1rem;
+  }
+
+  .badge-text {
+    font-size: 0.85rem;
+  }
+
+  .category-title {
+    font-size: 1.1rem;
   }
 }
 </style>

@@ -1,6 +1,19 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Monitor, Code2, Smartphone, Database, Cloud, Wrench, Gamepad2, Bot, Briefcase, Network } from "lucide-vue-next";
+import {
+  Monitor,
+  Code2,
+  Smartphone,
+  Database,
+  Cloud,
+  Wrench,
+  Gamepad2,
+  Bot,
+  Briefcase,
+  Network,
+  HardDrive,
+  Laptop,
+} from "lucide-vue-next";
 
 const techStacks = ref({
   frontend: [
@@ -83,12 +96,12 @@ const techStacks = ref({
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
     },
     {
-      name: "MySQL",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      name: "PostgreSQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     },
     {
-      name: "SQLite",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
+      name: "MySQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     },
   ],
   cloud: [
@@ -123,7 +136,7 @@ const techStacks = ref({
       icon: "craiyon_054400_image.png",
     },
     {
-      name: "Git",
+      name: "Git/Github",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     },
     {
@@ -146,10 +159,6 @@ const techStacks = ref({
       name: "XAMPP",
       icon: "xamppicon.jpg",
     },
-    {
-      name: "Oracle VirtualBox",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg",
-    },
   ],
   gamedev: [
     {
@@ -164,11 +173,23 @@ const techStacks = ref({
   networking: [
     {
       name: "Cisco Packet Tracer",
-      icon: "image-removebg-preview (2).png"
+      icon: "image-removebg-preview (2).png",
     },
     {
       name: "Wireshark",
       icon: "wiresharkicon.png",
+    },
+  ],
+  virtualization: [
+    {
+      name: "Oracle VirtualBox",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg",
+    },
+  ],
+  os: [
+    {
+      name: "Windows",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows11/windows11-original.svg",
     },
   ],
   ai: [
@@ -192,10 +213,14 @@ const techStacks = ref({
       name: "DeepSeek",
       icon: "craiyon_061056_image.png",
     },
+    {
+      name: "Tabnine",
+      icon: "tabnineicon.png",
+    },
   ],
   productivity: [
     {
-      name: "Microsoft 365",
+      name: "Microsoft Office 365",
       icon: "microsoft365icon.png",
     },
     {
@@ -206,6 +231,18 @@ const techStacks = ref({
       name: "Adobe",
       icon: "adobeicon.png",
     },
+    {
+      name: "Filmora",
+      icon: "filmorapng.png"
+    },
+    {
+      name: "Google Workspace",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+    },
+    { 
+      name: "Canva",
+      icon: "canvaicon.png",
+    },
   ],
 });
 </script>
@@ -213,8 +250,10 @@ const techStacks = ref({
 <template>
   <section id="tech" class="tech-stack">
     <div class="container">
-      <h2 class="section-title fade-in">Tech Stack</h2>
-      <p class="section-subtitle fade-in">Technologies and tools I have experienced</p>
+      <h2 class="section-title fade-in">Tech Used</h2>
+      <p class="section-subtitle fade-in">
+        Technologies and dev/non-dev tools I have experience/familiarity using in various projects/activities
+      </p>
 
       <div class="tech-grid">
         <div class="tech-category fade-in">
@@ -254,7 +293,7 @@ const techStacks = ref({
         <div class="tech-category fade-in">
           <div class="category-header">
             <Smartphone :size="28" />
-            <h3>Mobile</h3>
+            <h3>Mobile & Standalone</h3>
           </div>
           <div class="tech-items">
             <div
@@ -327,6 +366,40 @@ const techStacks = ref({
           <div class="tech-items">
             <div
               v-for="tech in techStacks.networking"
+              :key="tech.name"
+              class="tech-item"
+            >
+              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
+              <span class="tech-name">{{ tech.name }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-category fade-in">
+          <div class="category-header">
+            <HardDrive :size="28" />
+            <h3>Virtualization</h3>
+          </div>
+          <div class="tech-items">
+            <div
+              v-for="tech in techStacks.virtualization"
+              :key="tech.name"
+              class="tech-item"
+            >
+              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
+              <span class="tech-name">{{ tech.name }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-category fade-in">
+          <div class="category-header">
+            <Laptop :size="28" />
+            <h3>Operating System</h3>
+          </div>
+          <div class="tech-items">
+            <div
+              v-for="tech in techStacks.os"
               :key="tech.name"
               class="tech-item"
             >
@@ -492,6 +565,52 @@ const techStacks = ref({
 
   .tech-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-stack {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .tech-grid {
+    gap: 1.5rem;
+  }
+
+  .tech-category {
+    padding: 1.5rem;
+  }
+
+  .category-header {
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .category-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .tech-items {
+    gap: 0.6rem;
+  }
+
+  .tech-item {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .tech-icon-img {
+    width: 20px;
+    height: 20px;
   }
 }
 </style>

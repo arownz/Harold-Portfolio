@@ -7,7 +7,6 @@ import {
   Github,
   Linkedin,
   Send,
-  Facebook,
 } from "lucide-vue-next";
 import emailjs from "@emailjs/browser";
 
@@ -95,9 +94,7 @@ const handleSubmit = async () => {
   <section id="contact" class="contact">
     <div class="container">
       <h2 class="section-title fade-in">Get In Touch</h2>
-      <p class="section-subtitle fade-in">
-        Contact me for inquiries
-      </p>
+      <p class="section-subtitle fade-in">Contact me for inquiries</p>
 
       <div class="contact-content">
         <div class="contact-info fade-in">
@@ -144,29 +141,6 @@ const handleSubmit = async () => {
               aria-label="GitHub"
             >
               <Github :size="28" />
-            </a>
-            <a
-              href="https://web.facebook.com/haroldfortunpasion/"
-              target="_blank"
-              aria-label="Facebook"
-            >
-              <Facebook :size="28" />
-            </a>
-            <a
-              href="https://x.com/omskrp"
-              target="_blank"
-              aria-label="Twitter/X"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="social-icon"
-              >
-                <path
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                />
-              </svg>
             </a>
             <a
               href="https://stackoverflow.com/users/19126644/arownz"
@@ -474,6 +448,80 @@ const handleSubmit = async () => {
 
   .contact-form {
     padding: 1.5rem;
+  }
+
+  .contact-social {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-social a {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-content {
+    gap: 2rem;
+  }
+
+  .contact-info {
+    gap: 1.5rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .contact-social {
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .contact-social a {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
   }
 }
 </style>

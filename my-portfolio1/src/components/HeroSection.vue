@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import { Github, Linkedin, Mail, ChevronDown, Facebook } from "lucide-vue-next";
+import { Github, Linkedin, Mail, ChevronDown } from "lucide-vue-next";
 import ParticleBackground from "./ParticleBackground.vue";
 
 defineEmits<{
   scrollTo: [section: string];
 }>();
 
-const roles = ["IT Intern", "Aspiring Software Developer"];
+const roles = ["An IT Intern", "Aspiring Software Developer"];
 const currentRole = ref("");
 const roleIndex = ref(0);
 const charIndex = ref(0);
@@ -24,7 +24,7 @@ const typeRole = () => {
     if (charIndex.value < currentRoleText.length) {
       currentRole.value = currentRoleText.substring(0, charIndex.value + 1);
       charIndex.value++;
-      typingInterval = setTimeout(typeRole, 100);
+      typingInterval = setTimeout(typeRole, 50);
     } else {
       // Wait before deleting
       typingInterval = setTimeout(() => {
@@ -37,12 +37,12 @@ const typeRole = () => {
     if (charIndex.value > 0) {
       charIndex.value--;
       currentRole.value = currentRoleText.substring(0, charIndex.value + 1);
-      typingInterval = setTimeout(typeRole, 50);
+      typingInterval = setTimeout(typeRole, 40);
     } else {
       // Move to next role
       isDeleting.value = false;
       roleIndex.value = (roleIndex.value + 1) % roles.length;
-      typingInterval = setTimeout(typeRole, 500);
+      typingInterval = setTimeout(typeRole, 700);
     }
   }
 };
@@ -74,11 +74,7 @@ onUnmounted(() => {
         <h2 class="hero-title">
           <span class="typing-text">{{ currentRole }}</span>
         </h2>
-        <p class="hero-description">
-          IT student passionate about creating functionable, user-friendly
-          softwares. Specialized in building experiences using modern
-          solutions.
-        </p>
+        <p class="hero-description">An IT student who is curious by nature, driven by purpose who thrives on understanding how systems work, how they’re built, and how they can be improved.</p>
 
         <div class="hero-cta">
           <button
@@ -112,25 +108,6 @@ onUnmounted(() => {
             aria-label="GitHub"
           >
             <Github :size="24" />
-          </a>
-          <a
-            href="https://web.facebook.com/haroldfortunpasion/"
-            target="_blank"
-            aria-label="Facebook"
-          >
-            <Facebook :size="24" />
-          </a>
-          <a href="https://x.com/omskrp" target="_blank" aria-label="Twitter/X">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="social-icon"
-            >
-              <path
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-              />
-            </svg>
           </a>
           <a
             href="https://stackoverflow.com/users/19126644/arownz"
@@ -403,6 +380,61 @@ onUnmounted(() => {
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 1rem 2.5rem;
+    min-height: 100vh;
+  }
+
+  .hero-greeting {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-cta {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .social-links {
+    gap: 0.75rem;
+  }
+
+  .social-links a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .scroll-indicator {
+    bottom: 1.5rem;
+  }
+
+  .orb-1,
+  .orb-2,
+  .orb-3 {
+    opacity: 0.2;
   }
 }
 </style>

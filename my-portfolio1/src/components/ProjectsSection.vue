@@ -6,12 +6,13 @@ import { Github, ExternalLink } from "lucide-vue-next";
 const projects = ref([
   {
     id: 1,
-    title: "Lexia - Dyslexia Learning Platform",
+    title: "Lexia - Dyslexia Learning Platform (Capstone)",
     description:
-      "A gamified learning web platform designed specifically for children with dyslexia. Built with accessibility-first game mechanics using Godot Game Engine.",
+      "A gamified learning platform for children with dyslexia, built using accessibility-first mechanics in Godot Engine. (OCR-based whiteboard handwritten processing feature was disabled due to Google Cloud billing cancellation.)",
     image: "projects/lexia.png", // Replace with actual image path
     tags: [
       "Godot",
+      "GDscript",
       "Game Development",
       "Accessibility TTS, STT, OCR",
       "Google Cloud",
@@ -24,32 +25,72 @@ const projects = ref([
     id: 2,
     title: "Super Admin Lexia",
     description:
-      "A super admin management system for the mobile parents and professional playform.",
+      "Help in developing super admin management system for the mobile parents and professional platform.",
     image: "projects/super_admin.png", // Replace with actual image path
-    tags: ["React", "Node.js", "Firebase", "REST API"],
+    tags: ["React + Vite", "Bootstrap", "Javascript", "Firebase", "REST API"],
     github: "https://github.com/arownz/admin_panel",
     demo: "https://gamedevcapz-admin.web.app/login",
     featured: false,
   },
   {
     id: 3,
-    title: "Sales Duo",
-    description:
-      "The application presents a management system appearance suitable for business use, with modern design patterns, responsive layouts, and an intuitive user experience.",
-    image: "/projects/sales_duo.png", // Replace with actual image path
-    tags: ["React JS", "Bootstrap"],
-    github: "https://github.com/arownz/SalesDuo",
-    featured: false,
-  },
-  {
-    id: 4,
     title: "Cashier Point of Sale System",
     description:
-      "A Point of Sale System (POS) for cashier to manage their sales transactions.",
+      "A Standalone Point of Sale System (POS) for cashier to manage their menu sales transactions.",
     image: "/projects/POS_System.png", // Replace with actual image path
     tags: ["Netbeans", "Java GUI"],
     github: "https://github.com/arownz/Cashier-POS-java",
     featured: true,
+  },
+  {
+    id: 4,
+    title: "iBorrow",
+    description:
+      "iBorrow is a mobile library management application. It provides an intuitive interface for both book borrowers and administrators to manage book borrowing efficiently.",
+    image: "/projects/iborrows.png", // Replace with actual image path
+    tags: ["Flutter", "Supabase", "Google Cloud Books", "REST API"],
+    github: "https://github.com/arownz/iborrow",
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "ShopEase",
+    description:
+      "ShopEase is a mobile e-commerce web application. It provides an intuitive interface for both customers and administrators to manage book borrowing efficiently.",
+    image: "/projects/black.png", // Replace with actual image path
+    tags: ["React + Vite", "Bootstrap", "Laravel", "Javascript", "REST API"],
+    github: "https://github.com/arownz/e-commerce",
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Devslog",
+    description:
+      "Devslog is a forum web application for developers to share their knowledge and experiences. They can post some of their day to day development resources and share their knowledge with others.",
+    image: "/projects/logsz.png", // Replace with actual image path
+    tags: ["React + Vite", "Tailwind", "XAMPP", "Javascript", "REST API"],
+    github: "https://github.com/arownz/devslog",
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "ExpenzeWize",
+    description:
+      "Manage your financial expenses with ease. Track your expenses, set budgets, and get insights into your spending habits.",
+    image: "/projects/expenses.png", // Replace with actual image path
+    tags: ["React + Vite", "MySQL Workbench", "Javascript", "REST API"],
+    github: "https://github.com/arownz/Group-1-ETS-Final",
+    featured: false,
+  },
+    {
+    id: 8,
+    title: "Sales Duo",
+    description:
+      "The application presents a management system appearance suitable for business use, with modern design patterns, responsive layouts, and an intuitive user experience.",
+    image: "/projects/sales_duo.png", // Replace with actual image path
+    tags: ["React JS", "Bootstrap", "XAMPP", "REST API"],
+    github: "https://github.com/arownz/SalesDuo",
+    featured: false,
   },
 ]);
 </script>
@@ -58,7 +99,7 @@ const projects = ref([
   <section id="projects" class="projects">
     <div class="container">
       <h2 class="section-title fade-in">Featured Projects</h2>
-      <p class="section-subtitle fade-in">Some of my recent work</p>
+      <p class="section-subtitle fade-in">Some of my recent works</p>
 
       <div class="projects-grid">
         <div
@@ -286,6 +327,56 @@ const projects = ref([
 
   .project-card.featured {
     grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .projects-grid {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-content {
+    padding: 1.25rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-content p {
+    font-size: 0.95rem;
+  }
+
+  .project-tags {
+    gap: 0.4rem;
+  }
+
+  .tag {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .project-link {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
   }
 }
 </style>

@@ -22,7 +22,7 @@ const scrollToSection = (section: string) => {
 
 const downloadResume = () => {
   const link = document.createElement("a");
-  link.href = "/Harold_Resumes.pdf";
+  link.href = "/Harold_Pasion_Resume_compressed (1).pdf";
   link.download = "Harold_Pasion_Resume.pdf";
   link.click();
 };
@@ -372,6 +372,33 @@ const downloadResume = () => {
 
   .mobile-menu {
     display: block;
+  }
+
+  .nav-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-logo {
+    font-size: 1.25rem;
+  }
+
+  .theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobile-menu ul {
+    padding: 0 1rem;
+  }
+
+  .mobile-menu a {
+    font-size: 1rem;
   }
 }
 </style>
