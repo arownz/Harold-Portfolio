@@ -12,7 +12,6 @@ const currentRole = ref("");
 const roleIndex = ref(0);
 const charIndex = ref(0);
 const isDeleting = ref(false);
-const parallaxY = ref(0);
 let typingInterval: number;
 
 const typeRole = () => {
@@ -48,20 +47,14 @@ const typeRole = () => {
   }
 };
 
-const handleScroll = () => {
-  parallaxY.value = window.scrollY * 0.5;
-};
-
 onMounted(() => {
   typeRole();
-  window.addEventListener('scroll', handleScroll);
 });
 
 onUnmounted(() => {
   if (typingInterval) {
     clearTimeout(typingInterval);
   }
-  window.removeEventListener('scroll', handleScroll);
 });
 </script>
 
@@ -74,7 +67,7 @@ onUnmounted(() => {
       <div class="gradient-orb orb-3"></div>
     </div>
 
-    <div class="hero-content" :style="{ transform: `translateY(${parallaxY}px)` }">
+    <div class="hero-content">
       <div class="hero-text fade-in">
         <p class="hero-greeting scale-in">Hi, I'm</p>
         <h1 class="hero-name fade-in-left">Harold F. Pasion</h1>

@@ -175,11 +175,6 @@ if (typeof window !== "undefined") {
               me the importance of user case accessibility-first principles for
               those with special needs.
             </p>
-
-            <p>
-              Great software isn’t just functional — it’s empathetic, adaptable,
-              and built with purpose.
-            </p>
           </div>
         </div>
       </div>
@@ -282,7 +277,7 @@ if (typeof window !== "undefined") {
       <div class="certifications-section fade-in">
         <h3 class="timeline-title">Certifications & Credentials</h3>
         <p class="cert-subtitle">
-          Professional certifications demonstrating technical expertise
+          Certifications demonstrating technical expertises
         </p>
 
         <!-- Certiport Category -->
@@ -373,7 +368,6 @@ if (typeof window !== "undefined") {
                     <h4 class="cert-title">{{ cert.title }}</h4>
                     <p class="cert-issuer">{{ cert.issuer }}</p>
                     <div class="cert-badge">
-
                       <span>{{ cert.badge }}</span>
                     </div>
                   </div>
@@ -680,20 +674,20 @@ if (typeof window !== "undefined") {
 }
 
 .category-badge.certiport {
-  border-color: #f59e0b;
+  border-color: #0084A0;
   background: linear-gradient(
     135deg,
-    rgba(245, 158, 11, 0.1),
-    rgba(251, 191, 36, 0.1)
+    rgba(0, 132, 160, 0.1),
+    rgba(0, 132, 160, 0.15)
   );
 }
 
 .category-badge.tesda {
-  border-color: #10b981;
+  border-color: #0000FF;
   background: linear-gradient(
     135deg,
-    rgba(16, 185, 129, 0.1),
-    rgba(52, 211, 153, 0.1)
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 0, 255, 0.15)
   );
 }
 
@@ -719,8 +713,17 @@ if (typeof window !== "undefined") {
 }
 
 .cert-card.featured {
-  border: 3px solid #f59e0b;
-  box-shadow: 0 20px 60px -10px rgba(245, 158, 11, 0.3);
+  border: 3px solid #0084A0;
+  box-shadow: 0 20px 60px -10px rgba(0, 132, 160, 0.3);
+}
+
+.tesda-section .cert-card {
+  border: 2px solid #0000FF;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 255, 0.2);
+}
+
+.tesda-section .cert-card:hover {
+  box-shadow: 0 30px 70px -10px rgba(0, 0, 255, 0.3);
 }
 
 .cert-card:hover {
@@ -800,9 +803,15 @@ if (typeof window !== "undefined") {
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
-.cert-badge.gold {
-  background: linear-gradient(135deg, #f59e0b, #fbbf24);
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+.cert-badge.primary {
+  background: linear-gradient(135deg, #0084A0, #00a5cc);
+  box-shadow: 0 4px 12px rgba(0, 0, 255, 0.4);
+}
+
+/* TESDA badges (700 Passing Points) */
+.tesda-section .cert-badge {
+  background: linear-gradient(135deg, #0000FF, #4169E1);
+  box-shadow: 0 4px 12px rgba(0, 0, 255, 0.4);
 }
 
 .badge-star,
@@ -867,7 +876,7 @@ if (typeof window !== "undefined") {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #10b981, #34d399);
+  background: linear-gradient(135deg, #0000FF, #4169E1);
   color: white;
   display: flex;
   align-items: center;
@@ -875,7 +884,7 @@ if (typeof window !== "undefined") {
   font-weight: 700;
   font-size: 0.95rem;
   z-index: 2;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 255, 0.4);
 }
 
 .carousel-btn {

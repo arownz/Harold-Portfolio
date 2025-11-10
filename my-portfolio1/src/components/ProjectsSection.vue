@@ -40,7 +40,7 @@ const projects = ref([
     image: "/projects/POS_System.png", // Replace with actual image path
     tags: ["Netbeans", "Java GUI"],
     github: "https://github.com/arownz/Cashier-POS-java",
-    featured: true,
+    featured: false,
   },
   {
     id: 4,
@@ -99,7 +99,7 @@ const projects = ref([
   <section id="projects" class="projects">
     <div class="container">
       <h2 class="section-title fade-in">Featured Projects</h2>
-      <p class="section-subtitle fade-in">Some self-initiated projects and group projects.</p>
+      <p class="section-subtitle fade-in">Some self-initiated and group projects</p>
 
       <div class="projects-grid">
         <div
@@ -247,13 +247,13 @@ const projects = ref([
   align-items: center;
   gap: 0.375rem;
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: white;
   border-radius: 2rem;
   font-size: 0.875rem;
   font-weight: 700;
   z-index: 10;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
   animation: pulse 2s ease-in-out infinite;
 }
 
@@ -261,11 +261,11 @@ const projects = ref([
   0%,
   100% {
     transform: scale(1);
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
   }
   50% {
     transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.6);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.6);
   }
 }
 

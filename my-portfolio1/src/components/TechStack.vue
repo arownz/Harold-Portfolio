@@ -88,20 +88,20 @@ const techStacks = ref({
   ],
   database: [
     {
-      name: "Firebase",
+      name: "Firebase / NoSQL",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
     },
     {
-      name: "Supabase",
+      name: "Supabase / PostgreSQL",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
     },
     {
-      name: "PostgreSQL",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+      name: "MySQL Workbench / MySQL",
+      icon: "OSAAS.jpg",
     },
-    {
-      name: "MySQL",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        {
+      name: "XAMPP / MariaDB",
+      icon: "xamppicon.jpg",
     },
   ],
   cloud: [
@@ -150,14 +150,6 @@ const techStacks = ref({
     {
       name: "Figma",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-    },
-    {
-      name: "MySQL Workbench",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    },
-    {
-      name: "XAMPP",
-      icon: "xamppicon.jpg",
     },
   ],
   gamedev: [
@@ -213,10 +205,6 @@ const techStacks = ref({
       name: "DeepSeek",
       icon: "craiyon_061056_image.png",
     },
-    {
-      name: "Tabnine",
-      icon: "tabnineicon.png",
-    },
   ],
   productivity: [
     {
@@ -250,9 +238,9 @@ const techStacks = ref({
 <template>
   <section id="tech" class="tech-stack">
     <div class="container">
-      <h2 class="section-title fade-in">Tech Used</h2>
+      <h2 class="section-title fade-in">Tech Stack</h2>
       <p class="section-subtitle fade-in">
-        Technologies and dev/non-dev tools I have experience/familiarity using in various projects/activities
+        Technologies and dev/non-dev tools I have experience/familiarity using in various projects
       </p>
 
       <div class="tech-grid">
