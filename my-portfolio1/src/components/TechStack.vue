@@ -99,7 +99,7 @@ const techStacks = ref({
       name: "MySQL Workbench / MySQL",
       icon: "OSAAS.jpg",
     },
-        {
+    {
       name: "XAMPP / MariaDB",
       icon: "xamppicon.jpg",
     },
@@ -112,6 +112,10 @@ const techStacks = ref({
     {
       name: "AWS",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    },
+    {
+      name: "Hugging Face",
+      icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
     },
   ],
   devtools: [
@@ -136,8 +140,12 @@ const techStacks = ref({
       icon: "craiyon_054400_image.png",
     },
     {
-      name: "Git/Github",
+      name: "Github",
       icon: "githubz.svg",
+    },
+    {
+      name: "Git",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     },
     {
       name: "Github Desktop",
@@ -180,7 +188,7 @@ const techStacks = ref({
   ],
   os: [
     {
-      name: "Windows",
+      name: "Windows Server 2022; Windows 7–11",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows11/windows11-original.svg",
     },
   ],
@@ -221,13 +229,13 @@ const techStacks = ref({
     },
     {
       name: "Filmora",
-      icon: "filmorapng.png"
+      icon: "filmorapng.png",
     },
     {
       name: "Google Workspace",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
     },
-    { 
+    {
       name: "Canva",
       icon: "canvaicon.png",
     },
@@ -240,7 +248,8 @@ const techStacks = ref({
     <div class="container">
       <h2 class="section-title fade-in">Tech Stack</h2>
       <p class="section-subtitle fade-in">
-        Technologies and dev/non-dev tools I have experience/familiarity using in various projects
+        Technologies and dev/non-dev tools I have experience/familiarity using
+        in various projects
       </p>
 
       <div class="tech-grid">
@@ -495,7 +504,7 @@ const techStacks = ref({
 }
 
 .tech-category::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -556,7 +565,7 @@ const techStacks = ref({
 }
 
 .tech-item::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, var(--primary), var(--secondary));

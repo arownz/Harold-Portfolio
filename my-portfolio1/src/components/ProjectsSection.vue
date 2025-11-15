@@ -92,6 +92,22 @@ const projects = ref([
     github: "https://github.com/arownz/SalesDuo",
     featured: false,
   },
+  {
+    id: 9,
+    title: "Resumay Tailor Swift",
+    description:
+      "An AI-powered resume builder web application that helps users modify their resumes quickly and easily using customizable templates and real-time suggestions.",
+    image: "/projects/tailorz.png",
+    tags: [
+      "AI",
+      "Resume PDF Tailor",
+      "React Javascript",
+      "Tailwind CSS",
+      "Hugging Face",
+    ],
+    github: "https://github.com/arownz/resume_tailor_ai",
+    featured: false,
+  },
 ]);
 </script>
 
@@ -99,7 +115,9 @@ const projects = ref([
   <section id="projects" class="projects">
     <div class="container">
       <h2 class="section-title fade-in">Featured Projects</h2>
-      <p class="section-subtitle fade-in">Some self-initiated and group projects</p>
+      <p class="section-subtitle fade-in">
+        Some self-initiated and group projects
+      </p>
 
       <div class="projects-grid">
         <div
@@ -319,15 +337,19 @@ const projects = ref([
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 5;
 }
 
 .project-card:hover .project-overlay {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .project-links {
   display: flex;
   gap: 1rem;
+  z-index: 10;
 }
 
 .project-link {
@@ -345,6 +367,9 @@ const projects = ref([
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 15;
 }
 
 .project-link::before {

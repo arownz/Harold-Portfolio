@@ -22,8 +22,8 @@ const scrollToSection = (section: string) => {
 
 const downloadResume = () => {
   const link = document.createElement("a");
-  link.href = "/Harold_Resume.pdf";
-  link.download = "Harold_Pasion_Resume.pdf";
+  link.href = "/Harold_Resume_compressed.pdf";
+  link.download = "Harold_Resume.pdf";
   link.click();
 };
 </script>
