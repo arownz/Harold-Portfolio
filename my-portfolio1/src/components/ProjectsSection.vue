@@ -32,68 +32,8 @@ const projects = ref([
     demo: "https://gamedevcapz-admin.web.app/login",
     featured: true,
   },
-  {
+   {
     id: 3,
-    title: "Cashier Point of Sale System",
-    description:
-      "A Standalone Point of Sale System (POS) for cashier to manage their menu sales transactions.",
-    image: "/projects/POS_System.png", // Replace with actual image path
-    tags: ["Netbeans", "Java GUI"],
-    github: "https://github.com/arownz/Cashier-POS-java",
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "iBorrow",
-    description:
-      "iBorrow is a mobile library management application. It provides an intuitive interface for both book borrowers and administrators to manage book borrowing efficiently.",
-    image: "/projects/iborrows.png", // Replace with actual image path
-    tags: ["Flutter", "Supabase", "Google Cloud Books", "REST API"],
-    github: "https://github.com/arownz/iborrow",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "ShopEase",
-    description:
-      "ShopEase is a mobile e-commerce web application. It provides an intuitive interface for both customers and administrators to manage book borrowing efficiently.",
-    image: "/projects/black.png", // Replace with actual image path
-    tags: ["React + Vite", "Bootstrap", "Laravel", "Javascript", "REST API"],
-    github: "https://github.com/arownz/e-commerce",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Devslog",
-    description:
-      "Devslog is a forum web application for developers to share their knowledge and experiences. They can post some of their day to day development resources and share their knowledge with others.",
-    image: "/projects/logsz.png", // Replace with actual image path
-    tags: ["React + Vite", "Tailwind", "XAMPP", "Javascript", "REST API"],
-    github: "https://github.com/arownz/devslog",
-    featured: false,
-  },
-  {
-    id: 7,
-    title: "ExpenzeWize",
-    description:
-      "Manage your financial expenses with ease. Track your expenses, set budgets, and get insights into your spending habits.",
-    image: "/projects/expenses.png", // Replace with actual image path
-    tags: ["React + Vite", "MySQL Workbench", "Javascript", "REST API"],
-    github: "https://github.com/arownz/Group-1-ETS-Final",
-    featured: false,
-  },
-  {
-    id: 8,
-    title: "Sales Duo",
-    description:
-      "The application presents a management system appearance suitable for business use, with modern design patterns, responsive layouts, and an intuitive user experience.",
-    image: "/projects/sales_duo.png", // Replace with actual image path
-    tags: ["React JS", "Bootstrap", "XAMPP", "REST API"],
-    github: "https://github.com/arownz/SalesDuo",
-    featured: false,
-  },
-  {
-    id: 9,
     title: "Resumay Tailor Swift",
     description:
       "An AI-powered resume builder web application that helps users modify their resumes quickly and easily using customizable templates and real-time suggestions.",
@@ -106,7 +46,77 @@ const projects = ref([
       "Hugging Face",
     ],
     github: "https://github.com/arownz/resume_tailor_ai",
+    featured: true,
+    demo: "https://huggingface.co/spaces/arownz/resumetailor",
+  },
+  {
+    id: 4,
+    title: "Cashier Point of Sale System",
+    description:
+      "A Standalone Point of Sale System (POS) for cashier to manage their menu sales transactions.",
+    image: "/projects/POS_System.png", // Replace with actual image path
+    tags: ["Netbeans", "Java GUI"],
+    github: "https://github.com/arownz/Cashier-POS-java",
     featured: false,
+  },
+  {
+    id: 5,
+    title: "iBorrow",
+    description:
+      "iBorrow is a mobile library management application. It provides an intuitive interface for both book borrowers and administrators to manage book borrowing efficiently.",
+    image: "/projects/iborrows.png", // Replace with actual image path
+    tags: ["Flutter", "Supabase", "Google Cloud Books", "REST API"],
+    github: "https://github.com/arownz/iborrow",
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "ShopEase",
+    description:
+      "ShopEase is a mobile e-commerce web application. It provides an intuitive interface for both customers and administrators to manage book borrowing efficiently.",
+    image: "/projects/black.png", // Replace with actual image path
+    tags: ["React + Vite", "Bootstrap", "Laravel", "Javascript", "REST API"],
+    github: "https://github.com/arownz/e-commerce",
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "Devslog",
+    description:
+      "Devslog is a forum web application for developers to share their knowledge and experiences. They can post some of their day to day development resources and share their knowledge with others.",
+    image: "/projects/logsz.png", // Replace with actual image path
+    tags: ["React + Vite", "Tailwind", "XAMPP", "Javascript", "REST API"],
+    github: "https://github.com/arownz/devslog",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "ExpenzeWize",
+    description:
+      "Manage your financial expenses with ease. Track your expenses, set budgets, and get insights into your spending habits.",
+    image: "/projects/expenses.png", // Replace with actual image path
+    tags: ["React + Vite", "MySQL Workbench", "Javascript", "REST API"],
+    github: "https://github.com/arownz/Group-1-ETS-Final",
+    featured: false,
+  },
+  {
+    id: 9,
+    title: "Sales Duo",
+    description:
+      "The application presents a management system appearance suitable for business use, with modern design patterns, responsive layouts, and an intuitive user experience.",
+    image: "/projects/sales_duo.png", // Replace with actual image path
+    tags: ["React JS", "Bootstrap", "XAMPP", "REST API"],
+    github: "https://github.com/arownz/SalesDuo",
+    featured: false,
+  },
+  {
+    id: 10,
+    title: "AI Software Dev Roadmap",
+    description: "A comprehensive guide to becoming an AI-powered software developer. Master the skills that will define the future of development. (Lovable)",
+    image: "/projects/ai_roadmap.png", // Replace with actual image path
+    tags: ["AI", "Roadmap", "Software Development", "Future Skills"],
+    github: "https://github.com/arownz/aisoftwaredevroad",
+    demo: "https://aisoftwaredevroad.lovable.app",
   },
 ]);
 </script>

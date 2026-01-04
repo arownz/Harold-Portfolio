@@ -147,7 +147,7 @@ if (typeof window !== "undefined") {
         <div class="intro-content">
           <div class="about-image">
             <img
-              src="/harold_profile.png"
+              src="/meself2.jpg"
               alt="Harold F. Pasion"
               class="profile-img"
             />
