@@ -114,8 +114,8 @@ const techStacks = ref({
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
     },
     {
-      name: "Hugging Face",
-      icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+      name: "Docker",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     },
   ],
   devtools: [
@@ -159,6 +159,10 @@ const techStacks = ref({
       name: "Figma",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
     },
+    {
+      name: "n8n",
+      icon: "N8N.png",
+    }
   ],
   gamedev: [
     {
@@ -169,6 +173,10 @@ const techStacks = ref({
       name: "Godot",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg",
     },
+    {
+      name: "Roblox Studio",
+      icon: "Roblox-Studio-Logo-Vector.svg-.png"
+    }
   ],
   networking: [
     {
@@ -213,6 +221,10 @@ const techStacks = ref({
       name: "DeepSeek",
       icon: "craiyon_061056_image.png",
     },
+    {
+      name: "Hugging Face",
+      icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+    },
   ],
   productivity: [
     {
@@ -232,6 +244,14 @@ const techStacks = ref({
       icon: "filmorapng.png",
     },
     {
+      name: "Capcut",
+      icon: "Capcut-Logo-PNG-Photos.png",
+    },
+    {
+      name: "Trello",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
+    },
+    {
       name: "Google Workspace",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
     },
@@ -248,8 +268,7 @@ const techStacks = ref({
     <div class="container">
       <h2 class="section-title fade-in">Tech Stack</h2>
       <p class="section-subtitle fade-in">
-        Technologies and dev/non-dev tools I have experience/familiarity using
-        in various projects
+        Technologies and tools (development and non-development) I’ve applied across various projects
       </p>
 
       <div class="tech-grid">
@@ -426,7 +445,7 @@ const techStacks = ref({
         <div class="tech-category fade-in">
           <div class="category-header">
             <Bot :size="28" />
-            <h3>AI Tools</h3>
+            <h3>AI/ML</h3>
           </div>
           <div class="tech-items">
             <div

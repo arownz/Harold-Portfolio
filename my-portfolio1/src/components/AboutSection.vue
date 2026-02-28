@@ -212,6 +212,17 @@ if (typeof window !== "undefined") {
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
+              <a
+                href="https://www.linkedin.com/school/university-of-perpetual-help-system-dalta/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="company-logo"
+              >
+                <img
+                  src="/OIP (1).webp"
+                  alt="University of Perpetual Help System Dalta"
+                />
+              </a>
               <div class="timeline-period">2020 - 2022</div>
               <h4>
                 Senior High School – Information and Communication Technology
@@ -229,6 +240,14 @@ if (typeof window !== "undefined") {
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
+              <a
+                href="https://www.linkedin.com/company/nationaluph/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="company-logo"
+              >
+                <img src="/OIP (2).webp" alt="National University" />
+              </a>
               <div class="timeline-period">2022 - 2026</div>
               <h4>Bachelor of Science in Information Technology</h4>
               <p class="timeline-location">National University – Dasmariñas</p>
@@ -249,6 +268,14 @@ if (typeof window !== "undefined") {
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
+              <a
+                href="https://www.linkedin.com/company/msq-business-services-inc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="company-logo"
+              >
+                <img src="/msq_logo.jpg" alt="MSQ Business Services, Inc." />
+              </a>
               <div class="timeline-period">August 2024 - February 2025</div>
               <h4>Office / Student Assistant</h4>
               <p class="timeline-location">MSQ Business Services, Inc.</p>
@@ -266,6 +293,45 @@ if (typeof window !== "undefined") {
                 <li>
                   Supported compliance workflows and documentation standards,
                   contributing to smoother audit preparation.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <a
+                href="https://www.linkedin.com/company/endsofttech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="company-logo"
+              >
+                <img
+                  src="/endsofttech_logo.jpg"
+                  alt="Endsofttech Web Solutions"
+                />
+              </a>
+              <div class="timeline-period">November 2025 - February, 2026</div>
+              <h4>Web Development Intern</h4>
+              <p class="timeline-location">
+                Endsofttech Web Solutions · Las Piñas, National Capital Region,
+                Philippines
+              </p>
+              <ul class="timeline-description">
+                <li>
+                  Contributing to enhancements for client-facing software,
+                  including veterinary management systems, focused on improving
+                  usability, accessibility, and performance.
+                </li>
+                <li>
+                  Collaborating with the development team to deliver optimized
+                  solutions while learning the foundation of collaboration and
+                  object-oriented programming principles.
+                </li>
+                <li>
+                  Handling projects such as the Vet Assist App, involving
+                  debugging production web applications, web app designing,
+                  quality assurance, and testing.
                 </li>
               </ul>
             </div>
@@ -565,6 +631,39 @@ if (typeof window !== "undefined") {
   box-shadow: 0 8px 24px -8px var(--shadow-lg);
 }
 
+.company-logo {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.company-logo:hover {
+  transform: scale(1.05);
+  border-color: var(--primary);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .timeline-period {
   display: inline-block;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -674,7 +773,7 @@ if (typeof window !== "undefined") {
 }
 
 .category-badge.certiport {
-  border-color: #0084A0;
+  border-color: #0084a0;
   background: linear-gradient(
     135deg,
     rgba(0, 132, 160, 0.1),
@@ -683,7 +782,7 @@ if (typeof window !== "undefined") {
 }
 
 .category-badge.tesda {
-  border-color: #0000FF;
+  border-color: #0000ff;
   background: linear-gradient(
     135deg,
     rgba(0, 0, 255, 0.1),
@@ -713,12 +812,12 @@ if (typeof window !== "undefined") {
 }
 
 .cert-card.featured {
-  border: 3px solid #0084A0;
+  border: 3px solid #0084a0;
   box-shadow: 0 20px 60px -10px rgba(0, 132, 160, 0.3);
 }
 
 .tesda-section .cert-card {
-  border: 2px solid #0000FF;
+  border: 2px solid #0000ff;
   box-shadow: 0 10px 30px -5px rgba(0, 0, 255, 0.2);
 }
 
@@ -804,13 +903,13 @@ if (typeof window !== "undefined") {
 }
 
 .cert-badge.primary {
-  background: linear-gradient(135deg, #0084A0, #00a5cc);
+  background: linear-gradient(135deg, #0084a0, #00a5cc);
   box-shadow: 0 4px 12px rgba(0, 0, 255, 0.4);
 }
 
 /* TESDA badges (700 Passing Points) */
 .tesda-section .cert-badge {
-  background: linear-gradient(135deg, #0000FF, #4169E1);
+  background: linear-gradient(135deg, #0000ff, #4169e1);
   box-shadow: 0 4px 12px rgba(0, 0, 255, 0.4);
 }
 
@@ -876,7 +975,7 @@ if (typeof window !== "undefined") {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #0000FF, #4169E1);
+  background: linear-gradient(135deg, #0000ff, #4169e1);
   color: white;
   display: flex;
   align-items: center;

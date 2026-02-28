@@ -6,6 +6,22 @@ import { Github, ExternalLink } from "lucide-vue-next";
 const projects = ref([
   {
     id: 1,
+    title: "Vet Assist App - Veterinary Management System",
+    description:
+      "A comprehensive veterinary management system for client-facing operations. Contributed to production web app enhancements, debugging, web app designing, and quality assurance to improve usability and performance.",
+    image: "projects/vetassist.png", // Replace with actual image path
+    tags: [
+      "Web Development",
+      "Production Debugging",
+      "QA Testing",
+      "UI/UX Design",
+      "Veterinary Software",
+    ],
+    featured: true,
+    demo: "https://demo.vetassist.app/",
+  },
+  {
+    id: 2,
     title: "Lexia - Dyslexia Learning Platform (Capstone)",
     description:
       "A gamified learning platform for children with dyslexia, built using accessibility-first mechanics in Godot Engine. (OCR-based whiteboard handwritten processing feature was disabled due to Google Cloud billing cancellation.)",
@@ -22,10 +38,10 @@ const projects = ref([
     featured: true,
   },
   {
-    id: 2,
-    title: "Super Admin Lexia",
+    id: 3,
+    title: "Super Admin Lexia (Capstone)",
     description:
-      "Help in developing super admin management system for the mobile parents and professional platform.",
+      "A super admin management system for a mobile platform serving parents and professionals. Assisted as a web developer and QA in production enhancements, debugging, design, and testing to strengthen centralized control and usability.",
     image: "projects/super_admin.png", // Replace with actual image path
     tags: ["React + Vite", "Bootstrap", "Javascript", "Firebase", "REST API"],
     github: "https://github.com/arownz/admin_panel",
@@ -33,7 +49,7 @@ const projects = ref([
     featured: true,
   },
    {
-    id: 3,
+    id: 4,
     title: "Resumay Tailor Swift",
     description:
       "An AI-powered resume builder web application that helps users modify their resumes quickly and easily using customizable templates and real-time suggestions.",
@@ -50,7 +66,7 @@ const projects = ref([
     demo: "https://huggingface.co/spaces/arownz/resumetailor",
   },
   {
-    id: 4,
+    id: 5,
     title: "Cashier Point of Sale System",
     description:
       "A Standalone Point of Sale System (POS) for cashier to manage their menu sales transactions.",
@@ -60,7 +76,7 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 5,
+    id: 6,
     title: "iBorrow",
     description:
       "iBorrow is a mobile library management application. It provides an intuitive interface for both book borrowers and administrators to manage book borrowing efficiently.",
@@ -70,7 +86,7 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 6,
+    id: 7,
     title: "ShopEase",
     description:
       "ShopEase is a mobile e-commerce web application. It provides an intuitive interface for both customers and administrators to manage book borrowing efficiently.",
@@ -80,7 +96,7 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 7,
+    id: 8,
     title: "Devslog",
     description:
       "Devslog is a forum web application for developers to share their knowledge and experiences. They can post some of their day to day development resources and share their knowledge with others.",
@@ -90,7 +106,7 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 8,
+    id: 9,
     title: "ExpenzeWize",
     description:
       "Manage your financial expenses with ease. Track your expenses, set budgets, and get insights into your spending habits.",
@@ -100,7 +116,7 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 9,
+    id: 10,
     title: "Sales Duo",
     description:
       "The application presents a management system appearance suitable for business use, with modern design patterns, responsive layouts, and an intuitive user experience.",
@@ -110,7 +126,7 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 10,
+    id: 11,
     title: "AI Software Dev Roadmap",
     description: "A comprehensive guide to becoming an AI-powered software developer. Master the skills that will define the future of development. (Lovable)",
     image: "/projects/ai_roadmap.png", // Replace with actual image path
@@ -126,7 +142,7 @@ const projects = ref([
     <div class="container">
       <h2 class="section-title fade-in">Featured Projects</h2>
       <p class="section-subtitle fade-in">
-        Some self-initiated and group projects
+        Projects that showcase my experiences with solo, group, and collaborative development.
       </p>
 
       <div class="projects-grid">
