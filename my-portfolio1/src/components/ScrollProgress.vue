@@ -23,28 +23,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="scroll-progress-container">
+  <div class="fixed top-0 left-0 right-0 h-[3px] bg-s2 z-9999">
     <div
-      class="scroll-progress-bar"
+      class="h-full bg-linear-to-r from-brand to-brand-2 transition-[width] duration-100 ease-linear"
       :style="{ width: `${scrollProgress}%` }"
-    ></div>
+    />
   </div>
 </template>
-
-<style scoped>
-.scroll-progress-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--bg-light);
-  z-index: 9999;
-}
-
-.scroll-progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  transition: width 0.1s ease;
-}
-</style>

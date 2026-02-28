@@ -264,416 +264,56 @@ const techStacks = ref({
 </script>
 
 <template>
-  <section id="tech" class="tech-stack">
-    <div class="container">
-      <h2 class="section-title fade-in">Tech Stack</h2>
-      <p class="section-subtitle fade-in">
-        Technologies and tools (development and non-development) I’ve applied across various projects
+  <section id="tech" class="py-24 px-8 bg-s0 max-md:py-16 max-md:px-6 max-sm:py-12 max-sm:px-4">
+    <div class="site-container">
+      <h2 class="section-heading fade-in">Tech Stack</h2>
+      <p class="section-sub fade-in">
+        Technologies and tools (development and non-development) I've applied across various projects
       </p>
 
-      <div class="tech-grid">
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <Monitor :size="28" />
-            <h3>Frontend</h3>
+      <!-- auto-fill minmax: 2 cols on tablet+, 3 on medium, 4 on large automatically -->
+      <div class="grid grid-cols-[repeat(auto-fill,minmax(290px,1fr))] gap-6 md:gap-8">
+
+        <div v-for="({ icon: catIcon, label, key }) in [
+          { icon: Monitor, label: 'Frontend', key: 'frontend' },
+          { icon: Code2, label: 'Backend', key: 'backend' },
+          { icon: Smartphone, label: 'Mobile & Standalone', key: 'mobile' },
+          { icon: Database, label: 'Database', key: 'database' },
+          { icon: Cloud, label: 'Cloud & DevOps', key: 'cloud' },
+          { icon: Wrench, label: 'Dev Tools', key: 'devtools' },
+          { icon: Network, label: 'Networking', key: 'networking' },
+          { icon: HardDrive, label: 'Virtualization', key: 'virtualization' },
+          { icon: Laptop, label: 'Operating System', key: 'os' },
+          { icon: Gamepad2, label: 'Game Development', key: 'gamedev' },
+          { icon: Bot, label: 'AI/ML', key: 'ai' },
+          { icon: Briefcase, label: 'Productivity', key: 'productivity' },
+        ]" :key="key"
+          class="tech-category fade-in bg-s1 border-2 border-edge rounded-[1.25rem] p-6 md:p-8
+                 transition-all duration-400 ease-in-out
+                 hover:-translate-y-2 hover:scale-[1.02] hover:border-brand hover:shadow-[0_20px_40px_-10px_var(--shadow-lg)]"
+        >
+          <div class="flex items-center gap-3 mb-6 text-brand">
+            <component :is="catIcon" :size="28" />
+            <h3 class="text-[1.3rem] text-ink font-semibold">{{ label }}</h3>
           </div>
-          <div class="tech-items">
+          <div class="flex flex-wrap gap-3">
             <div
-              v-for="tech in techStacks.frontend"
+              v-for="tech in (techStacks as any)[key]"
               :key="tech.name"
-              class="tech-item"
+              class="tech-item flex items-center gap-2 bg-s0 px-3 py-1.5 text-[0.85rem]
+                     md:px-[1.1rem] md:py-[0.6rem] md:text-[0.95rem]
+                     rounded-[0.625rem] text-ink-2 font-medium
+                     transition-all duration-300 border border-transparent cursor-default
+                     hover:bg-s2 hover:border-brand hover:-translate-y-0.5 hover:scale-105 hover:text-ink
+                     hover:shadow-[0_4px_12px_rgba(99,102,241,0.2)]"
             >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
+              <img :src="tech.icon" :alt="tech.name" class="w-5 h-5 object-contain md:w-6 md:h-6" />
+              <span>{{ tech.name }}</span>
             </div>
           </div>
         </div>
 
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <Code2 :size="28" />
-            <h3>Backend</h3>
-          </div>
-          <div class="tech-items">
-            <div
-              v-for="tech in techStacks.backend"
-              :key="tech.name"
-              class="tech-item"
-            >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <Smartphone :size="28" />
-            <h3>Mobile & Standalone</h3>
-          </div>
-          <div class="tech-items">
-            <div
-              v-for="tech in techStacks.mobile"
-              :key="tech.name"
-              class="tech-item"
-            >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <Database :size="28" />
-            <h3>Database</h3>
-          </div>
-          <div class="tech-items">
-            <div
-              v-for="tech in techStacks.database"
-              :key="tech.name"
-              class="tech-item"
-            >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <Cloud :size="28" />
-            <h3>Cloud & DevOps</h3>
-          </div>
-          <div class="tech-items">
-            <div
-              v-for="tech in techStacks.cloud"
-              :key="tech.name"
-              class="tech-item"
-            >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <Wrench :size="28" />
-            <h3>Dev Tools</h3>
-          </div>
-          <div class="tech-items">
-            <div
-              v-for="tech in techStacks.devtools"
-              :key="tech.name"
-              class="tech-item"
-            >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <Network :size="28" />
-            <h3>Networking</h3>
-          </div>
-          <div class="tech-items">
-            <div
-              v-for="tech in techStacks.networking"
-              :key="tech.name"
-              class="tech-item"
-            >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <HardDrive :size="28" />
-            <h3>Virtualization</h3>
-          </div>
-          <div class="tech-items">
-            <div
-              v-for="tech in techStacks.virtualization"
-              :key="tech.name"
-              class="tech-item"
-            >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <Laptop :size="28" />
-            <h3>Operating System</h3>
-          </div>
-          <div class="tech-items">
-            <div
-              v-for="tech in techStacks.os"
-              :key="tech.name"
-              class="tech-item"
-            >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <Gamepad2 :size="28" />
-            <h3>Game Development</h3>
-          </div>
-          <div class="tech-items">
-            <div
-              v-for="tech in techStacks.gamedev"
-              :key="tech.name"
-              class="tech-item"
-            >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <Bot :size="28" />
-            <h3>AI/ML</h3>
-          </div>
-          <div class="tech-items">
-            <div
-              v-for="tech in techStacks.ai"
-              :key="tech.name"
-              class="tech-item"
-            >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-category fade-in">
-          <div class="category-header">
-            <Briefcase :size="28" />
-            <h3>Productivity</h3>
-          </div>
-          <div class="tech-items">
-            <div
-              v-for="tech in techStacks.productivity"
-              :key="tech.name"
-              class="tech-item"
-            >
-              <img :src="tech.icon" :alt="tech.name" class="tech-icon-img" />
-              <span class="tech-name">{{ tech.name }}</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 </template>
-
-<style scoped>
-.tech-stack {
-  padding: 6rem 2rem;
-  background: var(--bg-darker);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  text-align: center;
-  margin-bottom: 1rem;
-  color: var(--primary);
-  font-weight: 700;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  margin-bottom: 4rem;
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.tech-category {
-  background: var(--bg-dark);
-  border: 2px solid var(--border);
-  border-radius: 1.25rem;
-  padding: 2rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.tech-category::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(99, 102, 241, 0.1),
-    transparent
-  );
-  transition: left 0.6s ease;
-}
-
-.tech-category:hover::before {
-  left: 100%;
-}
-
-.tech-category:hover {
-  transform: translateY(-8px) scale(1.02);
-  border-color: var(--primary);
-  box-shadow: 0 20px 40px -10px var(--shadow-lg);
-}
-
-.category-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary);
-}
-
-.category-header h3 {
-  font-size: 1.3rem;
-  color: var(--text-primary);
-}
-
-.tech-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.tech-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--bg-darker);
-  padding: 0.6rem 1.1rem;
-  border-radius: 0.625rem;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid transparent;
-  cursor: default;
-  position: relative;
-  overflow: hidden;
-}
-
-.tech-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 0;
-}
-
-.tech-item:hover::before {
-  opacity: 0.1;
-}
-
-.tech-item:hover {
-  background: var(--bg-light);
-  border-color: var(--primary);
-  transform: translateY(-3px) scale(1.05);
-  color: var(--text-primary);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
-}
-
-.tech-icon-img,
-.tech-name {
-  position: relative;
-  z-index: 1;
-}
-
-.tech-icon-img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-
-.tech-name {
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .tech-stack {
-    padding: 4rem 1.5rem;
-  }
-
-  .tech-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .tech-stack {
-    padding: 3rem 1rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-subtitle {
-    font-size: 1rem;
-    margin-bottom: 3rem;
-  }
-
-  .tech-grid {
-    gap: 1.5rem;
-  }
-
-  .tech-category {
-    padding: 1.5rem;
-  }
-
-  .category-header {
-    gap: 0.5rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .category-header h3 {
-    font-size: 1.15rem;
-  }
-
-  .tech-items {
-    gap: 0.6rem;
-  }
-
-  .tech-item {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
-  }
-
-  .tech-icon-img {
-    width: 20px;
-    height: 20px;
-  }
-}
-</style>

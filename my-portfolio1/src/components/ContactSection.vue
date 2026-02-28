@@ -84,47 +84,55 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 class="section-title scale-in">Get In Touch</h2>
-      <p class="section-subtitle fade-in">Contact me for inquiries</p>
+  <section id="contact" class="py-24 px-8 bg-s0 max-md:py-16 max-sm:py-12 max-sm:px-4">
+    <div class="site-container">
+      <h2 class="section-heading scale-in">Get In Touch</h2>
+      <p class="section-sub fade-in">Contact me for inquiries</p>
 
-      <div class="contact-content">
-        <div class="contact-info fade-in-left">
-          <div class="contact-item">
-            <Mail :size="24" class="contact-icon" />
+      <div class="grid grid-cols-1 gap-8 items-start md:grid-cols-[1fr_1.5fr] md:gap-16">
+
+        <!-- Contact Info -->
+        <div class="flex flex-col gap-8 fade-in-left">
+          <div class="flex flex-col items-center text-center gap-2 md:flex-row md:items-start md:text-left md:gap-4">
+            <Mail :size="24" class="text-brand shrink-0 md:mt-1" />
             <div>
-              <h3>Email</h3>
-              <a href="mailto:pasionharold252002@gmail.com"
-                >pasionharold252002@gmail.com</a
-              >
+              <h3 class="text-lg text-ink font-semibold mb-2">Email</h3>
+              <a href="mailto:pasionharold252002@gmail.com" class="text-ink-2 no-underline hover:text-brand transition-colors duration-300">
+                pasionharold252002@gmail.com
+              </a>
             </div>
           </div>
 
-          <div class="contact-item">
-            <Phone :size="24" class="contact-icon" />
+          <div class="flex flex-col items-center text-center gap-2 md:flex-row md:items-start md:text-left md:gap-4">
+            <Phone :size="24" class="text-brand shrink-0 md:mt-1" />
             <div>
-              <h3>Phone</h3>
-              <a href="tel:+639494781634">+63 949 478 1634</a>
+              <h3 class="text-lg text-ink font-semibold mb-2">Phone</h3>
+              <a href="tel:+639494781634" class="text-ink-2 no-underline hover:text-brand transition-colors duration-300">
+                +63 949 478 1634
+              </a>
             </div>
           </div>
 
-          <div class="contact-item">
-            <MapPin :size="24" class="contact-icon" />
+          <div class="flex flex-col items-center text-center gap-2 md:flex-row md:items-start md:text-left md:gap-4">
+            <MapPin :size="24" class="text-brand shrink-0 md:mt-1" />
             <div>
-              <h3>Location</h3>
-              <p>Bacoor, Cavite, Philippines</p>
+              <h3 class="text-lg text-ink font-semibold mb-2">Location</h3>
+              <p class="text-ink-2 m-0">Bacoor, Cavite, Philippines</p>
             </div>
           </div>
 
-          <div class="contact-social">
-            <a href="mailto:pasionharold252002@gmail.com">
+          <div class="flex gap-4 mt-4 flex-wrap justify-center md:justify-start">
+            <a
+              href="mailto:pasionharold252002@gmail.com"
+              class="w-12 h-12 flex items-center justify-center rounded-full bg-s2 text-ink-2 border border-edge hover:bg-brand hover:text-white hover:-translate-y-0.5 hover:border-brand transition-all duration-300"
+            >
               <Mail :size="28" />
             </a>
             <a
               href="https://www.linkedin.com/in/harold-pasion-017a131b8/"
               target="_blank"
               aria-label="LinkedIn"
+              class="w-12 h-12 flex items-center justify-center rounded-full bg-s2 text-ink-2 border border-edge hover:bg-brand hover:text-white hover:-translate-y-0.5 hover:border-brand transition-all duration-300"
             >
               <Linkedin :size="28" />
             </a>
@@ -132,15 +140,20 @@ const handleSubmit = async () => {
               href="https://github.com/arownz"
               target="_blank"
               aria-label="GitHub"
+              class="w-12 h-12 flex items-center justify-center rounded-full bg-s2 text-ink-2 border border-edge hover:bg-brand hover:text-white hover:-translate-y-0.5 hover:border-brand transition-all duration-300"
             >
               <Github :size="28" />
             </a>
           </div>
         </div>
 
-        <form class="contact-form fade-in-right" @submit.prevent="handleSubmit">
-          <div class="form-group">
-            <label for="name">Name</label>
+        <!-- Contact Form -->
+        <form
+          class="contact-form-wrapper bg-s1 p-10 rounded-[1.25rem] border-2 border-edge relative overflow-hidden fade-in-right sm:p-6"
+          @submit.prevent="handleSubmit"
+        >
+          <div class="mb-6">
+            <label for="name" class="block text-ink font-semibold mb-2">Name</label>
             <input
               type="text"
               id="name"
@@ -149,11 +162,15 @@ const handleSubmit = async () => {
               required
               placeholder="Your Name"
               :disabled="isSubmitting"
+              class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text-ink text-base
+                     transition-all duration-300 focus:outline-none focus:border-brand
+                     focus:shadow-[0_0_0_4px_rgba(99,102,241,0.1)] focus:-translate-y-0.5 focus:bg-s1
+                     disabled:opacity-60 disabled:cursor-not-allowed"
             />
           </div>
 
-          <div class="form-group">
-            <label for="email">Email</label>
+          <div class="mb-6">
+            <label for="email" class="block text-ink font-semibold mb-2">Email</label>
             <input
               type="email"
               id="email"
@@ -162,11 +179,15 @@ const handleSubmit = async () => {
               required
               placeholder="your.email@example.com"
               :disabled="isSubmitting"
+              class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text-ink text-base
+                     transition-all duration-300 focus:outline-none focus:border-brand
+                     focus:shadow-[0_0_0_4px_rgba(99,102,241,0.1)] focus:-translate-y-0.5 focus:bg-s1
+                     disabled:opacity-60 disabled:cursor-not-allowed"
             />
           </div>
 
-          <div class="form-group">
-            <label for="message">Message</label>
+          <div class="mb-6">
+            <label for="message" class="block text-ink font-semibold mb-2">Message</label>
             <textarea
               id="message"
               name="message"
@@ -175,16 +196,28 @@ const handleSubmit = async () => {
               required
               placeholder="Your message..."
               :disabled="isSubmitting"
+              class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text-ink text-base
+                     transition-all duration-300 focus:outline-none focus:border-brand
+                     focus:shadow-[0_0_0_4px_rgba(99,102,241,0.1)] focus:-translate-y-0.5 focus:bg-s1
+                     disabled:opacity-60 disabled:cursor-not-allowed resize-y min-h-[120px]"
             ></textarea>
           </div>
 
-          <div v-if="statusMessage" :class="['status-message', submitStatus]">
+          <div
+            v-if="statusMessage"
+            :class="[
+              'p-4 rounded-lg mb-4 text-center font-medium animate-[slideIn_0.3s_ease]',
+              submitStatus === 'success'
+                ? 'bg-[rgba(34,197,94,0.1)] border border-[rgba(34,197,94,0.3)] text-[#22c55e]'
+                : 'bg-[rgba(239,68,68,0.1)] border border-[rgba(239,68,68,0.3)] text-[#ef4444]',
+            ]"
+          >
             {{ statusMessage }}
           </div>
 
           <button
             type="submit"
-            class="btn btn-primary"
+            class="btn btn-primary w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed"
             :disabled="isSubmitting"
           >
             <Send :size="20" />
@@ -195,329 +228,3 @@ const handleSubmit = async () => {
     </div>
   </section>
 </template>
-
-<style scoped>
-.contact {
-  padding: 6rem 2rem;
-  background: var(--bg-darker);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  text-align: center;
-  margin-bottom: 1rem;
-  color: var(--primary);
-  font-weight: 700;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  margin-bottom: 4rem;
-}
-
-.contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.contact-item {
-  display: flex;
-  gap: 1rem;
-  align-items: start;
-}
-
-.contact-icon {
-  color: var(--primary);
-  flex-shrink: 0;
-  margin-top: 0.25rem;
-}
-
-.contact-item h3 {
-  font-size: 1.1rem;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.contact-item a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-  color: var(--primary);
-}
-
-.contact-item p {
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-.contact-social {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.contact-social a {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--bg-light);
-  color: var(--text-secondary);
-  transition: all 0.3s ease;
-  border: 1px solid var(--border);
-}
-
-.contact-social a:hover {
-  background: var(--primary);
-  color: white;
-  transform: translateY(-3px);
-  border-color: var(--primary);
-}
-
-.social-icon {
-  width: 28px;
-  height: 28px;
-}
-
-.contact-form {
-  background: var(--bg-dark);
-  padding: 2.5rem;
-  border-radius: 1.25rem;
-  border: 2px solid var(--border);
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-form::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary),
-    var(--accent)
-  );
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  color: var(--text-primary);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.875rem 1rem;
-  background: var(--bg-darker);
-  border: 2px solid var(--border);
-  border-radius: 0.625rem;
-  color: var(--text-primary);
-  font-size: 1rem;
-  font-family: inherit;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
-  transform: translateY(-2px);
-  background: var(--bg-dark);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.btn {
-  padding: 0.875rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-  justify-content: center;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px var(--shadow-lg);
-}
-
-.btn-primary:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.status-message {
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  font-weight: 500;
-  animation: slideIn 0.3s ease;
-}
-
-.status-message.success {
-  background: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  color: #22c55e;
-}
-
-.status-message.error {
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  color: #ef4444;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.form-group input:disabled,
-.form-group textarea:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-@media (max-width: 968px) {
-  .contact-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact {
-    padding: 4rem 1.5rem;
-  }
-
-  .contact-form {
-    padding: 1.5rem;
-  }
-
-  .contact-social {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .contact-social a {
-    width: 44px;
-    height: 44px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact {
-    padding: 3rem 1rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-subtitle {
-    font-size: 1rem;
-    margin-bottom: 3rem;
-  }
-
-  .contact-content {
-    gap: 2rem;
-  }
-
-  .contact-info {
-    gap: 1.5rem;
-  }
-
-  .contact-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.5rem;
-  }
-
-  .contact-social {
-    gap: 0.75rem;
-    margin-top: 1.5rem;
-  }
-
-  .contact-social a {
-    width: 48px;
-    height: 48px;
-  }
-
-  .social-icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  .contact-form {
-    padding: 1.25rem;
-  }
-
-  .form-group {
-    margin-bottom: 1.25rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    padding: 0.75rem;
-    font-size: 0.95rem;
-  }
-
-  .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.95rem;
-  }
-}
-</style>

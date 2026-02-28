@@ -11,11 +11,10 @@ import BackToTop from './components/BackToTop.vue'
 
 const activeSection = ref('home')
 const scrollY = ref(0)
+let observer: IntersectionObserver | null = null
 
 const handleScroll = () => {
   scrollY.value = window.scrollY
-  
-  // Update active section based on scroll position
   const sections = ['home', 'about', 'tech', 'projects', 'contact']
   for (const section of sections) {
     const element = document.getElementById(section)
@@ -31,100 +30,69 @@ const handleScroll = () => {
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
+  if (element) element.scrollIntoView({ behavior: 'smooth' })
+}
+
+const initScrollObserver = () => {
+  observer?.disconnect()
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), 50)
+        }
+      })
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  )
+  setTimeout(() => {
+    const selectors = ['.fade-in', '.fade-in-left', '.fade-in-right', '.scale-in']
+    selectors.forEach(selector => {
+      document.querySelectorAll(selector).forEach((el) => observer?.observe(el))
+    })
+  }, 100)
 }
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
-  
-  // Enhanced Intersection Observer for all animation types
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px' // Trigger slightly before element enters viewport
-  }
-  
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible')
-        }
-      })
-    },
-    observerOptions
-  )
-  
-  // Observe all animation elements
-  setTimeout(() => {
-    const selectors = ['.fade-in', '.fade-in-left', '.fade-in-right', '.scale-in']
-    selectors.forEach(selector => {
-      document.querySelectorAll(selector).forEach((el) => observer.observe(el))
+  initScrollObserver()
+
+  // Fix HMR: re-init observer after any hot module update
+  if (import.meta.hot) {
+    import.meta.hot.on('vite:afterUpdate', () => {
+      setTimeout(initScrollObserver, 200)
     })
-  }, 100)
+  }
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  observer?.disconnect()
 })
 </script>
 
 <template>
-  <div id="app" class="app">
+  <div class="bg-s0 text-ink font-sans overflow-x-hidden relative min-h-screen w-full">
     <ScrollProgress />
-    <Navigation 
-      :activeSection="activeSection" 
+    <Navigation
+      :activeSection="activeSection"
       :scrollY="scrollY"
       @scrollTo="scrollToSection"
     />
-    
+
     <HeroSection @scrollTo="scrollToSection" />
     <AboutSection />
     <TechStack />
     <ProjectsSection />
     <ContactSection />
-    
+
     <BackToTop />
-    
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; {{ new Date().getFullYear() }} Harold F. Pasion. All rights reserved.</p>
-        <p class="footer-note">Built with Vue 3 + TypeScript + Vite</p>
+
+    <footer class="bg-s1 py-12 px-8 text-center border-t border-edge">
+      <div class="site-container">
+        <p class="text-ink-3 my-2">&copy; {{ new Date().getFullYear() }} Harold F. Pasion. All rights reserved.</p>
+        <p class="text-ink-3 text-[0.9rem] my-2">Built with Vue 3 + TypeScript + Vite + Tailwind CSS v4</p>
       </div>
     </footer>
   </div>
 </template>
-
-<style scoped>
-.app {
-  background: var(--bg-darker);
-  color: var(--text-primary);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  overflow-x: hidden;
-  position: relative;
-}
-
-.footer {
-  background: var(--bg-dark);
-  padding: 3rem 2rem;
-  text-align: center;
-  border-top: 1px solid var(--border);
-  position: relative;
-}
-
-.footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer p {
-  color: var(--text-muted);
-  margin: 0.5rem 0;
-}
-
-.footer-note {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-</style>
