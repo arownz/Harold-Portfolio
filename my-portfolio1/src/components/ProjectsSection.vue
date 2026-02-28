@@ -8,7 +8,7 @@ const projects = ref([
     id: 1,
     title: "Vet Assist App - Veterinary Management System",
     description:
-      "A comprehensive veterinary management system for client-facing operations. Contributed to production web app enhancements, debugging, web app designing, and quality assurance to improve usability and performance.",
+      "A structured veterinary management system for client-facing operations. Contributed to production web app enhancements, debugging, web app designing, and quality assurance to improve usability and performance.",
     image: "projects/vetassist.png", // Replace with actual image path
     tags: [
       "Web Development",
@@ -17,8 +17,9 @@ const projects = ref([
       "UI/UX Design",
       "Veterinary Software",
     ],
-    featured: true,
+    github: false,
     demo: "https://demo.vetassist.app/",
+    featured: true,
   },
   {
     id: 2,
@@ -164,7 +165,7 @@ const projects = ref([
             <div class="project-overlay">
               <div class="project-links">
                 <a
-                  :href="project.github"
+                  v-if="project.github"
                   target="_blank"
                   class="project-link"
                   aria-label="View source code"

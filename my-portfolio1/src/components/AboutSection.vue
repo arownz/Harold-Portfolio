@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import {
-  Code2,
-  Palette,
-  Database,
   ChevronLeft,
   ChevronRight,
 } from "lucide-vue-next";
@@ -15,6 +12,13 @@ const certifications = ref({
       issuer: "Certiport - Frontend",
       badge: "700 Passing Points",
       image: "/html-css_cert.png",
+      color: "primary",
+    },
+    {
+      title: "PMI Project Management Ready®",
+      issuer: "Project Management Institute",
+      badge: "Self-Paced Completed",
+      image: "/certiport_pm.png",
       color: "primary",
     },
   ],
@@ -161,25 +165,25 @@ if (typeof window !== "undefined") {
             </p>
 
             <p>
-              My technological journey is curiosity — a drive to understand how
+              My technological journey is curiosity, a drive to understand how
               systems work, how they’re developed, and how they can be improved.
               I enjoy exploring various tech stacks not just for breadth, but to
               find the right tools to develop it that serve specific user needs
               and adapt to the fast-changing technology era.
             </p>
-            <p>
+            <!-- <p>
               In our defended capstone project, I led the functional development
               of
               <strong>"Lexia"</strong>, a gamified learning platform designed
               specifically for children with dyslexia conditions, which taught
               me the importance of user case accessibility-first principles for
               those with special needs.
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
 
-      <div class="about-highlights fade-in">
+      <!-- <div class="about-highlights fade-in">
         <div class="highlight-item">
           <Code2 :size="32" class="highlight-icon" />
           <div>
@@ -203,7 +207,7 @@ if (typeof window !== "undefined") {
             <p>End-to-end development</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="about-timeline fade-in">
         <h3 class="timeline-title">Education Background</h3>
@@ -223,9 +227,9 @@ if (typeof window !== "undefined") {
                   alt="University of Perpetual Help System Dalta"
                 />
               </a>
-              <div class="timeline-period">2020 - 2022</div>
+              <div class="timeline-period">2017 - 2022</div>
               <h4>
-                Senior High School – Information and Communication Technology
+                Junior to Senior High School – Information and Communication Technology
               </h4>
               <p class="timeline-location">
                 University of Perpetual Help System Dalta – Molino
@@ -311,7 +315,7 @@ if (typeof window !== "undefined") {
                   alt="Endsofttech Web Solutions"
                 />
               </a>
-              <div class="timeline-period">November 2025 - February, 2026</div>
+              <div class="timeline-period">November 2025 - May 2026</div>
               <h4>Web Development Intern</h4>
               <p class="timeline-location">
                 Endsofttech Web Solutions · Las Piñas, National Capital Region,
@@ -367,9 +371,6 @@ if (typeof window !== "undefined") {
               <div class="cert-content">
                 <h4 class="cert-title">{{ cert.title }}</h4>
                 <p class="cert-issuer">{{ cert.issuer }}</p>
-                <div class="cert-badge primary">
-                  <span>{{ cert.badge }}</span>
-                </div>
               </div>
             </div>
           </div>
@@ -433,8 +434,6 @@ if (typeof window !== "undefined") {
                   <div class="cert-content">
                     <h4 class="cert-title">{{ cert.title }}</h4>
                     <p class="cert-issuer">{{ cert.issuer }}</p>
-                    <div class="cert-badge">
-                      <span>{{ cert.badge }}</span>
                     </div>
                   </div>
                 </div>
@@ -465,7 +464,6 @@ if (typeof window !== "undefined") {
           </div>
         </div>
       </div>
-    </div>
   </section>
 </template>
 
@@ -798,7 +796,10 @@ if (typeof window !== "undefined") {
 
 /* Featured Certificate (Certiport) */
 .featured-cert {
-  max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -905,6 +906,11 @@ if (typeof window !== "undefined") {
 .cert-badge.primary {
   background: linear-gradient(135deg, #0084a0, #00a5cc);
   box-shadow: 0 4px 12px rgba(0, 0, 255, 0.4);
+}
+
+.cert-badge.pmi {
+  background: linear-gradient(135deg, #c8102e, #e8001d);
+  box-shadow: 0 4px 12px rgba(200, 16, 46, 0.4);
 }
 
 /* TESDA badges (700 Passing Points) */
