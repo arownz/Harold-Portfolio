@@ -239,14 +239,14 @@ const techStacks = ref({
       name: "Adobe",
       icon: "adobeicon.png",
     },
-    {
-      name: "Filmora",
-      icon: "filmorapng.png",
-    },
-    {
-      name: "Capcut",
-      icon: "Capcut-Logo-PNG-Photos.png",
-    },
+    // {
+    //   name: "Filmora",
+    //   icon: "filmorapng.png",
+    // },
+    // {
+    //   name: "Capcut",
+    //   icon: "Capcut-Logo-PNG-Photos.png",
+    // },
     {
       name: "Trello",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
