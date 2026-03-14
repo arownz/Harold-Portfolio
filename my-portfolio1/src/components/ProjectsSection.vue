@@ -126,15 +126,6 @@ const projects = ref([
     github: "https://github.com/arownz/SalesDuo",
     featured: false,
   },
-  {
-    id: 11,
-    title: "AI Software Dev Roadmap",
-    description: "A comprehensive guide to becoming an AI-powered software developer. Master the skills that will define the future of development. (Lovable)",
-    image: "/projects/ai_roadmap.png", // Replace with actual image path
-    tags: ["AI", "Roadmap", "Software Development", "Future Skills"],
-    github: "https://github.com/arownz/aisoftwaredevroad",
-    demo: "https://aisoftwaredevroad.lovable.app",
-  },
 ]);
 </script>
 
