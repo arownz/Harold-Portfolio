@@ -257,9 +257,22 @@
   /* ---- Section Headers ---- */
   .section-heading {
     @apply text-[clamp(2rem,5vw,3rem)] text-center font-bold text-brand mb-4;
+    position: relative;
+    padding-bottom: 1.25rem;
+  }
+  .section-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
   }
   .section-sub {
-    @apply text-center text-ink-3 text-[1.1rem] mb-8 md:mb-16;
+    @apply text-center text-ink-3 text-[1.1rem] mb-8 mt-4 md:mb-16 max-w-[620px] mx-auto;
   }
 
   /* ---- Shared Buttons ---- */

@@ -171,17 +171,15 @@ if (typeof window !== "undefined") {
 
           <div class="text-[1.05rem] leading-[1.8] text-ink-2">
             <p class="text-[1.25rem] font-semibold text-ink mb-6 leading-[1.6]">
-              I'm an undergraduate pursuing a Bachelor of Science in Information
-              Technology at National University – Dasmariñas, specializing in
-              Mobile and Web Applications.
+              A developer rooted in Information Technology, specializing in Mobile and Web Applications.
+              Committed to continuous growth and building scalable, impactful solutions — one project at a time.
             </p>
 
             <p class="mb-5">
-              My technological journey is curiosity, a drive to understand how
-              systems work, how they're developed, and how they can be improved.
-              I enjoy exploring various tech stacks not just for breadth, but to
-              find the right tools to develop it that serve specific user needs
-              and adapt to the fast-changing technology era.
+              My development journey is driven by curiosity — a hunger to understand how systems work, how
+              they’re built, and where they can be improved. I explore a wide range of tech stacks not just
+              for breadth, but to find the right tool for each unique challenge, adapting to an ever-evolving
+              technology landscape.
             </p>
           </div>
         </div>
@@ -206,8 +204,8 @@ if (typeof window !== "undefined") {
               <h4>Junior to Senior High School – Information and Communication Technology</h4>
               <p class="timeline-location">University of Perpetual Help System Dalta – Molino</p>
               <p class="timeline-description">
-                Specialized in Information and Communication Technology, builded
-                a foundational skill in java and standalone java projects.
+                Specialized in Information and Communication Technology, building a strong foundation
+                in Java and standalone desktop application development.
               </p>
             </div>
           </div>
@@ -227,9 +225,8 @@ if (typeof window !== "undefined") {
               <h4>Bachelor of Science in Information Technology</h4>
               <p class="timeline-location">National University – Dasmariñas</p>
               <p class="timeline-description">
-                With a specialization in Mobile and Web Applications. Focused on
-                full‑stack app development, web development, mobile application
-                development, and software engineering principles.
+                Specializing in Mobile and Web Applications, with a focus on full-stack development,
+                software engineering principles, and building real-world projects across web and mobile platforms.
               </p>
             </div>
           </div>

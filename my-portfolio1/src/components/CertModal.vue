@@ -28,7 +28,7 @@ onUnmounted(() => {
 <template>
   <Teleport to="body">
     <div
-      class="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-8"
+      class="fixed inset-0 z-9999 flex items-center justify-center p-4 md:p-8"
       @click.self="emit('close')"
     >
       <!-- Backdrop -->
@@ -53,7 +53,7 @@ onUnmounted(() => {
         <!-- Content -->
         <div class="bg-s1 rounded-2xl border-2 border-edge overflow-hidden shadow-[0_40px_80px_-12px_rgba(0,0,0,0.7)]">
           <!-- Image -->
-          <div class="p-6 md:p-8 bg-gradient-to-br from-s0 to-s2 flex items-center justify-center min-h-[300px] md:min-h-[400px]">
+          <div class="p-6 md:p-8 bg-linear-to-br from-s0 to-s2 flex items-center justify-center min-h-[300px] md:min-h-[400px]">
             <img
               :src="props.image"
               :alt="props.title"

@@ -97,7 +97,7 @@ const handleSubmit = async () => {
             <Mail :size="24" class="text-brand shrink-0 md:mt-1" />
             <div>
               <h3 class="text-lg text-ink font-semibold mb-2">Email</h3>
-              <a href="mailto:pasionharold252002@gmail.com" class="text-ink-2 no-underline hover:text-brand transition-colors duration-300">
+              <a href="mailto:pasionharold252002@gmail.com" class="text-ink-2 underline hover:text-brand transition-colors duration-300">
                 pasionharold252002@gmail.com
               </a>
             </div>
@@ -107,7 +107,7 @@ const handleSubmit = async () => {
             <Phone :size="24" class="text-brand shrink-0 md:mt-1" />
             <div>
               <h3 class="text-lg text-ink font-semibold mb-2">Phone</h3>
-              <a href="tel:+639494781634" class="text-ink-2 no-underline hover:text-brand transition-colors duration-300">
+              <a href="tel:+639494781634" class="text-ink-2 underline hover:text-brand transition-colors duration-300">
                 +63 949 478 1634
               </a>
             </div>
@@ -196,7 +196,7 @@ const handleSubmit = async () => {
               required
               placeholder="Your message..."
               :disabled="isSubmitting"
-              class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text-ink text-base
+              class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text- ink text-base
                      transition-all duration-300 focus:outline-none focus:border-brand
                      focus:shadow-[0_0_0_4px_rgba(99,102,241,0.1)] focus:-translate-y-0.5 focus:bg-s1
                      disabled:opacity-60 disabled:cursor-not-allowed resize-y min-h-[120px]"

@@ -7,7 +7,7 @@ defineEmits<{
   scrollTo: [section: string];
 }>();
 
-const roles = ["An IT Intern", "Aspiring Software Developer"];
+const roles = ["Aspiring Software Developer", "Mobile & Web Development Major", "BSIT Graduate · 2026"];
 const currentRole = ref("");
 const roleIndex = ref(0);
 const charIndex = ref(0);
@@ -79,12 +79,12 @@ onUnmounted(() => {
           <span class="typing-cursor relative inline-block">{{ currentRole }}</span>
         </h2>
         <p class="text-[1.1rem] leading-[1.8] text-ink-3 mb-8 max-w-[600px] fade-in">
-          An IT student who is curious by nature, driven by purpose who thrives on understanding how systems work, how they're built, and how they can be improved.
+          Curious by nature and driven by purpose — Understanding thoughtful, scalable software with a focus on clean architecture, real-world impact, and continuous growth.
         </p>
 
         <div class="flex flex-col gap-4 mb-8 md:flex-row md:flex-wrap">
           <button @click="$emit('scrollTo', 'projects')" class="btn btn-primary text-[1rem] w-full md:w-auto">
-            View My Work
+            View Projects
           </button>
           <button @click="$emit('scrollTo', 'contact')" class="btn btn-secondary text-[1rem] w-full md:w-auto">
             Get In Touch

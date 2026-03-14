@@ -143,7 +143,7 @@ const projects = ref([
     <div class="site-container">
       <h2 class="section-heading fade-in">Featured Projects</h2>
       <p class="section-sub fade-in">
-        Projects that showcase my experiences with solo, group, and collaborative development.
+        A collection of work spanning solo projects, team collaborations, and internship contributions — each one a step forward as a developer.
       </p>
 
       <div class="grid grid-cols-1 gap-6 mb-12 md:grid-cols-[repeat(auto-fill,minmax(340px,1fr))] md:gap-8">
