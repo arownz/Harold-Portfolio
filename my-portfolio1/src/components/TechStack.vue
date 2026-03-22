@@ -188,9 +188,9 @@ onBeforeUnmount(clearTyping);
               class="tech-item flex items-center gap-2 bg-s0 px-3 py-1.5 text-[0.85rem]
                      md:px-[1.1rem] md:py-[0.6rem] md:text-[0.95rem]
                      rounded-[0.625rem] text-ink-2 font-medium
-                     transition-all duration-300 border border-transparent cursor-pointer
+                     transition-all duration-300 border border-transparent cursor-help
                      hover:bg-s2 hover:border-brand hover:-translate-y-0.5 hover:scale-105 hover:text-ink
-                     hover:shadow-[0_4px_12px_rgba(99,102,241,0.2)]"
+                     hover:shadow-[0_4px_12px_rgba(158,29,76,0.25)]"
               @mouseenter="onTechEnter(tech, $event)"
               @mouseleave="onTechLeave"
             >

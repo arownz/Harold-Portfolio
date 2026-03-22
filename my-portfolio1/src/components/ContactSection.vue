@@ -86,8 +86,8 @@ const handleSubmit = async () => {
 <template>
   <section id="contact" class="py-24 px-8 bg-s0 max-md:py-16 max-sm:py-12 max-sm:px-4">
     <div class="site-container">
-      <h2 class="section-heading scale-in">Get In Touch</h2>
-      <p class="section-sub fade-in">Contact me for inquiries</p>
+      <h2 class="section-heading scale-in">Contact Me</h2>
+      <p class="section-sub fade-in">Get in touch for inquiries</p>
 
       <div class="grid grid-cols-1 gap-8 items-start md:grid-cols-[1fr_1.5fr] md:gap-16">
 
@@ -164,7 +164,7 @@ const handleSubmit = async () => {
               :disabled="isSubmitting"
               class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text-ink text-base
                      transition-all duration-300 focus:outline-none focus:border-brand
-                     focus:shadow-[0_0_0_4px_rgba(99,102,241,0.1)] focus:-translate-y-0.5 focus:bg-s1
+                     focus:shadow-[0_0_0_4px_rgba(158,29,76,0.15)] focus:-translate-y-0.5 focus:bg-s1
                      disabled:opacity-60 disabled:cursor-not-allowed"
             />
           </div>
@@ -181,7 +181,7 @@ const handleSubmit = async () => {
               :disabled="isSubmitting"
               class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text-ink text-base
                      transition-all duration-300 focus:outline-none focus:border-brand
-                     focus:shadow-[0_0_0_4px_rgba(99,102,241,0.1)] focus:-translate-y-0.5 focus:bg-s1
+                     focus:shadow-[0_0_0_4px_rgba(158,29,76,0.15)] focus:-translate-y-0.5 focus:bg-s1
                      disabled:opacity-60 disabled:cursor-not-allowed"
             />
           </div>
@@ -198,7 +198,7 @@ const handleSubmit = async () => {
               :disabled="isSubmitting"
               class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text- ink text-base
                      transition-all duration-300 focus:outline-none focus:border-brand
-                     focus:shadow-[0_0_0_4px_rgba(99,102,241,0.1)] focus:-translate-y-0.5 focus:bg-s1
+                     focus:shadow-[0_0_0_4px_rgba(158,29,76,0.15)] focus:-translate-y-0.5 focus:bg-s1
                      disabled:opacity-60 disabled:cursor-not-allowed resize-y min-h-[120px]"
             ></textarea>
           </div>

@@ -36,9 +36,9 @@ onUnmounted(() => {
              bg-linear-to-br from-brand to-brand-2
              text-white border-none cursor-pointer
              flex items-center justify-center
-             shadow-[0_8px_24px_rgba(99,102,241,0.4)]
+             shadow-[0_8px_24px_rgba(158,29,76,0.45)]
              transition-all duration-300 ease-in-out
-             hover:-translate-y-[5px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(99,102,241,0.6)]
+             hover:-translate-y-[5px] hover:scale-105 hover:shadow-[0_12px_32px_rgba(158,29,76,0.55)]
              active:-translate-y-0.5 active:scale-[1.02]
              md:bottom-6 md:right-6 md:w-12 md:h-12
              sm:bottom-4 sm:right-4 sm:w-11 sm:h-11"

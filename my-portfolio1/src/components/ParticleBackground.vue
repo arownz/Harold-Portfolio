@@ -52,7 +52,7 @@ onMounted(() => {
       // Draw particle
       ctx.beginPath();
       ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(96, 165, 250, 0.5)';
+      ctx.fillStyle = 'rgba(158, 29, 76, 0.45)';
       ctx.fill();
 
       // Draw connections
@@ -65,7 +65,7 @@ onMounted(() => {
           ctx.beginPath();
           ctx.moveTo(particle.x, particle.y);
           ctx.lineTo(otherParticle.x, otherParticle.y);
-          ctx.strokeStyle = `rgba(96, 165, 250, ${0.2 * (1 - distance / 150)})`;
+          ctx.strokeStyle = `rgba(158, 29, 76, ${0.22 * (1 - distance / 150)})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }

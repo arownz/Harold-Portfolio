@@ -2,6 +2,7 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-vue-next";
 import ParticleBackground from "./ParticleBackground.vue";
+import SwingPhoto from "./SwingPhoto.vue";
 
 defineEmits<{
   scrollTo: [section: string];
@@ -87,7 +88,7 @@ onUnmounted(() => {
             View Projects
           </button>
           <button @click="$emit('scrollTo', 'contact')" class="btn btn-secondary text-[1rem] w-full md:w-auto">
-            Get In Touch
+            Contact Me
           </button>
         </div>
 
@@ -116,6 +117,8 @@ onUnmounted(() => {
             <Github :size="24" />
           </a>
         </div>
+
+        <SwingPhoto />
       </div>
     </div>
 

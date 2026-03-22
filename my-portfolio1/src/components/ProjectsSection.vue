@@ -146,14 +146,14 @@ const projects = ref([
             'transition-all duration-400 ease-in-out',
             'hover:-translate-y-3 hover:border-brand hover:shadow-[0_25px_50px_-12px_var(--shadow-lg)]',
             project.featured
-              ? 'bg-linear-to-br from-s0 to-[rgba(99,102,241,0.05)]'
+              ? 'bg-linear-to-br from-s0 to-[rgba(158,29,76,0.06)]'
               : 'bg-s0',
             index % 2 === 0 ? 'fade-in-left' : 'fade-in-right',
           ]"
         >
           <div
             v-if="project.featured"
-            class="project-badge-pulse absolute top-4 right-4 flex items-center gap-1.5 px-4 py-2 bg-linear-to-br from-brand to-brand-2 text-white rounded-full text-sm font-bold z-10 shadow-[0_4px_12px_rgba(99,102,241,0.4)]"
+            class="project-badge-pulse absolute top-4 right-4 flex items-center gap-1.5 px-4 py-2 bg-linear-to-br from-brand to-brand-2 text-white rounded-full text-sm font-bold z-10 shadow-[0_4px_12px_rgba(158,29,76,0.45)]"
           >
             <span>Featured</span>
           </div>
