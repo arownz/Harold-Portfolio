@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-vue-next";
+import { Mail, Smartphone, MapPin, Github, Linkedin, Send } from "lucide-vue-next";
 import emailjs from "@emailjs/browser";
 
 const formData = ref({
@@ -104,7 +104,7 @@ const handleSubmit = async () => {
           </div>
 
           <div class="flex flex-col items-center text-center gap-2 md:flex-row md:items-start md:text-left md:gap-4">
-            <Phone :size="24" class="text-brand shrink-0 md:mt-1" />
+            <Smartphone :size="24" class="text-brand shrink-0 md:mt-1" />
             <div>
               <h3 class="text-lg text-ink font-semibold mb-2">Phone</h3>
               <a href="tel:+639494781634" class="text-ink-2 underline hover:text-brand transition-colors duration-300">

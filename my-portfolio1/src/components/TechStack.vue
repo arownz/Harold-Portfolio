@@ -152,7 +152,7 @@ onBeforeUnmount(clearTyping);
     <div class="site-container">
       <h2 class="section-heading fade-in">Tech Stack</h2>
       <p class="section-sub fade-in">
-        A broad toolkit refined across real-world projects — from frontend and mobile to cloud, AI, and beyond.
+        A broad toolkit that I have used refined across real-world projects — from frontend and mobile to cloud, AI, and beyond.
         <span class="hidden md:inline opacity-60"> Hover any technology to learn more.</span>
       </p>
 
