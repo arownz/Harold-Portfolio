@@ -161,7 +161,7 @@ if (typeof window !== "undefined") {
       <!-- Intro -->
       <div class="mb-16 fade-in">
         <div class="grid grid-cols-1 gap-8 items-start md:grid-cols-[280px_1fr] md:gap-12">
-          <div class="relative max-w-[200px] mx-auto md:max-w-none md:mx-0">
+          <div class="relative max-w-50 mx-auto md:max-w-none md:mx-0">
             <img
               src="/meself2.jpg"
               alt="Harold F. Pasion"
@@ -172,11 +172,11 @@ if (typeof window !== "undefined") {
           <div class="text-[1.05rem] leading-[1.8] text-ink-2">
             <p class="text-[1.25rem] font-semibold text-ink mb-6 leading-[1.6]">
               A developer rooted in Information Technology, specializing in Mobile and Web Applications.
-              Committed to continuous growth and building scalable, impactful solutions — one project at a time.
+              Committed to continuous growth for impactful solutions.
             </p>
 
             <p class="mb-5">
-              My development journey is driven by curiosity — a hunger to understand how systems work, how
+              My development journey is driven by curiosity to understand how systems work, how
               they’re built, and where they can be improved. I explore a wide range of tech stacks not just
               for breadth, but to find the right tool for each unique challenge, adapting to an ever-evolving
               technology landscape.
@@ -281,7 +281,7 @@ if (typeof window !== "undefined") {
               >
                 <img src="/endsofttech_logo.jpg" alt="Endsofttech Web Solutions" />
               </a>
-              <div class="timeline-period">November 2025 - May 2026</div>
+              <div class="timeline-period">November 2025 - April 2026</div>
               <h4>Web Development Intern</h4>
               <p class="timeline-location">
                 Endsofttech Web Solutions · Las Piñas, National Capital Region, Philippines

@@ -8,7 +8,7 @@ defineEmits<{
   scrollTo: [section: string];
 }>();
 
-const roles = ["Aspiring Software Developer", "Mobile & Web Development Major", "BSIT Graduate · 2026"];
+const roles = ["Aspiring Software Developer", "Mobile & Web Development Major", "BSIT Graduate · 2026", "UI/UX Enthusiast"];
 const currentRole = ref("");
 const roleIndex = ref(0);
 const charIndex = ref(0);
@@ -70,8 +70,8 @@ onUnmounted(() => {
       <div class="gradient-orb orb-3"></div>
     </div>
 
-    <div class="max-w-[1200px] w-full relative z-10">
-      <div class="max-w-[700px]">
+    <div class="max-w-300 w-full relative z-10">
+      <div class="max-w-175">
         <p class="text-[1.2rem] text-brand font-medium mb-2 scale-in">Hi, I'm</p>
         <h1 class="text-[clamp(2.5rem,8vw,4.5rem)] font-extrabold mb-4 text-brand leading-tight fade-in-left">
           Harold F. Pasion
@@ -79,7 +79,7 @@ onUnmounted(() => {
         <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] text-ink-2 mb-6 font-semibold fade-in-right">
           <span class="typing-cursor relative inline-block">{{ currentRole }}</span>
         </h2>
-        <p class="text-[1.1rem] leading-[1.8] text-ink-3 mb-8 max-w-[600px] fade-in">
+        <p class="text-[1.1rem] leading-[1.8] text-ink-3 mb-8 max-w-150 fade-in">
           Curious by nature and driven by purpose — Understanding thoughtful, scalable software with a focus on clean architecture, real-world impact, and continuous growth.
         </p>
 

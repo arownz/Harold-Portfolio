@@ -230,7 +230,7 @@ onUnmounted(() => {
   <Teleport to="body">
     <div
       v-if="isDesktop"
-      class="swing-photo-layer pointer-events-none fixed inset-0 z-[850]"
+      class="swing-photo-layer pointer-events-none fixed inset-0 z-850"
       aria-hidden="true"
     >
       <div
@@ -250,12 +250,12 @@ onUnmounted(() => {
           width="204"
           height="255"
           role="presentation"
-          class="block w-[204px] h-auto object-cover aspect-[4/5] rounded-lg pointer-events-none"
+          class="block w-51 h-auto object-cover aspect-4/5 rounded-lg pointer-events-none"
           draggable="false"
         />
-        <p class="mt-2 text-center text-[0.65rem] font-semibold uppercase tracking-widest text-ink-3 pointer-events-none">
+        <!-- <p class="mt-2 text-center text-[0.65rem] font-semibold uppercase tracking-widest text-ink-3 pointer-events-none">
           Boink
-        </p>
+        </p> -->
       </div>
       <span class="sr-only">
         Floating portrait: drag anywhere on the page and release to throw; it bounces off screen edges.
