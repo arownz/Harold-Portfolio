@@ -31,7 +31,7 @@ const downloadResume = () => {
 <template>
   <Teleport to="body">
     <nav :class="['navbar', { scrolled: scrollY > 50 }]">
-      <div class="max-w-[1200px] mx-auto px-8 flex justify-between items-center">
+      <div class="max-w-300 mx-auto px-8 flex justify-between items-center">
         <div
           class="text-2xl font-bold cursor-pointer transition-transform duration-300 hover:scale-105 select-none"
           @click="scrollToSection('home')"

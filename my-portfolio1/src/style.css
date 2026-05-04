@@ -97,7 +97,7 @@
 @layer base {
 
   *,
-  *::before,
+  *::before,s
   *::after {
     box-sizing: border-box;
   }
@@ -431,7 +431,7 @@
 
   /* ---- Layout ---- */
   .site-container {
-    @apply max-w-[1200px] mx-auto;
+    @apply max-w-300 mx-auto;
   }
 
   /* ---- Section Headers ---- */
@@ -455,7 +455,7 @@
   }
 
   .section-sub {
-    @apply text-center text-ink-3 text-[1.1rem] mb-8 mt-4 md:mb-16 max-w-[620px] mx-auto;
+    @apply text-center text-ink-3 text-[1.1rem] mb-8 mt-4 md:mb-16 max-w-155 mx-auto;
   }
 
   /* ---- Shared Buttons ---- */

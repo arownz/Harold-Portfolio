@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CodedBackground from './CodedBackground.vue'
 import { ref } from "vue";
 import {
   ChevronLeft,
@@ -154,8 +155,9 @@ if (typeof window !== "undefined") {
 </script>
 
 <template>
-  <section id="about" class="py-24 px-8 bg-s1 max-md:py-16 max-sm:py-12 max-sm:px-4">
-    <div class="site-container">
+  <section id="about" class="py-24 px-8 bg-s1 max-md:py-16 max-sm:py-12 max-sm:px-4 relative overflow-hidden">
+    <CodedBackground />
+    <div class="site-container relative z-10">
       <h2 class="section-heading fade-in">About Me</h2>
 
       <!-- Intro -->
@@ -223,7 +225,7 @@ if (typeof window !== "undefined") {
               </a>
               <div class="timeline-period">2022 - 2026</div>
               <h4>Bachelor of Science in Information Technology</h4>
-              <p class="timeline-location">National University – Dasmariñas</p>
+              <p class="timeline-location">National University – Dasmariñas, Cavite, Philippines</p>
               <p class="timeline-description">
                 Specializing in Mobile and Web Applications, with a focus on full-stack development,
                 software engineering principles, and building real-world projects across web and mobile platforms.
@@ -250,7 +252,7 @@ if (typeof window !== "undefined") {
               </a>
               <div class="timeline-period">August 2024 - February 2025</div>
               <h4>Office / Student Assistant</h4>
-              <p class="timeline-location">MSQ Business Services, Inc.</p>
+              <p class="timeline-location">MSQ Business Services, Inc. · Bacoor, Cavite, Philippines</p>
               <ul class="timeline-description">
                 <li>
                   Handled accurate data encoding and digital record management
@@ -282,7 +284,7 @@ if (typeof window !== "undefined") {
                 <img src="/endsofttech_logo.jpg" alt="Endsofttech Web Solutions" />
               </a>
               <div class="timeline-period">November 2025 - April 2026</div>
-              <h4>Web Development Intern</h4>
+              <h4>Full-Stack Developer and Quality Assurance Intern</h4>
               <p class="timeline-location">
                 Endsofttech Web Solutions · Las Piñas, National Capital Region, Philippines
               </p>

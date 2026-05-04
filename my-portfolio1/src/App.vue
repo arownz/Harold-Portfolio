@@ -8,6 +8,7 @@ import ProjectsSection from './components/ProjectsSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import ScrollProgress from './components/ScrollProgress.vue'
 import BackToTop from './components/BackToTop.vue'
+import CodedBackground from './components/CodedBackground.vue'
 
 const activeSection = ref('home')
 const scrollY = ref(0)
@@ -89,6 +90,7 @@ onUnmounted(() => {
     <BackToTop />
 
     <footer class="bg-s1 py-12 px-8 text-center border-t border-edge">
+        <CodedBackground />
       <div class="site-container">
         <p class="text-ink-3 my-2">&copy; {{ new Date().getFullYear() }} Harold F. Pasion. All rights reserved.</p>
         <p class="text-ink-3 text-[0.9rem] my-2">Built with Vue 3 + TypeScript + Vite + Tailwind CSS v4</p>

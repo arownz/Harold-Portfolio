@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import CodedBackground from './CodedBackground.vue'
 import { ref } from "vue";
 import { Github, ExternalLink } from "lucide-vue-next";
 
 // Easily scalable project structure
 const projects = ref([
    {
-    id: 2,
+    id: 1,
     title: "Endsofttech Web Solutions - Company Website",
     description:
       "A modern company website for Endsofttech Web Solutions, showcasing their services and portfolio. Implemented responsive design and optimized for performance. Contributed to web design, development, and deployment to enhance online presence and attract potential clients.",
@@ -21,7 +22,7 @@ const projects = ref([
     featured: true,
   },
   {
-    id: 1,
+    id: 2,
     title: "Vet Assist App - Veterinary Management System",
     description:
       "A structured veterinary management system for client-facing operations. Contributed to production web app enhancements, debugging, web app designing, and quality assurance to improve usability and performance.",
@@ -99,7 +100,7 @@ const projects = ref([
     demo: "https://huggingface.co/spaces/arownz/resumetailor",
   },
   {
-    id: 5,
+    id: 7,
     title: "Cashier Point of Sale System",
     description:
       "A Standalone Point of Sale System (POS) for cashier to manage their menu sales transactions.",
@@ -109,7 +110,7 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 6,
+    id: 8,
     title: "iBorrow",
     description:
       "iBorrow is a mobile library management application. It provides an intuitive interface for both book borrowers and administrators to manage book borrowing efficiently.",
@@ -119,7 +120,7 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 7,
+    id: 9,
     title: "ShopEase",
     description:
       "ShopEase is a mobile e-commerce web application. It provides an intuitive interface for both customers and administrators to manage book borrowing efficiently.",
@@ -129,7 +130,7 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 8,
+    id: 10,
     title: "Devslog",
     description:
       "Devslog is a forum web application for developers to share their knowledge and experiences. They can post some of their day to day development resources and share their knowledge with others.",
@@ -139,7 +140,7 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 9,
+    id: 11,
     title: "ExpenzeWize",
     description:
       "Manage your financial expenses with ease. Track your expenses, set budgets, and get insights into your spending habits.",
@@ -149,7 +150,7 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 10,
+    id: 12,
     title: "Sales Duo",
     description:
       "The application presents a management system appearance suitable for business use, with modern design patterns, responsive layouts, and an intuitive user experience.",
@@ -162,8 +163,9 @@ const projects = ref([
 </script>
 
 <template>
-  <section id="projects" class="py-24 px-8 bg-s1 max-md:py-16 max-sm:py-12 max-sm:px-4">
-    <div class="site-container">
+  <section id="projects" class="py-24 px-8 bg-s1 max-md:py-16 max-sm:py-12 max-sm:px-4 relative overflow-hidden">
+    <CodedBackground />
+    <div class="site-container relative z-10">
       <h2 class="section-heading fade-in">Featured projects</h2>
       <p class="section-sub fade-in">
         A collection of work spanning solo projects, team collaborations, and internship contributions — each one a step forward as a developer.

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch, nextTick } from "vue";
 
-const photoSrc = "/meself2.jpg";
+const photoSrc = "/b06cbfca51b63271e22dccaf07eee050.jpg";
 
 /** Viewport position (px), fixed layer — drag / throw anywhere on screen */
 const x = ref(0);

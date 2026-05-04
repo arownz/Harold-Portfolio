@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CodedBackground from './CodedBackground.vue'
 import { ref, onBeforeUnmount } from "vue";
 import {
   Monitor,
@@ -148,8 +149,9 @@ onBeforeUnmount(clearTyping);
 </script>
 
 <template>
-  <section id="tech" class="py-24 px-8 bg-s0 max-md:py-16 max-md:px-6 max-sm:py-12 max-sm:px-4">
-    <div class="site-container">
+  <section id="tech" class="py-24 px-8 bg-s0 max-md:py-16 max-md:px-6 max-sm:py-12 max-sm:px-4 relative overflow-hidden">
+    <CodedBackground />
+    <div class="site-container relative z-10">
       <h2 class="section-heading fade-in">Tech Stack</h2>
       <p class="section-sub fade-in">
         A broad toolkit that I have used refined across real-world projects — from frontend and mobile to cloud, AI, and beyond.

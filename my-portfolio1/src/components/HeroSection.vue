@@ -1,14 +1,20 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-vue-next";
-import ParticleBackground from "./ParticleBackground.vue";
 import SwingPhoto from "./SwingPhoto.vue";
+import TerminalHero from "./TerminalHero.vue";
+import CodedBackground from "./CodedBackground.vue";
 
 defineEmits<{
   scrollTo: [section: string];
 }>();
 
-const roles = ["Aspiring Software Developer", "Mobile & Web Development Major", "BSIT Graduate · 2026", "UI/UX Enthusiast"];
+const roles = [
+  "Aspiring Software Dev",
+  "Mobile & Web Dev Major",
+  "BSIT Graduate · 2026",
+  "UI/UX Enthusiast",
+];
 const currentRole = ref("");
 const roleIndex = ref(0);
 const charIndex = ref(0);
@@ -17,30 +23,26 @@ let typingInterval: number;
 
 const typeRole = () => {
   const currentRoleText = roles[roleIndex.value];
-  
+
   if (!currentRoleText) return;
-  
+
   if (!isDeleting.value) {
-    // Typing
     if (charIndex.value < currentRoleText.length) {
       currentRole.value = currentRoleText.substring(0, charIndex.value + 1);
       charIndex.value++;
       typingInterval = setTimeout(typeRole, 50);
     } else {
-      // Wait before deleting
       typingInterval = setTimeout(() => {
         isDeleting.value = true;
         typeRole();
       }, 2000);
     }
   } else {
-    // Deleting
     if (charIndex.value > 0) {
       charIndex.value--;
       currentRole.value = currentRoleText.substring(0, charIndex.value + 1);
       typingInterval = setTimeout(typeRole, 40);
     } else {
-      // Move to next role
       isDeleting.value = false;
       roleIndex.value = (roleIndex.value + 1) % roles.length;
       typingInterval = setTimeout(typeRole, 700);
@@ -60,9 +62,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden py-24 px-8 md:py-20 md:px-6 sm:py-16 sm:px-4">
-    <ParticleBackground />
-
+  <section
+    id="home"
+    class="min-h-screen flex items-center justify-center relative overflow-hidden py-24 px-8 md:py-20 md:px-6 sm:py-16 sm:px-4"
+  >
+  <CodedBackground />
     <!-- Gradient orbs (styled via global @layer) -->
     <div class="absolute inset-0 overflow-hidden">
       <div class="gradient-orb orb-1"></div>
@@ -70,24 +74,44 @@ onUnmounted(() => {
       <div class="gradient-orb orb-3"></div>
     </div>
 
-    <div class="max-w-300 w-full relative z-10">
-      <div class="max-w-175">
-        <p class="text-[1.2rem] text-brand font-medium mb-2 scale-in">Hi, I'm</p>
-        <h1 class="text-[clamp(2.5rem,8vw,4.5rem)] font-extrabold mb-4 text-brand leading-tight fade-in-left">
+    <div
+      class="max-w-300 w-full relative z-10 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.92fr)] lg:items-center lg:gap-10"
+    >
+      <div class="max-w-175 relative z-10">
+        <p class="text-[1.2rem] text-brand font-medium mb-2 scale-in">
+          Sup, I'm
+        </p>
+        <h1
+          class="text-[clamp(2.5rem,8vw,4.5rem)] font-extrabold mb-4 text-brand leading-tight fade-in-left"
+        >
           Harold F. Pasion
         </h1>
-        <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] text-ink-2 mb-6 font-semibold fade-in-right">
-          <span class="typing-cursor relative inline-block">{{ currentRole }}</span>
+        <h2
+          class="text-[clamp(1.5rem,4vw,2.5rem)] text-ink-2 mb-6 font-semibold fade-in-right"
+        >
+          <span class="typing-cursor relative inline-block">{{
+            currentRole
+          }}</span>
         </h2>
-        <p class="text-[1.1rem] leading-[1.8] text-ink-3 mb-8 max-w-150 fade-in">
-          Curious by nature and driven by purpose — Understanding thoughtful, scalable software with a focus on clean architecture, real-world impact, and continuous growth.
+        <p
+          class="text-[1.1rem] leading-[1.8] text-ink-3 mb-8 max-w-150 fade-in"
+        >
+          Curious by nature and driven by purpose — Understanding thoughtful,
+          scalable software with a focus on proper architecture, real-world
+          impact, and continuous growth.
         </p>
 
         <div class="flex flex-col gap-4 mb-8 md:flex-row md:flex-wrap">
-          <button @click="$emit('scrollTo', 'projects')" class="btn btn-primary text-[1rem] w-full md:w-auto">
+          <button
+            @click="$emit('scrollTo', 'projects')"
+            class="btn btn-primary text-[1rem] w-full md:w-auto"
+          >
             View Projects
           </button>
-          <button @click="$emit('scrollTo', 'contact')" class="btn btn-secondary text-[1rem] w-full md:w-auto">
+          <button
+            @click="$emit('scrollTo', 'contact')"
+            class="btn btn-secondary text-[1rem] w-full md:w-auto"
+          >
             Contact Me
           </button>
         </div>
@@ -119,6 +143,16 @@ onUnmounted(() => {
         </div>
 
         <SwingPhoto />
+      </div>
+
+      <div
+        class="relative mt-14 hidden lg:flex lg:min-h-130 lg:items-center lg:justify-end"
+      >
+        <div
+          class="terminal-shell relative w-full max-w-140 min-h-130 overflow-hidden rounded-4xl border border-white/10 bg-black/10 shadow-[0_24px_80px_rgba(0,0,0,0.28)]"
+        >
+          <TerminalHero />
+        </div>
       </div>
     </div>
 
