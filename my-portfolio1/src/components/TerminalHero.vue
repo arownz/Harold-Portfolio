@@ -4,14 +4,14 @@ import { onMounted, onUnmounted, ref } from "vue";
 const canvas = ref<HTMLCanvasElement | null>(null);
 
 const codeLines = [
-  "Welcome to my portfolio!",
+  "Welcome to my portfolio...",
   "Loading experience...",
-  "✓ Frontend Development",
+  "✓ Full Stack Development",
   "✓ UI/UX Design",
-  "✓ Full Stack Solutions",
+  "✓ Agile Method",
   "Building amazing projects...",
   "Ready to collaborate!",
-  "Let's create something great!",
+  "Let's create something great.",
 ];
 
 let frameId = 0;

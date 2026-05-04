@@ -14,14 +14,14 @@ const certifications = ref({
       title: "IT Specialist - HTML & CSS",
       issuer: "Information Technology Specialist",
       badge: "700 Passing Points",
-      image: "/html-css_cert.png",
+      image: "/html-css_cert.webp",
       color: "primary",
     },
     {
       title: "PMI - Project Management Ready®",
       issuer: "Project Management Institute",
       badge: "Self-Paced Completed",
-      image: "/certiport_pm.png",
+      image: "/certiport_pm.webp",
       color: "primary",
     },
   ],
@@ -30,31 +30,31 @@ const certifications = ref({
       title: "Install and Configure Computer Systems",
       issuer: "TESDA - ICCS",
       badge: "Self-Paced Completed",
-      image: "/installconfig_cert.png",
+      image: "/installconfig_cert.webp",
     },
     {
       title: "Maintain Computer Systems and Networks",
       issuer: "TESDA - MCSN",
       badge: "Self-Paced Completed",
-      image: "/maintcompsysnet_cert.png",
+      image: "/maintcompsysnet_cert.webp",
     },
     {
       title: "Set-up Computer Networks",
       issuer: "TESDA - SCN",
       badge: "Self-Paced Completed",
-      image: "/setupcompnet_cert.png",
+      image: "/setupcompnet_cert.webp",
     },
     {
       title: "Set-up Computer Servers",
       issuer: "TESDA - SCS",
       badge: "Self-Paced Completed",
-      image: "/setupcompserv_cert.png",
+      image: "/setupcompserv_cert.webp",
     },
     {
       title: "Introduction to Cascading Style Sheets",
       issuer: "TESDA - ICSS",
       badge: "Self-Paced Completed",
-      image: "/introtocss_cert.png",
+      image: "/introtocss_cert.webp",
     },
   ],
 });
@@ -165,7 +165,7 @@ if (typeof window !== "undefined") {
         <div class="grid grid-cols-1 gap-8 items-start md:grid-cols-[280px_1fr] md:gap-12">
           <div class="relative max-w-50 mx-auto md:max-w-none md:mx-0">
             <img
-              src="/meself2.jpg"
+              src="/meself2.webp"
               alt="Harold F. Pasion"
               class="w-full h-auto rounded-2xl border-[3px] border-brand shadow-[0_10px_30px_-10px_var(--shadow-lg)] transition-transform duration-300 hover:scale-105"
             />
@@ -248,7 +248,7 @@ if (typeof window !== "undefined") {
                 rel="noopener noreferrer"
                 class="company-logo"
               >
-                <img src="/msq_logo.jpg" alt="MSQ Business Services, Inc." />
+                <img src="/msq_logo.webp" alt="MSQ Business Services, Inc." />
               </a>
               <div class="timeline-period">August 2024 - February 2025</div>
               <h4>Office / Student Assistant</h4>
@@ -281,7 +281,7 @@ if (typeof window !== "undefined") {
                 rel="noopener noreferrer"
                 class="company-logo"
               >
-                <img src="/endsofttech_logo.jpg" alt="Endsofttech Web Solutions" />
+                <img src="/endsofttech_logo.webp" alt="Endsofttech Web Solutions" />
               </a>
               <div class="timeline-period">November 2025 - April 2026</div>
               <h4>Full-Stack Developer and Quality Assurance Intern</h4>

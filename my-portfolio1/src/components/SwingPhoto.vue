@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch, nextTick } from "vue";
 
-const photoSrc = "/b06cbfca51b63271e22dccaf07eee050.jpg";
+const photoSrc = "/b06cbfca51b63271e22dccaf07eee050.webp";
 
 /** Viewport position (px), fixed layer — drag / throw anywhere on screen */
 const x = ref(0);
@@ -10,6 +10,22 @@ const vx = ref(0);
 const vy = ref(0);
 const rotation = ref(0);
 const angularVelocity = ref(0);
+
+// Responsive photo dimensions (base 220x288 on desktop, scales down on smaller screens)
+const basePhotoW = 220;
+const basePhotoH = 288;
+let PHOTO_W = basePhotoW;
+let PHOTO_H = basePhotoH;
+
+function computePhotoSize() {
+  const vw = window.innerWidth;
+  // Scale down on smaller desktops: reduce by 20% on screens < 1600px
+  const scale = vw < 1600 ? 0.85 : 1;
+  PHOTO_W = Math.round(basePhotoW * scale);
+  PHOTO_H = Math.round(basePhotoH * scale);
+}
+
+const PAD = 10;
 
 const dragging = ref(false);
 let grabDx = 0;
@@ -24,10 +40,6 @@ let lastTs = 0;
 let lastMoveT = 0;
 let lastPx = 0;
 let lastPy = 0;
-
-const PHOTO_W = 220;
-const PHOTO_H = 288;
-const PAD = 10;
 
 const GRAVITY = 1550;
 const LINEAR_DRAG = 1.85;
@@ -194,6 +206,7 @@ function tick(ts: number) {
 }
 
 function onResize() {
+  computePhotoSize();
   syncDesktop();
   if (isDesktop.value) clampStateToBounds();
 }
@@ -207,6 +220,7 @@ watch(isDesktop, (ok) => {
 });
 
 onMounted(() => {
+  computePhotoSize();
   mq = window.matchMedia("(min-width: 1024px) and (pointer: fine)");
   mqHandler = () => syncDesktop();
   isDesktop.value = mq.matches;
@@ -234,7 +248,7 @@ onUnmounted(() => {
       aria-hidden="true"
     >
       <div
-        class="pointer-events-auto fixed left-0 top-0 cursor-grab rounded-2xl border-[3px] border-brand bg-s1 p-2 pb-3 shadow-[0_16px_48px_-12px_var(--shadow-lg)] will-change-transform select-none touch-none active:cursor-grabbing"
+        class="pointer-events-auto fixed left-0 top-0 cursor-grab rounded-2xl border-[3px] border-brand bg-s1 p-2 pb-3 shadow-[0_16px_48px_-12px_var(--shadow-lg)] will-change-transform select-none touch-none active:cursor-grabbing height-full"
         :style="{
           width: PHOTO_W + 'px',
           transform: `translate3d(${x}px, ${y}px, 0) rotate(${rotation}rad)`,
@@ -248,7 +262,7 @@ onUnmounted(() => {
           :src="photoSrc"
           alt=""
           width="204"
-          height="255"
+          height="268"
           role="presentation"
           class="block w-51 h-auto object-cover aspect-4/5 rounded-lg pointer-events-none"
           draggable="false"

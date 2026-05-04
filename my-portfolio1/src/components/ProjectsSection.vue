@@ -10,7 +10,7 @@ const projects = ref([
     title: "Endsofttech Web Solutions - Company Website",
     description:
       "A modern company website for Endsofttech Web Solutions, showcasing their services and portfolio. Implemented responsive design and optimized for performance. Contributed to web design, development, and deployment to enhance online presence and attract potential clients.",
-    image: "projects/endsoftt.png", // Replace with actual image path
+    image: "projects/endsoftt.webp", // Replace with actual image path
     tags: [
       "Web Development",
       "UI/UX Design",
@@ -26,7 +26,7 @@ const projects = ref([
     title: "Vet Assist App - Veterinary Management System",
     description:
       "A structured veterinary management system for client-facing operations. Contributed to production web app enhancements, debugging, web app designing, and quality assurance to improve usability and performance.",
-    image: "projects/vetassist.png", // Replace with actual image path
+    image: "projects/vetassist.webp", // Replace with actual image path
     tags: [
       "Web Development",
       "Production Debugging",
@@ -43,7 +43,7 @@ const projects = ref([
     title: "Vet Assist Web - Landing Website",
     description:
       "A landing website for Vet Assist, a veterinary management system. Designed to attract potential clients and provide information and demo request about the product. Contributed to web design, development, and deployment to enhance online presence and drive demo requests.",
-    image: "projects/vetassist_web.png",
+    image: "projects/vetassist_web.webp",
     tags: [
       "Web Development",
       "UI/UX Design",
@@ -59,7 +59,7 @@ const projects = ref([
     title: "Lexia - Dyslexia Learning Platform (Capstone)",
     description:
       "A gamified learning platform for children with dyslexia, built using accessibility-first mechanics in Godot Engine. (OCR-based whiteboard handwritten processing feature was disabled due to Google Cloud billing cancellation.)",
-    image: "projects/lexia.png", // Replace with actual image path
+    image: "projects/lexia.webp", // Replace with actual image path
     tags: [
       "Godot",
       "GDscript",
@@ -76,7 +76,7 @@ const projects = ref([
     title: "Super Admin Lexia (Capstone)",
     description:
       "A super admin management system for a mobile platform serving parents and professionals. Assisted as a web developer and QA in production enhancements, debugging, design, and testing to strengthen centralized control and usability.",
-    image: "projects/super_admin.png", // Replace with actual image path
+    image: "projects/super_admin.webp", // Replace with actual image path
     tags: ["React + Vite", "Bootstrap", "Javascript", "Firebase", "REST API"],
     github: "https://github.com/arownz/admin_panel",
     demo: "https://gamedevcapz-admin.web.app/login",
@@ -87,7 +87,7 @@ const projects = ref([
     title: "Resumay Tailor Swift",
     description:
       "An AI-powered resume builder web application that helps users modify their resumes quickly and easily using customizable templates and real-time suggestions.",
-    image: "/projects/tailorz.png",
+    image: "/projects/tailorz.webp",
     tags: [
       "AI",
       "Resume PDF Tailor",
@@ -104,7 +104,7 @@ const projects = ref([
     title: "Cashier Point of Sale System",
     description:
       "A Standalone Point of Sale System (POS) for cashier to manage their menu sales transactions.",
-    image: "/projects/POS_System.png", // Replace with actual image path
+    image: "/projects/POS_System.webp", // Replace with actual image path
     tags: ["Netbeans", "Java GUI"],
     github: "https://github.com/arownz/Cashier-POS-java",
     featured: false,
@@ -114,7 +114,7 @@ const projects = ref([
     title: "iBorrow",
     description:
       "iBorrow is a mobile library management application. It provides an intuitive interface for both book borrowers and administrators to manage book borrowing efficiently.",
-    image: "/projects/iborrows.png", // Replace with actual image path
+    image: "/projects/iborrows.webp", // Replace with actual image path
     tags: ["Flutter", "Supabase", "Google Cloud Books", "REST API"],
     github: "https://github.com/arownz/iborrow",
     featured: false,
@@ -124,7 +124,7 @@ const projects = ref([
     title: "ShopEase",
     description:
       "ShopEase is a mobile e-commerce web application. It provides an intuitive interface for both customers and administrators to manage book borrowing efficiently.",
-    image: "/projects/black.png", // Replace with actual image path
+    image: "/projects/black.webp", // Replace with actual image path
     tags: ["React + Vite", "Bootstrap", "Laravel", "Javascript", "REST API"],
     github: "https://github.com/arownz/e-commerce",
     featured: false,
@@ -134,7 +134,7 @@ const projects = ref([
     title: "Devslog",
     description:
       "Devslog is a forum web application for developers to share their knowledge and experiences. They can post some of their day to day development resources and share their knowledge with others.",
-    image: "/projects/logsz.png", // Replace with actual image path
+    image: "/projects/logsz.webp", // Replace with actual image path
     tags: ["React + Vite", "Tailwind", "XAMPP", "Javascript", "REST API"],
     github: "https://github.com/arownz/devslog",
     featured: false,
@@ -144,7 +144,7 @@ const projects = ref([
     title: "ExpenzeWize",
     description:
       "Manage your financial expenses with ease. Track your expenses, set budgets, and get insights into your spending habits.",
-    image: "/projects/expenses.png", // Replace with actual image path
+    image: "/projects/expenses.webp", // Replace with actual image path
     tags: ["React + Vite", "MySQL Workbench", "Javascript", "REST API"],
     github: "https://github.com/arownz/Group-1-ETS-Final",
     featured: false,
@@ -154,7 +154,7 @@ const projects = ref([
     title: "Sales Duo",
     description:
       "The application presents a management system appearance suitable for business use, with modern design patterns, responsive layouts, and an intuitive user experience.",
-    image: "/projects/sales_duo.png", // Replace with actual image path
+    image: "/projects/sales_duo.webp", // Replace with actual image path
     tags: ["React JS", "Bootstrap", "XAMPP", "REST API"],
     github: "https://github.com/arownz/SalesDuo",
     featured: false,
