@@ -110,55 +110,15 @@ const projects = ref([
     featured: false,
   },
   {
-    id: 8,
-    title: "iBorrow",
-    description:
-      "iBorrow is a mobile library management application. It provides an intuitive interface for both book borrowers and administrators to manage book borrowing efficiently.",
-    image: "/projects/iborrows.webp", // Replace with actual image path
-    tags: ["Flutter", "Supabase", "Google Cloud Books", "REST API"],
-    github: "https://github.com/arownz/iborrow",
-    featured: false,
-  },
-  {
-    id: 9,
-    title: "ShopEase",
-    description:
-      "ShopEase is a mobile e-commerce web application. It provides an intuitive interface for both customers and administrators to manage book borrowing efficiently.",
-    image: "/projects/black.webp", // Replace with actual image path
-    tags: ["React + Vite", "Bootstrap", "Laravel", "Javascript", "REST API"],
-    github: "https://github.com/arownz/e-commerce",
-    featured: false,
-  },
-  {
-    id: 10,
-    title: "Devslog",
-    description:
-      "Devslog is a forum web application for developers to share their knowledge and experiences. They can post some of their day to day development resources and share their knowledge with others.",
-    image: "/projects/logsz.webp", // Replace with actual image path
-    tags: ["React + Vite", "Tailwind", "XAMPP", "Javascript", "REST API"],
-    github: "https://github.com/arownz/devslog",
-    featured: false,
-  },
-  {
-    id: 11,
-    title: "ExpenzeWize",
-    description:
-      "Manage your financial expenses with ease. Track your expenses, set budgets, and get insights into your spending habits.",
-    image: "/projects/expenses.webp", // Replace with actual image path
-    tags: ["React + Vite", "MySQL Workbench", "Javascript", "REST API"],
-    github: "https://github.com/arownz/Group-1-ETS-Final",
-    featured: false,
-  },
-  {
     id: 12,
-    title: "Sales Duo",
+    title: "CodeLens",
     description:
-      "The application presents a management system appearance suitable for business use, with modern design patterns, responsive layouts, and an intuitive user experience.",
-    image: "/projects/sales_duo.webp", // Replace with actual image path
-    tags: ["React JS", "Bootstrap", "XAMPP", "REST API"],
-    github: "https://github.com/arownz/SalesDuo",
-    featured: false,
-  },
+      "An AI powered code analysis with suggestion for improvments in the code snippet. This simplifies the process of code review and helps developers to improve their code quality.",
+    image: "/projects/CodeAnalysis.webp", // Replace with actual image path
+    tags: ["Base44", "Tailwind CSS", "JavaScript", "Web Development"],
+    github: false,
+    demo: "https://stimulating-code-lens-flow.base44.app",
+  }
 ]);
 </script>
 
@@ -167,7 +127,7 @@ const projects = ref([
     <CodedBackground />
     <div class="site-container relative z-10">
       <h2 class="section-heading fade-in">Featured projects</h2>
-      <p class="section-sub fade-in">
+      <p class="section-sub fade-in">x
         A collection of work spanning solo projects, team collaborations, and internship contributions — each one a step forward as a developer.
       </p>
 
