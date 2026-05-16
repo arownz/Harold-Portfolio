@@ -72,7 +72,7 @@ const techStacks = ref<Record<string, TechItem[]>>({
   gamedev: [
     { name: "Unity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg", description: "Cross-platform 2D/3D game engine using C# scripting — widely used across indie and commercial game development." },
     { name: "Godot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg", description: "Open-source engine with its own GDScript — used for the Lexia capstone project with Google Cloud OCR integration." },
-    { name: "Roblox Studio", icon: "Roblox-Studio-Logo-Vector.svg-.webp", description: "Platform and IDE for creating multiplayer experiences using Lua scripting and collaborative world-building tools." },
+    // { name: "Roblox Studio", icon: "Roblox-Studio-Logo-Vector.svg-.webp", description: "Platform and IDE for creating multiplayer experiences using Lua scripting and collaborative world-building tools." },
   ],
   networking: [
     { name: "Cisco Packet Tracer", icon: "image-removebg-preview (2).webp", description: "Network simulation tool for designing, configuring, and troubleshooting complex topologies without physical hardware." },
@@ -96,7 +96,7 @@ const techStacks = ref<Record<string, TechItem[]>>({
     { name: "Microsoft Office 365", icon: "microsoft365icon.webp", description: "Cloud-integrated productivity suite covering documents, spreadsheets, presentations, and team collaboration." },
     { name: "Notion", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg", description: "All-in-one workspace combining notes, databases, wikis, and project boards into one connected system." },
     { name: "Adobe", icon: "adobeicon.webp", description: "Industry-standard creative suite for graphic design, video editing, image processing, and visual content production." },
-    { name: "Trello", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg", description: "Kanban-style project board for visualizing tasks, managing sprints, and keeping teams aligned on priorities." },
+    // { name: "Trello", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg", description: "Kanban-style project board for visualizing tasks, managing sprints, and keeping teams aligned on priorities." },
     { name: "Google Workspace", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg", description: "Google's cloud productivity platform — Docs, Sheets, Drive, and Meet — for real-time collaboration and file management." },
     { name: "Canva", icon: "canvaicon.webp", description: "Web-based design tool for creating presentations, social visuals, and graphics with an intuitive drag-and-drop editor." },
   ],

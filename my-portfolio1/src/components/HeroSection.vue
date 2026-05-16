@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-vue-next";
-import SwingPhoto from "./SwingPhoto.vue";
-import TerminalHero from "./TerminalHero.vue";
+// import SwingPhoto from "./SwingPhoto.vue";
+// import TerminalHero from "./TerminalHero.vue";
 import CodedBackground from "./CodedBackground.vue";
 
 defineEmits<{
@@ -142,10 +142,10 @@ onUnmounted(() => {
           </a>
         </div>
 
-        <SwingPhoto />
+        <!-- <SwingPhoto /> -->
       </div>
 
-      <div
+      <!-- <div
         class="relative mt-14 hidden lg:flex lg:min-h-130 lg:items-center lg:justify-end"
       >
         <div
@@ -153,7 +153,7 @@ onUnmounted(() => {
         >
           <TerminalHero />
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="scroll-indicator" @click="$emit('scrollTo', 'about')">
