@@ -10,10 +10,10 @@ defineEmits<{
 }>();
 
 const roles = [
-  "Aspiring Software Dev",
-  "Mobile & Web Dev Major",
+  "Full-Stack Developer",
+  "Mobile & Web Development Major",
   "BSIT Graduate · 2026",
-  "UI/UX Enthusiast",
+  "AI Enthusiast"
 ];
 const currentRole = ref("");
 const roleIndex = ref(0);
@@ -87,11 +87,10 @@ onUnmounted(() => {
           Harold F. Pasion
         </h1>
         <h2
-          class="text-[clamp(1.5rem,4vw,2.5rem)] text-ink-2 mb-6 font-semibold fade-in-right"
+          class="text-[clamp(1.5rem,4vw,2.5rem)] text-ink-2 mb-6 font-semibold leading-tight fade-in-right max-w-full whitespace-normal wrap-break-word"
         >
-          <span class="typing-cursor relative inline-block">{{
-            currentRole
-          }}</span>
+          <span>{{ currentRole }}</span>
+          <span class="typing-cursor-dot" aria-hidden="true">|</span>
         </h2>
         <p
           class="text-[1.1rem] leading-[1.8] text-ink-3 mb-8 max-w-150 fade-in"
@@ -163,11 +162,9 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-/* Typing cursor (pseudo-element can't be done in Tailwind) */
-.typing-cursor::after {
-  content: "|";
-  position: absolute;
-  right: -10px;
+.typing-cursor-dot {
+  display: inline-block;
+  margin-left: 0.08em;
   animation: typing-cursor 1s infinite;
   color: var(--primary);
 }
