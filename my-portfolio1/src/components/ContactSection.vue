@@ -109,9 +109,14 @@ const handleSubmit = async () => {
             <Smartphone :size="24" class="text-brand shrink-0 md:mt-1" />
             <div>
               <h3 class="text-lg text-ink font-semibold mb-2">Phone</h3>
-              <a href="tel:+639494781634" class="text-ink-2 underline hover:text-brand transition-colors duration-300">
-                +63 949 478 1634
+              <div class="flex flex-col gap-1 text-ink-2">
+              <a href="tel:+639924658229" class="text-ink-2 underline hover:text-brand transition-colors duration-300">
+                +63 992 465 8229 (Primary)
               </a>
+              <a href="tel:+639494781634" class="text-ink-2 underline hover:text-brand transition-colors duration-300">
+                +63 949 478 1634 (Secondary)
+              </a>
+            </div>
             </div>
           </div>
 
@@ -201,7 +206,7 @@ const handleSubmit = async () => {
               class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text- ink text-base
                      transition-all duration-300 focus:outline-none focus:border-brand
                      focus:shadow-[0_0_0_4px_rgba(158,29,76,0.15)] focus:-translate-y-0.5 focus:bg-s1
-                     disabled:opacity-60 disabled:cursor-not-allowed resize-y min-h-[120px]"
+                     disabled:opacity-60 disabled:cursor-not-allowed resize-y min-h-30"
             ></textarea>
           </div>
 

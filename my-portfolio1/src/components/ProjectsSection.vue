@@ -84,7 +84,7 @@ const projects = ref([
   },
    {
     id: 6,
-    title: "Resumay Tailor Swift",
+    title: "Resumay Tailor Swift - Prototype AI Resume Builder",
     description:
       "An AI-powered resume builder web application that helps users modify their resumes quickly and easily using customizable templates and real-time suggestions.",
     image: "/projects/tailorz.webp",
@@ -111,24 +111,25 @@ const projects = ref([
   },
   {
     id: 8,
-    title: "CodeLens",
+    title: "CodeLens - Personal AI Code Analysis Tool",
     description:
       "An AI powered code analysis with suggestion for improvments in the code snippet. This simplifies the process of code review and helps developers to improve their code quality.",
     image: "/projects/CodeAnalysis.webp", // Replace with actual image path
     tags: ["Base44", "Tailwind CSS", "JavaScript", "Web Development"],
     github: false,
+    featured: false,
     demo: "https://stimulating-code-lens-flow.base44.app",
   },
   {
     id: 9,
-    title: "StudyRoom - Collaborative Study Workspace",
+    title: "StudyRoom - Personal Collaborative Study Workspace (Prototype)",
     description: 
       "A collaborative study workspace web application that allows students to create virtual study rooms, share resources, and communicate in real-time to enhance their learning experience.",
     image: "/projects/StudyRoom.png",
     tags: ["Replit", "React", "Typescript", "Node.js", "PostgreSQL", "Socket.io"],
     github: "https://github.com/arownz/study-room",  
     demo: "https://studyroom-beryl.vercel.app/",
-    featured: true,
+    featured: false,
   }
 ]);
 </script>
