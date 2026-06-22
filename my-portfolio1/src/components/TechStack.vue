@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CodedBackground from './CodedBackground.vue'
+// import CodedBackground from './CodedBackground.vue'
 import { ref, onBeforeUnmount } from "vue";
 import {
   Monitor,
@@ -152,7 +152,7 @@ onBeforeUnmount(clearTyping);
 
 <template>
   <section id="tech" class="py-24 px-8 bg-s0 max-md:py-16 max-md:px-6 max-sm:py-12 max-sm:px-4 relative overflow-hidden">
-    <CodedBackground />
+    <!-- <CodedBackground /> -->
     <div class="site-container relative z-10">
       <h2 class="section-heading fade-in">Tech Stack</h2>
       <p class="section-sub fade-in">

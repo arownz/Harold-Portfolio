@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CodedBackground from './CodedBackground.vue'
+// import CodedBackground from './CodedBackground.vue'
 import { ref } from "vue";
 import {
   ChevronLeft,
@@ -156,7 +156,7 @@ if (typeof window !== "undefined") {
 
 <template>
   <section id="about" class="py-24 px-8 bg-s1 max-md:py-16 max-sm:py-12 max-sm:px-4 relative overflow-hidden">
-    <CodedBackground />
+    <!-- <CodedBackground /> -->
     <div class="site-container relative z-10">
       <h2 class="section-heading fade-in">About Me</h2>
 

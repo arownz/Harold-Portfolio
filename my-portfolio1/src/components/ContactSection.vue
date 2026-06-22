@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CodedBackground from './CodedBackground.vue';
+// import CodedBackground from './CodedBackground.vue';
 import { ref } from "vue";
 import { Mail, Smartphone, MapPin, Github, Linkedin, Send } from "lucide-vue-next";
 import emailjs from "@emailjs/browser";
@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 const formData = ref({
   name: "",
   email: "",
+  subject: "",
   message: "",
 });
 
@@ -45,6 +46,7 @@ const handleSubmit = async () => {
     const templateParams = {
       from_name: formData.value.name,
       from_email: formData.value.email,
+      subject: formData.value.subject,
       message: formData.value.message,
       to_name: "Harold",
       gravatar_url: gravatarUrl,
@@ -65,6 +67,7 @@ const handleSubmit = async () => {
     formData.value = {
       name: "",
       email: "",
+      subject: "",
       message: "",
     };
   } catch (error) {
@@ -86,7 +89,7 @@ const handleSubmit = async () => {
 
 <template>
   <section id="contact" class="py-24 px-8 bg-s0 max-md:py-16 max-sm:py-12 max-sm:px-4 relative overflow-hidden">
-    <CodedBackground />
+    <!-- <CodedBackground /> -->
     <div class="site-container relative z-10">
       <h2 class="section-heading scale-in">Contact Me</h2>
       <p class="section-sub fade-in">Get in touch for inquiries</p>
@@ -194,6 +197,23 @@ const handleSubmit = async () => {
           </div>
 
           <div class="mb-6">
+            <label for="subject" class="block text-ink font-semibold mb-2">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              v-model="formData.subject"
+              required
+              placeholder="What's this about?"
+              :disabled="isSubmitting"
+              class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text-ink text-base
+                     transition-all duration-300 focus:outline-none focus:border-brand
+                     focus:shadow-[0_0_0_4px_rgba(158,29,76,0.15)] focus:-translate-y-0.5 focus:bg-s1
+                     disabled:opacity-60 disabled:cursor-not-allowed"
+            />
+          </div>
+
+          <div class="mb-6">
             <label for="message" class="block text-ink font-semibold mb-2">Message</label>
             <textarea
               id="message"
@@ -203,7 +223,7 @@ const handleSubmit = async () => {
               required
               placeholder="Your message..."
               :disabled="isSubmitting"
-              class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text- ink text-base
+              class="w-full px-4 py-3.5 bg-s0 border-2 border-edge rounded-[0.625rem] text-ink text-base
                      transition-all duration-300 focus:outline-none focus:border-brand
                      focus:shadow-[0_0_0_4px_rgba(158,29,76,0.15)] focus:-translate-y-0.5 focus:bg-s1
                      disabled:opacity-60 disabled:cursor-not-allowed resize-y min-h-30"

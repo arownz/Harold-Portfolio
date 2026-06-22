@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-vue-next";
 // import SwingPhoto from "./SwingPhoto.vue";
 // import TerminalHero from "./TerminalHero.vue";
-import CodedBackground from "./CodedBackground.vue";
+// import CodedBackground from "./CodedBackground.vue";
 
 defineEmits<{
   scrollTo: [section: string];
@@ -66,7 +66,7 @@ onUnmounted(() => {
     id="home"
     class="min-h-screen flex items-center justify-center relative overflow-hidden py-24 px-8 md:py-20 md:px-6 sm:py-16 sm:px-4"
   >
-  <CodedBackground />
+  <!-- <CodedBackground /> -->
     <!-- Gradient orbs (styled via global @layer) -->
     <div class="absolute inset-0 overflow-hidden">
       <div class="gradient-orb orb-1"></div>

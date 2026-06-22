@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import CodedBackground from './CodedBackground.vue'
+// import CodedBackground from './CodedBackground.vue'
 import { ref } from "vue";
 import { Github, ExternalLink } from "lucide-vue-next";
 
 // Easily scalable project structure
 const projects = ref([
-   {
+  {
     id: 1,
     title: "Endsofttech Web Solutions - Company Website",
     description:
@@ -58,7 +58,7 @@ const projects = ref([
     id: 4,
     title: "Lexia - Dyslexia Learning Platform (Capstone)",
     description:
-      "A gamified learning platform for children with dyslexia, built using accessibility-first mechanics in Godot Engine. (OCR-based whiteboard handwritten processing feature was disabled due to Google Cloud billing cancellation.)",
+      "A gamified learning platform for children with dyslexia, built using accessibility-first mechanics in Godot Engine. Integrated with Text-to-Speech, Speech-to-Text, and OCR technologies to create an engaging and supportive learning environment.",
     image: "projects/lexia.webp", // Replace with actual image path
     tags: [
       "Godot",
@@ -68,7 +68,7 @@ const projects = ref([
       "Google Cloud",
     ],
     github: "https://github.com/arownz/godotcaps", // Replace with actual repo
-    demo: "https://gamedevcapz.web.app/",
+    demo: "https://lexiadyslexia.web.app/",
     featured: true,
   },
   {
@@ -79,10 +79,10 @@ const projects = ref([
     image: "projects/super_admin.webp", // Replace with actual image path
     tags: ["React + Vite", "Bootstrap", "Javascript", "Firebase", "REST API"],
     github: "https://github.com/arownz/admin_panel",
-    demo: "https://gamedevcapz-admin.web.app/login",
+    demo: "https://lexiadyslexia-admin.web.app/",
     featured: true,
   },
-   {
+  {
     id: 6,
     title: "Resumay Tailor Swift - Prototype AI Resume Builder",
     description:
@@ -123,28 +123,42 @@ const projects = ref([
   {
     id: 9,
     title: "StudyRoom - Personal Collaborative Study Workspace (Prototype)",
-    description: 
+    description:
       "A collaborative study workspace web application that allows students to create virtual study rooms, share resources, and communicate in real-time to enhance their learning experience.",
     image: "/projects/StudyRoom.png",
-    tags: ["Replit", "React", "Typescript", "Node.js", "PostgreSQL", "Socket.io"],
-    github: "https://github.com/arownz/study-room",  
+    tags: [
+      "Replit",
+      "React",
+      "Typescript",
+      "Node.js",
+      "PostgreSQL",
+      "Socket.io",
+    ],
+    github: "https://github.com/arownz/study-room",
     demo: "https://studyroom-beryl.vercel.app/",
     featured: false,
-  }
+  },
 ]);
 </script>
 
 <template>
-  <section id="projects" class="py-24 px-8 bg-s1 max-md:py-16 max-sm:py-12 max-sm:px-4 relative overflow-hidden">
-    <CodedBackground />
+  <section
+    id="projects"
+    class="py-24 px-8 bg-s1 max-md:py-16 max-sm:py-12 max-sm:px-4 relative overflow-hidden"
+  >
+    <!-- <CodedBackground /> -->
     <div class="site-container relative z-10">
       <h2 class="section-heading fade-in">Featured projects</h2>
-      <p class="section-sub fade-in">x
-        A collection of work spanning solo projects, team collaborations, and internship contributions — each one a step forward as a developer.
+      <p class="section-sub fade-in">
+        A collection of work spanning solo projects, team collaborations, and
+        internship contributions — each one a step forward as a developer.
       </p>
 
       <!-- Premium asymmetric grid layout -->
-      <div class="grid grid-cols-1 gap-6 mb-12 md:grid-cols-2 md:gap-8 lg:grid-cols-[1.2fr_1fr] xl:grid-cols-[1.3fr_1fr]" style="grid-auto-rows: auto; grid-auto-flow: dense;">
+      <div
+        class="grid grid-cols-1 gap-6 mb-12 md:grid-cols-2 md:gap-8 lg:grid-cols-[1.2fr_1fr] xl:grid-cols-[1.3fr_1fr]"
+        style="grid-auto-rows: auto; grid-auto-flow: dense"
+      >
         <div
           v-for="(project, index) in projects"
           :key="project.id"
@@ -155,7 +169,9 @@ const projects = ref([
             project.featured
               ? 'bg-s0 md:col-span-1 lg:row-span-1'
               : 'bg-s0 md:col-span-1',
-            index % 3 === 0 && project.featured ? 'md:col-span-2 lg:col-span-1' : '',
+            index % 3 === 0 && project.featured
+              ? 'md:col-span-2 lg:col-span-1'
+              : '',
             index % 2 === 0 ? 'fade-in-left' : 'fade-in-right',
           ]"
         >
@@ -166,17 +182,21 @@ const projects = ref([
             <span>Featured</span>
           </div>
 
-          <div class="project-image-wrap relative w-full h-50 md:h-62.5 overflow-hidden bg-linear-to-br from-[#1e293b] to-[#334155]">
+          <div
+            class="project-image-wrap relative w-full h-50 md:h-62.5 overflow-hidden bg-linear-to-br from-[#1e293b] to-[#334155]"
+          >
             <img
               :src="project.image"
               :alt="project.title"
               class="w-full h-full object-cover transition-transform duration-600 ease-in-out group-hover:scale-110 group-hover:rotate-1"
             />
-            <div class="absolute inset-0 bg-[rgba(15,23,42,0.95)] flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto z-5">
+            <div
+              class="absolute inset-0 bg-[rgba(15,23,42,0.95)] flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto z-5"
+            >
               <div class="flex gap-4 z-10">
                 <a
                   v-if="project.github"
-                  :href="(project.github as string)"
+                  :href="project.github as string"
                   target="_blank"
                   class="btn btn-primary flex items-center gap-2"
                   aria-label="View source code"
@@ -199,10 +219,18 @@ const projects = ref([
           </div>
 
           <div class="p-5 md:p-6 flex-1 flex flex-col">
-            <h3 class="text-xl md:text-2xl text-ink mb-3 font-semibold">{{ project.title }}</h3>
-            <p class="text-ink-2 leading-relaxed mb-4 flex-1 text-[0.95rem] md:text-base">{{ project.description }}</p>
+            <h3 class="text-xl md:text-2xl text-ink mb-3 font-semibold">
+              {{ project.title }}
+            </h3>
+            <p
+              class="text-ink-2 leading-relaxed mb-4 flex-1 text-[0.95rem] md:text-base"
+            >
+              {{ project.description }}
+            </p>
             <div class="flex flex-wrap gap-2">
-              <span v-for="tag in project.tags" :key="tag" class="tag">{{ tag }}</span>
+              <span v-for="tag in project.tags" :key="tag" class="tag">{{
+                tag
+              }}</span>
             </div>
           </div>
         </div>
@@ -217,7 +245,11 @@ const projects = ref([
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 100%
+  );
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
