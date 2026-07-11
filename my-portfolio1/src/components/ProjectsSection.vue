@@ -51,7 +51,7 @@ const projects = ref([
       "Veterinary Software",
     ],
     github: false,
-    demo: "https://staging.vetassist.app/",
+    demo: "https://vetassist.app/",
     featured: true,
   },
   {
@@ -84,7 +84,7 @@ const projects = ref([
   },
   {
     id: 6,
-    title: "Resumay Tailor Swift - Prototype AI Resume Builder",
+    title: "Resumay Tailor Swift - Prototype AI Resume Builde (Prototype)",
     description:
       "An AI-powered resume builder web application that helps users modify their resumes quickly and easily using customizable templates and real-time suggestions.",
     image: "/projects/tailorz.webp",
@@ -115,7 +115,7 @@ const projects = ref([
     description:
       "An AI powered code analysis with suggestion for improvments in the code snippet. This simplifies the process of code review and helps developers to improve their code quality.",
     image: "/projects/CodeAnalysis.webp", // Replace with actual image path
-    tags: ["Base44", "Tailwind CSS", "JavaScript", "Web Development"],
+    tags: ["Base44", "Tailwind CSS", "JavaScript", "Web Development, NoCode AI Integration"],
     github: false,
     featured: false,
     demo: "https://stimulating-code-lens-flow.base44.app",
@@ -125,7 +125,7 @@ const projects = ref([
     title: "StudyRoom - Personal Collaborative Study Workspace (Prototype)",
     description:
       "A collaborative study workspace web application that allows students to create virtual study rooms, share resources, and communicate in real-time to enhance their learning experience.",
-    image: "/projects/StudyRoom.png",
+    image: "/projects/StudyRoom.webp",
     tags: [
       "Replit",
       "React",

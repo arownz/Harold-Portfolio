@@ -62,6 +62,7 @@ const techStacks = ref<Record<string, TechItem[]>>({
     { name: "Visual Studio Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", description: "Lightweight yet powerful code editor with a vast extension ecosystem for any language or development workflow." },
     { name: "Android Studio", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg", description: "Official Android IDE with a built-in emulator, layout editor, Gradle integration, and performance profiling tools." },
     { name: "Cursor", icon: "ODF.webp", description: "AI-first code editor built on VS Code — accelerates development with inline LLM assistance and codebase-aware completions." },
+    { name: "Antigravity", icon: "antigravity.webp", description: "AI-powered code assistant that understands your codebase and provides context-aware suggestions, refactoring, and documentation." },
     { name: "Windsurf", icon: "/windsurf.webp", description: "Agentic IDE with deep codebase understanding — enables in-editor AI collaboration that goes beyond basic autocomplete." },
     { name: "NetBeans", icon: "craiyon_054400_image.webp", description: "Java-focused open-source IDE used for desktop, web, and mobile application development in academic settings." },
     { name: "Github", icon: "githubz.svg", description: "World's largest code hosting and collaboration platform for version control, open-source contribution, and code review." },

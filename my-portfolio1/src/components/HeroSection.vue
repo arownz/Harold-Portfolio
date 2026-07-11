@@ -11,9 +11,10 @@ defineEmits<{
 
 const roles = [
   "Full-Stack Developer",
+  "Cloud & API Integration",
+  "AI Engineer",
   "Mobile & Web Development Major",
   "BSIT Graduate · 2026",
-  "AI Enthusiast"
 ];
 const currentRole = ref("");
 const roleIndex = ref(0);

@@ -8,6 +8,7 @@ import ProjectsSection from './components/ProjectsSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import ScrollProgress from './components/ScrollProgress.vue'
 import BackToTop from './components/BackToTop.vue'
+import ChatBot from './components/ChatBot.vue'
 // import CodedBackground from './components/CodedBackground.vue'
 
 const activeSection = ref('home')
@@ -88,6 +89,7 @@ onUnmounted(() => {
     <ContactSection />
 
     <BackToTop />
+    <ChatBot />
 
     <footer class="bg-s1 py-12 px-8 text-center border-t border-edge">
         <!-- <CodedBackground /> -->
