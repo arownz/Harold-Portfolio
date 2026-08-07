@@ -1,157 +1,157 @@
 <script setup lang="ts">
 // import CodedBackground from './CodedBackground.vue'
-import { ref } from "vue";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Maximize2,
-} from "lucide-vue-next";
-import CertModal from "./CertModal.vue";
+// import { ref } from "vue";
+// import {
+//   ChevronLeft,
+//   ChevronRight,
+//   Maximize2,
+// } from "lucide-vue-next";
+// import CertModal from "./CertModal.vue";
 
-const certifications = ref({
-  certiport: [
-    {
-      title: "IT Specialist - HTML & CSS",
-      issuer: "Information Technology Specialist",
-      badge: "700 Passing Points",
-      image: "/html-css_cert.webp",
-      color: "primary",
-    },
-    {
-      title: "PMI - Project Management Ready®",
-      issuer: "Project Management Institute",
-      badge: "Self-Paced Completed",
-      image: "/certiport_pm.webp",
-      color: "primary",
-    },
-  ],
-  tesda: [
-    {
-      title: "Install and Configure Computer Systems",
-      issuer: "TESDA - ICCS",
-      badge: "Self-Paced Completed",
-      image: "/installconfig_cert.webp",
-    },
-    {
-      title: "Maintain Computer Systems and Networks",
-      issuer: "TESDA - MCSN",
-      badge: "Self-Paced Completed",
-      image: "/maintcompsysnet_cert.webp",
-    },
-    {
-      title: "Set-up Computer Networks",
-      issuer: "TESDA - SCN",
-      badge: "Self-Paced Completed",
-      image: "/setupcompnet_cert.webp",
-    },
-    {
-      title: "Set-up Computer Servers",
-      issuer: "TESDA - SCS",
-      badge: "Self-Paced Completed",
-      image: "/setupcompserv_cert.webp",
-    },
-    {
-      title: "Introduction to Cascading Style Sheets",
-      issuer: "TESDA - ICSS",
-      badge: "Self-Paced Completed",
-      image: "/introtocss_cert.webp",
-    },
-  ],
-});
+// const certifications = ref({
+//   certiport: [
+//     {
+//       title: "IT Specialist - HTML & CSS",
+//       issuer: "Information Technology Specialist",
+//       badge: "700 Passing Points",
+//       image: "/html-css_cert.webp",
+//       color: "primary",
+//     },
+//     {
+//       title: "PMI - Project Management Ready®",
+//       issuer: "Project Management Institute",
+//       badge: "Self-Paced Completed",
+//       image: "/certiport_pm.webp",
+//       color: "primary",
+//     },
+//   ],
+//   tesda: [
+//     {
+//       title: "Install and Configure Computer Systems",
+//       issuer: "TESDA - ICCS",
+//       badge: "Self-Paced Completed",
+//       image: "/installconfig_cert.webp",
+//     },
+//     {
+//       title: "Maintain Computer Systems and Networks",
+//       issuer: "TESDA - MCSN",
+//       badge: "Self-Paced Completed",
+//       image: "/maintcompsysnet_cert.webp",
+//     },
+//     {
+//       title: "Set-up Computer Networks",
+//       issuer: "TESDA - SCN",
+//       badge: "Self-Paced Completed",
+//       image: "/setupcompnet_cert.webp",
+//     },
+//     {
+//       title: "Set-up Computer Servers",
+//       issuer: "TESDA - SCS",
+//       badge: "Self-Paced Completed",
+//       image: "/setupcompserv_cert.webp",
+//     },
+//     {
+//       title: "Introduction to Cascading Style Sheets",
+//       issuer: "TESDA - ICSS",
+//       badge: "Self-Paced Completed",
+//       image: "/introtocss_cert.webp",
+//     },
+//   ],
+// });
 
-// Cert modal state
-const selectedCert = ref<{ image: string; title: string; issuer: string } | null>(null);
-const openModal = (cert: { image: string; title: string; issuer: string }) => {
-  selectedCert.value = cert;
-};
-const closeModal = () => {
-  selectedCert.value = null;
-};
+// // Cert modal state
+// const selectedCert = ref<{ image: string; title: string; issuer: string } | null>(null);
+// // const openModal = (cert: { image: string; title: string; issuer: string }) => {
+//   selectedCert.value = cert;
+// };
+// const closeModal = () => {
+//   selectedCert.value = null;
+// };
 
-const currentTesdaIndex = ref(0);
-const tesdaCardsPerView = ref(3);
-const carouselWrapper = ref<HTMLElement | null>(null);
-const isDragging = ref(false);
-const startX = ref(0);
-const scrollLeft = ref(0);
+// const currentTesdaIndex = ref(0);
+// const tesdaCardsPerView = ref(3);
+// const carouselWrapper = ref<HTMLElement | null>(null);
+// const isDragging = ref(false);
+// const startX = ref(0);
+// const scrollLeft = ref(0);
 
-const nextTesdaCert = () => {
-  if (
-    currentTesdaIndex.value <
-    certifications.value.tesda.length - tesdaCardsPerView.value
-  ) {
-    currentTesdaIndex.value++;
-  }
-};
+// const nextTesdaCert = () => {
+//   if (
+//     currentTesdaIndex.value <
+//     certifications.value.tesda.length - tesdaCardsPerView.value
+//   ) {
+//     currentTesdaIndex.value++;
+//   }
+// };
 
-const prevTesdaCert = () => {
-  if (currentTesdaIndex.value > 0) {
-    currentTesdaIndex.value--;
-  }
-};
+// const prevTesdaCert = () => {
+//   if (currentTesdaIndex.value > 0) {
+//     currentTesdaIndex.value--;
+//   }
+// };
 
 // Touch and mouse drag handlers
-const handleDragStart = (e: MouseEvent | TouchEvent) => {
-  isDragging.value = true;
-  const clientX =
-    "touches" in e
-      ? e.touches && e.touches[0]
-        ? e.touches[0].clientX
-        : 0
-      : e.clientX;
-  startX.value = clientX;
-  if (carouselWrapper.value) {
-    scrollLeft.value = currentTesdaIndex.value;
-  }
-};
+// const handleDragStart = (e: MouseEvent | TouchEvent) => {
+//   isDragging.value = true;
+//   const clientX =
+//     "touches" in e
+//       ? e.touches && e.touches[0]
+//         ? e.touches[0].clientX
+//         : 0
+//       : e.clientX;
+//   startX.value = clientX;
+//   if (carouselWrapper.value) {
+//     scrollLeft.value = currentTesdaIndex.value;
+//   }
+// };
 
-const handleDragMove = (e: MouseEvent | TouchEvent) => {
-  if (!isDragging.value) return;
-  e.preventDefault();
+// const handleDragMove = (e: MouseEvent | TouchEvent) => {
+//   if (!isDragging.value) return;
+//   e.preventDefault();
 
-  const clientX =
-    "touches" in e
-      ? e.touches && e.touches[0]
-        ? e.touches[0].clientX
-        : startX.value
-      : e.clientX;
-  const diff = startX.value - clientX;
-  const threshold = 50; // Minimum swipe distance
+//   const clientX =
+//     "touches" in e
+//       ? e.touches && e.touches[0]
+//         ? e.touches[0].clientX
+//         : startX.value
+//       : e.clientX;
+//   const diff = startX.value - clientX;
+//   const threshold = 50; // Minimum swipe distance
 
-  if (Math.abs(diff) > threshold) {
-    if (
-      diff > 0 &&
-      currentTesdaIndex.value <
-        certifications.value.tesda.length - tesdaCardsPerView.value
-    ) {
-      nextTesdaCert();
-      isDragging.value = false;
-    } else if (diff < 0 && currentTesdaIndex.value > 0) {
-      prevTesdaCert();
-      isDragging.value = false;
-    }
-  }
-};
+//   if (Math.abs(diff) > threshold) {
+//     if (
+//       diff > 0 &&
+//       currentTesdaIndex.value <
+//         certifications.value.tesda.length - tesdaCardsPerView.value
+//     ) {
+//       nextTesdaCert();
+//       isDragging.value = false;
+//     } else if (diff < 0 && currentTesdaIndex.value > 0) {
+//       prevTesdaCert();
+//       isDragging.value = false;
+//     }
+//   }
+// };
 
-const handleDragEnd = () => {
-  isDragging.value = false;
-};
+// const handleDragEnd = () => {
+//   isDragging.value = false;
+// };
 
 // Update cards per view on window resize
-if (typeof window !== "undefined") {
-  const updateCardsPerView = () => {
-    if (window.innerWidth < 640) {
-      tesdaCardsPerView.value = 1;
-    } else if (window.innerWidth < 1024) {
-      tesdaCardsPerView.value = 2;
-    } else {
-      tesdaCardsPerView.value = 3;
-    }
-  };
+// if (typeof window !== "undefined") {
+//   const updateCardsPerView = () => {
+//     if (window.innerWidth < 640) {
+//       tesdaCardsPerView.value = 1;
+//     } else if (window.innerWidth < 1024) {
+//       tesdaCardsPerView.value = 2;
+//     } else {
+//       tesdaCardsPerView.value = 3;
+//     }
+//   };
 
-  updateCardsPerView();
-  window.addEventListener("resize", updateCardsPerView);
-}
+//   updateCardsPerView();
+//   window.addEventListener("resize", updateCardsPerView);
+// }
 </script>
 
 <template>
@@ -162,12 +162,12 @@ if (typeof window !== "undefined") {
 
       <!-- Intro -->
       <div class="mb-16 fade-in">
-        <div class="grid grid-cols-1 gap-8 items-start md:grid-cols-[280px_1fr] md:gap-12">
+        <div class="grid grid-cols-1 gap-8 items-start md:grid-cols-[350px_1fr] md:gap-0 md:items-center">
           <div class="relative max-w-50 mx-auto md:max-w-none md:mx-0">
             <img
-              src="/meself2.webp"
+              src="/meself3.webp"
               alt="Harold F. Pasion"
-              class="w-full h-auto rounded-2xl border-[3px] border-brand shadow-[0_10px_30px_-10px_var(--shadow-lg)] transition-transform duration-300 hover:scale-105"
+              class="w-full h-full rounded-2xl border-[3px] border-brand shadow-[0_10px_30px_-10px_var(--shadow-lg)] transition-transform duration-300 hover:scale-105 rotate-270 origin-center"
             />
           </div>
 
@@ -310,18 +310,17 @@ if (typeof window !== "undefined") {
         </div>
       </div>
 
-      <!-- Certifications Section -->
+      <!-- Certifications Section 
       <div class="certifications-section fade-in">
         <h3 class="timeline-title">Certifications &amp; Credentials</h3>
         <p class="cert-subtitle">Certifications demonstrating technical expertises</p>
 
-        <!-- Certiport Category -->
-        <div class="cert-category">
+        <div class="cert-category"> 
           <div class="category-header">
             <div class="category-badge certiport">
               <span>Certiport - A Pearson Vue Business</span>
             </div>
-          </div>
+          </div> 
 
           <div class="featured-cert scale-in">
             <div
@@ -346,7 +345,6 @@ if (typeof window !== "undefined") {
           </div>
         </div>
 
-        <!-- TESDA Category with Carousel -->
         <div class="cert-category tesda-section">
           <div class="category-header">
             <div class="category-badge tesda">
@@ -425,15 +423,15 @@ if (typeof window !== "undefined") {
             ></button>
           </div>
         </div>
-      </div>
-    </div>
+      </div>-->
+    </div> 
   </section>
 
-  <CertModal
+  <!-- <CertModal
     v-if="selectedCert"
     :image="selectedCert.image"
     :title="selectedCert.title"
     :issuer="selectedCert.issuer"
     @close="closeModal"
-  />
+  /> -->
 </template>

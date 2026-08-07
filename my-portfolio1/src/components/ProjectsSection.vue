@@ -109,19 +109,19 @@ const projects = ref([
     github: "https://github.com/arownz/Cashier-POS-java",
     featured: false,
   },
+  // {
+  //   id: 8,
+  //   title: "CodeLens - Personal AI Code Analysis Tool",
+  //   description:
+  //     "An AI powered code analysis with suggestion for improvments in the code snippet. This simplifies the process of code review and helps developers to improve their code quality.",
+  //   image: "/projects/CodeAnalysis.webp", // Replace with actual image path
+  //   tags: ["Base44", "Tailwind CSS", "JavaScript", "Web Development, NoCode AI Integration"],
+  //   github: false,
+  //   featured: false,
+  //   demo: "https://stimulating-code-lens-flow.base44.app",
+  // },
   {
     id: 8,
-    title: "CodeLens - Personal AI Code Analysis Tool",
-    description:
-      "An AI powered code analysis with suggestion for improvments in the code snippet. This simplifies the process of code review and helps developers to improve their code quality.",
-    image: "/projects/CodeAnalysis.webp", // Replace with actual image path
-    tags: ["Base44", "Tailwind CSS", "JavaScript", "Web Development, NoCode AI Integration"],
-    github: false,
-    featured: false,
-    demo: "https://stimulating-code-lens-flow.base44.app",
-  },
-  {
-    id: 9,
     title: "StudyRoom - Personal Collaborative Study Workspace (Prototype)",
     description:
       "A collaborative study workspace web application that allows students to create virtual study rooms, share resources, and communicate in real-time to enhance their learning experience.",
