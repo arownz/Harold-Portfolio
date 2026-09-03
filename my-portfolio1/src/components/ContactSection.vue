@@ -113,11 +113,8 @@ const handleSubmit = async () => {
             <div>
               <h3 class="text-lg text-ink font-semibold mb-2">Phone</h3>
               <div class="flex flex-col gap-1 text-ink-2">
-              <a href="tel:+639924658229" class="text-ink-2 underline hover:text-brand transition-colors duration-300">
-                +63 992 465 8229 (Primary)
-              </a>
-              <a href="tel:+639494781634" class="text-ink-2 underline hover:text-brand transition-colors duration-300">
-                +63 949 478 1634 (Secondary)
+              <a href="tel:639494781634" class="text-ink-2 underline hover:text-brand transition-colors duration-300">
+                +639494781634
               </a>
             </div>
             </div>

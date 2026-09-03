@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
-    "deploy": "netlify deploy --prod --dir=dist"
+    "deploy": "npm run build && netlify deploy --prod --dir=dist --no-build"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

@@ -72,6 +72,8 @@ const techStacks = ref<Record<string, TechItem[]>>({
     { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", description: "API platform for building, testing, and documenting REST and GraphQL services with collaborative team workspaces." },
     { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", description: "Collaborative UI/UX design tool for prototyping, design systems, component libraries, and developer handoff." },
     { name: "n8n", icon: "N8N.webp", description: "Open-source workflow automation platform connecting apps and APIs with a visual low-code and code-integrated builder." },
+    { name: "pgAdmin 4", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", description: "Web-based administration tool for PostgreSQL databases — manage schemas, queries, and user permissions with ease." },
+    { name: "TablePlus", icon: "tableplusicon.webp", description: "Modern database management GUI supporting multiple relational and NoSQL databases with a clean, native interface." },
   ],
   gamedev: [
     { name: "Unity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg", description: "Cross-platform 2D/3D game engine using C# scripting — widely used across indie and commercial game development." },
@@ -95,6 +97,7 @@ const techStacks = ref<Record<string, TechItem[]>>({
     { name: "Gemini", icon: "geminiicon.svg", description: "Google's multimodal AI integrated across the Google ecosystem for development, ideation, and research workflows." },
     { name: "DeepSeek", icon: "craiyon_061056_image.webp", description: "High-capacity open-weight language model excelling in coding, math reasoning, and multilingual understanding." },
     { name: "Hugging Face", icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg", description: "Open-source AI platform for discovering and deploying models — used in the Resumay Tailor Swift project." },
+    { name: "OpenCode", icon: "ODF.webp", description: "Free Open-source AI coding assistant for generating, refactoring, and explaining code snippets across multiple languages." },
   ],
   productivity: [
     { name: "Microsoft Office 365", icon: "microsoft365icon.webp", description: "Cloud-integrated productivity suite covering documents, spreadsheets, presentations, and team collaboration." },
@@ -158,7 +161,7 @@ onBeforeUnmount(clearTyping);
     <div class="site-container relative z-10">
       <h2 class="section-heading fade-in">Tech Stack</h2>
       <p class="section-sub fade-in">
-        A broad toolkit that I have used refined across real-world projects — from frontend and mobile to cloud, AI, and beyond.
+        A broad toolkit that I have used refined across personal academic and collabated projects — from frontend and mobile to cloud, AI, and beyond.
         <span class="hidden md:inline opacity-60"> Hover any technology to learn more.</span>
       </p>
 
